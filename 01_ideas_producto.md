@@ -14,7 +14,7 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cad
 - **Qué ocurre actualmente.** Las empresas que invierten en publicidad reparten su presupuesto entre varios canales (buscadores, redes sociales, televisión, exterior, email…) apoyándose en la inercia del año anterior, en lo que cada plataforma reporta de sí misma o en la atribución al último clic. Es decir, deciden con información sesgada o incompleta. Se toman decisiones en función de la intuición del equipo y no con un criterio de datos. 
 - **Por qué supone un problema.** Cada plataforma tiene incentivo a atribuirse el mérito de las ventas, y la atribución basada en seguimiento a nivel de usuario se ha degradado mucho por las restricciones de privacidad y la desaparición de las cookies. El resultado es presupuesto mal repartido: se sigue invirtiendo en canales saturados mientras se infrafinancian otros que sí generan ventas.
 - **Qué decisión, proceso o situación podría mejorar con datos.** El proyecto estima la contribución incremental real de cada canal a las ventas y, a partir de ahí, recomienda cómo redistribuir el presupuesto para maximizar el retorno. La decisión que mejora es concreta y muy cara: cuánto invertir en cada canal.
-- **Por qué no es simplemente un ejercicio técnico.** El modelo no se limita a predecir ventas: tiene que capturar dos fenómenos con enjundia —el *adstock* (el efecto de la publicidad se arrastra en el tiempo, no se agota el día del impacto) y la *saturación* (cada euro adicional rinde menos, con curvas de rendimiento decreciente)— y terminar en una optimización con restricciones que reparte un presupuesto dado entre canales. La salida es una política de asignación de presupuesto en euros, no una métrica estadística.
+- **Por qué no es simplemente un ejercicio técnico.** El modelo no se limita a predecir ventas: tiene que capturar dos fenómenos  —el *adstock* (el efecto de la publicidad se arrastra en el tiempo, no se agota el día del impacto) y la *saturación* (cada euro adicional rinde menos, con curvas de rendimiento decreciente)— y terminar en una optimización con restricciones que reparte un presupuesto dado entre canales. 
 
 ### Motivación para realizar el proyecto
 
@@ -25,7 +25,7 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cad
 
 ### A quién impacta
 
-- Directores de marketing y equipos de *growth*, que deben justificar y repartir el presupuesto de medios.
+- Directores de marketing, que deben justificar y repartir el presupuesto de medios.
 - Agencias de medios y consultoras de marketing, que asesoran a clientes sobre dónde invertir.
 - Pymes que gastan en publicidad digital sin recursos para modelos propietarios y necesitan saber qué canales funcionan de verdad.
 
@@ -50,9 +50,9 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cad
 ### Motivación para realizar el proyecto
 
 - **Relevancia.** Económica y social: la vivienda es la mayor decisión de compra en la vida de la mayoría de las personas, y el sector inmobiliario tiene un peso enorme en la economía.
-- **Interés técnico.** Regresión con muchas variables, y sobre todo un fuerte componente **geoespacial** (poco explotado en proyectos de máster): la ubicación es el principal determinante del precio, lo que abre trabajo interesante de ingeniería de características de localización (cercanía a servicios, transporte, equipamientos) e interpretabilidad del modelo.
+- **Interés técnico.** Regresión con muchas variables, y sobre todo un fuerte componente **geoespacial**: la ubicación es el principal determinante del precio, lo que abre trabajo interesante de ingeniería de características de localización (cercanía a servicios, transporte, equipamientos) e interpretabilidad del modelo.
 - **Componente visual.** Da mucho juego en visualización: mapas de calor de precio por zona, comparativas por barrio, mapas de idoneidad. Esto refuerza la parte de comunicación del proyecto.
-- **Aplicación de contenidos del máster.** Regresión, modelos de machine learning (p. ej. gradient boosting), tratamiento de datos geoespaciales y visualización de datos.
+- **Aplicación de contenidos del máster.** Regresión, modelos de machine learning.
 - **Viabilidad de datos.** Los datos son abundantes y abiertos en España: catastro, renta por sección censal del INE, portales inmobiliarios (con extracción responsable), datos abiertos municipales y fuentes tipo OpenStreetMap para equipamientos y servicios cercanos. Es perfectamente abordable construir un dataset de trabajo.
 
 ### A quién impacta
