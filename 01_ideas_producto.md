@@ -1,45 +1,18 @@
 # Entrega 1 — Propuesta inicial de ideas de producto
 
-Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cada una se describe con foco en el problema real que resuelve y en el valor que aportaría, sin entrar todavía en arquitectura, modelos ni fuentes concretas de datos (eso se trabajará en la Entrega 2).
+Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cada una se describe con foco en el problema real que resuelve y en el valor que aportaría, sin entrar todavía en arquitectura, modelos ni fuentes concretas de datos.
 
 
-## Idea 1 — Predicción de ocupación hospitalaria y UCI
 
-### Problema que resuelve
-
-- **Qué ocurre actualmente.** Los hospitales dimensionan camas de planta, camas de UCI y personal apoyándose sobre todo en históricos simples y en la experiencia del equipo de gestión. La planificación es en gran medida reactiva: se ajustan recursos cuando la presión asistencial ya está subiendo.
-- **Por qué supone un problema.** Los picos previsibles (gripe estacional, olas de calor, brotes respiratorios) llegan sin margen de anticipación suficiente. Esto se traduce en saturación de urgencias, cancelación de cirugía programada, sobrecarga de personal y activación tardía de planes de contingencia. En el otro extremo, sobredimensionar recursos "por si acaso" tiene un coste elevado en camas y personal infrautilizados.
-- **Qué decisión, proceso o situación podría mejorar con datos.** Un modelo de previsión de ocupación a 7–14 días permitiría anticipar el dimensionamiento de camas y UCI, planificar turnos, gestionar la agenda de cirugía electiva y decidir con antelación la activación de planes de contingencia o derivación.
-- **Por qué no es simplemente un ejercicio técnico.** No es "predecir una serie temporal" por deporte: es planificación sanitaria con impacto directo en la seguridad del paciente, en las listas de espera y en el gasto público. La predicción alimenta una decisión operativa concreta y recurrente.
-
-### Motivación para realizar el proyecto
-
-- **Relevancia.** Social y económica: afecta a la calidad asistencial y al coste del sistema sanitario público.
-- **Interés técnico.** Es un problema de forecasting de series temporales con variables exógenas interesantes (vigilancia epidemiológica, calendario, meteorología), lo que da mucho recorrido metodológico.
-- **Aplicación de contenidos del máster.** Series temporales, modelos de machine learning, validación temporal, tratamiento de estacionalidad y eventos.
-- **Viabilidad de datos.** Existen datos abiertos utilizables: series históricas de vigilancia respiratoria (p. ej. sistemas de vigilancia del ISCIII), datos abiertos de salud de CCAA y ministerio, datos históricos de la etapa COVID y catálogos de datos.gob.es. Es razonable pensar que se puede construir un dataset de trabajo.
-
-### A quién impacta
-
-- Dirección médica y de enfermería, y servicios de admisión y planificación hospitalaria, que son quienes toman las decisiones de dimensionamiento.
-- Gerencia del hospital y servicios de salud autonómicos, por el impacto en coste y en cumplimiento de objetivos asistenciales.
-- Indirectamente, los pacientes, que se benefician de menos cancelaciones y menor saturación.
-
-### Por qué tiene valor
-
-- **Mejor planificación** de camas, UCI y turnos con antelación real.
-- **Reducción de costes** por menos recursos ociosos y menos horas extra de urgencia.
-- **Detección temprana de riesgo** de saturación asistencial.
-- **Mejor experiencia** para el paciente al reducir cancelaciones de cirugía programada.
 
 ---
 
-## Idea 2 — Optimización del mix de inversión publicitaria (Marketing Mix Modeling)
+## Idea 1 — Optimización del mix de inversión publicitaria (Marketing Mix Modeling)
 
 ### Problema que resuelve
 
-- **Qué ocurre actualmente.** Las empresas que invierten en publicidad reparten su presupuesto entre varios canales (buscadores, redes sociales, televisión, exterior, email…) apoyándose en la inercia del año anterior, en lo que cada plataforma reporta de sí misma o en la atribución al último clic. Es decir, deciden con información sesgada o incompleta.
-- **Por qué supone un problema.** Cada plataforma tiene incentivo a atribuirse el mérito de las ventas, y la atribución basada en seguimiento a nivel de usuario se ha degradado mucho por las restricciones de privacidad y la desaparición de las cookies. El resultado es presupuesto mal repartido: se sigue invirtiendo en canales saturados o sobreatribuidos mientras se infrafinancian otros que sí generan ventas.
+- **Qué ocurre actualmente.** Las empresas que invierten en publicidad reparten su presupuesto entre varios canales (buscadores, redes sociales, televisión, exterior, email…) apoyándose en la inercia del año anterior, en lo que cada plataforma reporta de sí misma o en la atribución al último clic. Es decir, deciden con información sesgada o incompleta. Se toman decisiones en función de la intuición del equipo y no con un criterio de datos. 
+- **Por qué supone un problema.** Cada plataforma tiene incentivo a atribuirse el mérito de las ventas, y la atribución basada en seguimiento a nivel de usuario se ha degradado mucho por las restricciones de privacidad y la desaparición de las cookies. El resultado es presupuesto mal repartido: se sigue invirtiendo en canales saturados mientras se infrafinancian otros que sí generan ventas.
 - **Qué decisión, proceso o situación podría mejorar con datos.** El proyecto estima la contribución incremental real de cada canal a las ventas y, a partir de ahí, recomienda cómo redistribuir el presupuesto para maximizar el retorno. La decisión que mejora es concreta y muy cara: cuánto invertir en cada canal.
 - **Por qué no es simplemente un ejercicio técnico.** El modelo no se limita a predecir ventas: tiene que capturar dos fenómenos con enjundia —el *adstock* (el efecto de la publicidad se arrastra en el tiempo, no se agota el día del impacto) y la *saturación* (cada euro adicional rinde menos, con curvas de rendimiento decreciente)— y terminar en una optimización con restricciones que reparte un presupuesto dado entre canales. La salida es una política de asignación de presupuesto en euros, no una métrica estadística.
 
@@ -65,7 +38,7 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cad
 
 ---
 
-## Idea 3 — Valoración automática de vivienda (AVM)
+## Idea 2 — Valoración automática de vivienda (AVM)
 
 ### Problema que resuelve
 
@@ -108,3 +81,31 @@ Las tres ideas comparten un mismo hilo conductor —convertir una predicción en
 - La **Idea 3** es la más segura en cuanto a disponibilidad de datos y la que ofrece el componente visual más potente, con una decisión de negocio muy tangible.
 
 A priori, la Idea 2 es la más diferenciadora técnicamente y la Idea 3 la más sólida por viabilidad de datos y por su vertiente visual. La elección definitiva se hará en la Entrega 2.
+## Idea 3 — Predicción de ocupación hospitalaria y UCI
+
+### Problema que resuelve
+
+- **Qué ocurre actualmente.** Los hospitales dimensionan camas de planta, camas de UCI y personal apoyándose sobre todo en históricos simples y en la experiencia del equipo de gestión. La planificación es en gran medida reactiva: se ajustan recursos cuando la presión asistencial ya está subiendo.
+- **Por qué supone un problema.** Los picos previsibles (gripe estacional, olas de calor, brotes respiratorios) llegan sin margen de anticipación suficiente. Esto se traduce en saturación de urgencias, cancelación de cirugía programada, sobrecarga de personal y activación tardía de planes de contingencia. En el otro extremo, sobredimensionar recursos "por si acaso" tiene un coste elevado en camas y personal infrautilizados.
+- **Qué decisión, proceso o situación podría mejorar con datos.** Un modelo de previsión de ocupación a 7–14 días permitiría anticipar el dimensionamiento de camas y UCI, planificar turnos, gestionar la agenda de cirugía electiva y decidir con antelación la activación de planes de contingencia o derivación.
+- **Por qué no es simplemente un ejercicio técnico.** No es "predecir una serie temporal" por deporte: es planificación sanitaria con impacto directo en la seguridad del paciente, en las listas de espera y en el gasto público. La predicción alimenta una decisión operativa concreta y recurrente.
+
+### Motivación para realizar el proyecto
+
+- **Relevancia.** Social y económica: afecta a la calidad asistencial y al coste del sistema sanitario público.
+- **Interés técnico.** Es un problema de forecasting de series temporales con variables exógenas interesantes (vigilancia epidemiológica, calendario, meteorología), lo que da mucho recorrido metodológico.
+- **Aplicación de contenidos del máster.** Series temporales, modelos de machine learning, validación temporal, tratamiento de estacionalidad y eventos.
+- **Viabilidad de datos.** Existen datos abiertos utilizables: series históricas de vigilancia respiratoria (p. ej. sistemas de vigilancia del ISCIII), datos abiertos de salud de CCAA y ministerio, datos históricos de la etapa COVID y catálogos de datos.gob.es. Es razonable pensar que se puede construir un dataset de trabajo.
+
+### A quién impacta
+
+- Dirección médica y de enfermería, y servicios de admisión y planificación hospitalaria, que son quienes toman las decisiones de dimensionamiento.
+- Gerencia del hospital y servicios de salud autonómicos, por el impacto en coste y en cumplimiento de objetivos asistenciales.
+- Indirectamente, los pacientes, que se benefician de menos cancelaciones y menor saturación.
+
+### Por qué tiene valor
+
+- **Mejor planificación** de camas, UCI y turnos con antelación real.
+- **Reducción de costes** por menos recursos ociosos y menos horas extra de urgencia.
+- **Detección temprana de riesgo** de saturación asistencial.
+- **Mejor experiencia** para el paciente al reducir cancelaciones de cirugía programada.
