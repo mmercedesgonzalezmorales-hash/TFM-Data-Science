@@ -1,6 +1,6 @@
 # Entrega 1 — Propuesta inicial de ideas de producto
 
-Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cada una se describe con foco en el problema real que resuelve y en el valor que aportaría, sin entrar todavía en arquitectura, modelos ni fuentes concretas de datos.
+Este documento recoge tres ideas iniciales de proyecto de Data Science e IA. Cada una se describe con foco en el problema real que resuelve y en el valor que aportaría, sin entrar todavía en arquitectura, modelos ni fuentes concretas de datos.
 
 
 
@@ -14,7 +14,7 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science / IA. Cad
 - **Qué ocurre actualmente.** Las empresas que invierten en publicidad reparten su presupuesto entre varios canales (buscadores, redes sociales, televisión, exterior, email…) apoyándose en la inercia del año anterior, en lo que cada plataforma reporta de sí misma o en la atribución al último clic. Es decir, deciden con información sesgada o incompleta. Se toman decisiones en función de la intuición del equipo y no con un criterio de datos. 
 - **Por qué supone un problema.** Cada plataforma tiene incentivo a atribuirse el mérito de las ventas, y la atribución basada en seguimiento a nivel de usuario se ha degradado mucho por las restricciones de privacidad y la desaparición de las cookies. El resultado es presupuesto mal repartido: se sigue invirtiendo en canales saturados mientras se infrafinancian otros que sí generan ventas.
 - **Qué decisión, proceso o situación podría mejorar con datos.** El proyecto estima la contribución incremental real de cada canal a las ventas y, a partir de ahí, recomienda cómo redistribuir el presupuesto para maximizar el retorno. La decisión que mejora es concreta y muy cara: cuánto invertir en cada canal.
-- **Por qué no es simplemente un ejercicio técnico.** El modelo no se limita a predecir ventas: tiene que capturar dos fenómenos  —el *adstock* (el efecto de la publicidad se arrastra en el tiempo, no se agota el día del impacto) y la *saturación* (cada euro adicional rinde menos, con curvas de rendimiento decreciente)— y terminar en una optimización con restricciones que reparte un presupuesto dado entre canales. 
+- **Por qué no es simplemente un ejercicio técnico.** El modelo no se limita a predecir ventas: tiene que capturar dos fenómenos  —el *adstock* (el efecto de la publicidad se arrastra en el tiempo, no se agota el día del impacto) y la *saturación* (cada euro adicional rinde menos)— y terminar en una optimización con restricciones que reparte un presupuesto dado entre canales. 
 
 ### Motivación para realizar el proyecto
 
