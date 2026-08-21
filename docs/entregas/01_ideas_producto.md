@@ -72,7 +72,10 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science e IA. Cad
 
 
 
+
 ## Idea 3 — Predicción de ocupación hospitalaria y UCI
+
+
 
 ### Problema que resuelve
 
