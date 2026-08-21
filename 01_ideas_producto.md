@@ -72,16 +72,7 @@ Este documento recoge tres ideas iniciales de proyecto de Data Science e IA. Cad
 
 ---
 
-## Valoración preliminar
 
-Las tres ideas comparten un mismo hilo conductor —convertir una predicción en una decisión de negocio medible— pero cubren dominios deliberadamente distintos (operaciones sanitarias, inversión en marketing y sector inmobiliario), lo que da variedad al proyecto:
-
-- La **Idea 1** destaca por su relevancia social y por la riqueza de variables exógenas, aunque exige consolidar un buen dataset a partir de fuentes abiertas heterogéneas.
-- La **Idea 2** es la más actual y empleable: el Marketing Mix Modeling está en pleno auge por la pérdida de precisión de la atribución tradicional, y su cierre en una optimización de presupuesto la conecta directamente con un KPI en euros.
-- La **Idea 3** es la más segura en cuanto a disponibilidad de datos y la que ofrece el componente visual más potente, con una decisión de negocio muy tangible.
-
-A priori, la Idea 2 es la más diferenciadora técnicamente y la Idea 3 la más sólida por viabilidad de datos y por su vertiente visual. La elección definitiva se hará en la Entrega 2.
-## Idea 3 — Predicción de ocupación hospitalaria y UCI
 
 ### Problema que resuelve
 
