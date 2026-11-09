@@ -1,0 +1,7 @@
+modelo,MAE_eur,MdAPE_pct,MAPE_pct,dentro_10pct,dentro_20pct,R2_log
+B0 · Mediana global,205685.047,48.871,58.706,9.616,19.952,-0.014
+B1 · €/m² del barrio × m²,70105.463,15.477,20.094,33.451,62.002,0.867
+M1 · Regresión Ridge (log),59897.329,12.36,16.061,41.853,72.275,0.911
+M2a · LightGBM pequeño,52955.933,10.911,14.471,46.562,76.567,0.925
+M2b · LightGBM medio,49118.19,10.076,13.675,49.732,78.982,0.931
+M2c · LightGBM grande,47728.6,9.739,13.409,51.108,79.278,0.932

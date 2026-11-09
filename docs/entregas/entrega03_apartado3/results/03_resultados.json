@@ -1,0 +1,163 @@
+{
+  "gold": "data/gold/viviendas_gold.parquet",
+  "objetivo": "log_precio",
+  "entradas": {
+    "numericas": [
+      "superficie_m2",
+      "habitaciones",
+      "banos",
+      "planta",
+      "antiguedad_anios",
+      "plantas_edificio",
+      "viviendas_edificio",
+      "calidad_catastral",
+      "lat",
+      "lon",
+      "dist_centro_km",
+      "dist_metro_km",
+      "dist_castellana_km"
+    ],
+    "binarias": [
+      "planta_desconocida",
+      "terraza",
+      "ascensor",
+      "aire_acondicionado",
+      "parking",
+      "trastero",
+      "armarios",
+      "piscina",
+      "portero",
+      "jardin",
+      "duplex",
+      "estudio",
+      "ultima_planta",
+      "orient_norte",
+      "orient_sur",
+      "orient_este",
+      "orient_oeste"
+    ],
+    "categoricas": [
+      "exterior_interior",
+      "estado",
+      "equipamiento",
+      "distrito",
+      "barrio"
+    ]
+  },
+  "separacion": "Entrenamiento y selección: 2018 T1–T3 con GroupKFold(5, shuffle, seed=42) agrupando copias de la misma vivienda; comprobación temporal T1–T2 -> T3. Test reservado: 2018 T4 (apartado 4).",
+  "n_entreno": 44091,
+  "n_test_reservado": 31210,
+  "cv_media": [
+    {
+      "modelo": "B0 · Mediana global",
+      "MAE_eur": 218081.38,
+      "MdAPE_pct": 50.752,
+      "MAPE_pct": 61.695,
+      "dentro_10pct": 8.879,
+      "dentro_20pct": 18.668,
+      "R2_log": -0.013
+    },
+    {
+      "modelo": "B1 · €/m² del barrio × m²",
+      "MAE_eur": 73135.126,
+      "MdAPE_pct": 15.587,
+      "MAPE_pct": 20.847,
+      "dentro_10pct": 33.482,
+      "dentro_20pct": 61.202,
+      "R2_log": 0.877
+    },
+    {
+      "modelo": "M1 · Regresión Ridge (log)",
+      "MAE_eur": 61961.581,
+      "MdAPE_pct": 12.202,
+      "MAPE_pct": 16.605,
+      "dentro_10pct": 42.166,
+      "dentro_20pct": 71.801,
+      "R2_log": 0.916
+    },
+    {
+      "modelo": "M2a · LightGBM pequeño",
+      "MAE_eur": 53706.342,
+      "MdAPE_pct": 10.665,
+      "MAPE_pct": 14.745,
+      "dentro_10pct": 47.409,
+      "dentro_20pct": 76.861,
+      "R2_log": 0.931
+    },
+    {
+      "modelo": "M2b · LightGBM medio",
+      "MAE_eur": 49559.519,
+      "MdAPE_pct": 9.874,
+      "MAPE_pct": 13.769,
+      "dentro_10pct": 50.545,
+      "dentro_20pct": 79.503,
+      "R2_log": 0.938
+    },
+    {
+      "modelo": "M2c · LightGBM grande",
+      "MAE_eur": 47878.29,
+      "MdAPE_pct": 9.388,
+      "MAPE_pct": 13.38,
+      "dentro_10pct": 52.299,
+      "dentro_20pct": 80.495,
+      "R2_log": 0.94
+    }
+  ],
+  "temporal_T3": [
+    {
+      "modelo": "B0 · Mediana global",
+      "MAE_eur": 205685.047,
+      "MdAPE_pct": 48.871,
+      "MAPE_pct": 58.706,
+      "dentro_10pct": 9.616,
+      "dentro_20pct": 19.952,
+      "R2_log": -0.014
+    },
+    {
+      "modelo": "B1 · €/m² del barrio × m²",
+      "MAE_eur": 70105.463,
+      "MdAPE_pct": 15.477,
+      "MAPE_pct": 20.094,
+      "dentro_10pct": 33.451,
+      "dentro_20pct": 62.002,
+      "R2_log": 0.867
+    },
+    {
+      "modelo": "M1 · Regresión Ridge (log)",
+      "MAE_eur": 59897.329,
+      "MdAPE_pct": 12.36,
+      "MAPE_pct": 16.061,
+      "dentro_10pct": 41.853,
+      "dentro_20pct": 72.275,
+      "R2_log": 0.911
+    },
+    {
+      "modelo": "M2a · LightGBM pequeño",
+      "MAE_eur": 52955.933,
+      "MdAPE_pct": 10.911,
+      "MAPE_pct": 14.471,
+      "dentro_10pct": 46.562,
+      "dentro_20pct": 76.567,
+      "R2_log": 0.925
+    },
+    {
+      "modelo": "M2b · LightGBM medio",
+      "MAE_eur": 49118.19,
+      "MdAPE_pct": 10.076,
+      "MAPE_pct": 13.675,
+      "dentro_10pct": 49.732,
+      "dentro_20pct": 78.982,
+      "R2_log": 0.931
+    },
+    {
+      "modelo": "M2c · LightGBM grande",
+      "MAE_eur": 47728.6,
+      "MdAPE_pct": 9.739,
+      "MAPE_pct": 13.409,
+      "dentro_10pct": 51.108,
+      "dentro_20pct": 79.278,
+      "R2_log": 0.932
+    }
+  ],
+  "configuracion_gbm_elegida": "M2b · LightGBM medio"
+}
