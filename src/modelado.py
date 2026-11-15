@@ -69,6 +69,13 @@ def cargar() -> tuple[pd.DataFrame, dict[str, pd.DataFrame], pd.PeriodIndex]:
     return info, series, trimestres
 
 
+def pesos_en(series: dict, corte: pd.Period) -> pd.Series:
+    """Peso de cada municipio con lo que se sabía en `corte`: contratos medios de los 4 trimestres
+    que terminan en el corte. Así un backtest de 2021 no usa información de 2023."""
+    c = np.expm1(series["log_contratos"].loc[:, corte - 3: corte])
+    return c.mean(axis=1).fillna(0)
+
+
 # --------------------------------------------------------------------------------------------- Variables
 def _pendiente(m: np.ndarray) -> np.ndarray:
     """Pendiente por trimestre de cada fila (ignora huecos)."""
@@ -213,10 +220,11 @@ MODELOS = [Persistencia, TendenciaPropia, Ridge, GBM]
 
 
 # --------------------------------------------------------------------------------------------- Métricas
-def error_agregado(d: pd.DataFrame, pred: np.ndarray, info: pd.DataFrame) -> pd.DataFrame:
+def error_agregado(d: pd.DataFrame, pred: np.ndarray, info: pd.DataFrame, pesos: pd.Series) -> pd.DataFrame:
     """Error del conjunto de un grupo en cada trimestre: media ponderada por contratos de (real - previsto).
-    Es el error que importa para el efecto de la ley, porque el efecto se mide sobre el grupo."""
-    t = d.assign(err=d["objetivo"].to_numpy() - pred, peso=info["peso"].reindex(d.index).to_numpy(),
+    Es el error que importa para el efecto de la ley, porque el efecto se mide sobre el grupo.
+    `pesos` = contratos de cada municipio conocidos en el corte (ver pesos_en)."""
+    t = d.assign(err=d["objetivo"].to_numpy() - pred, peso=pesos.reindex(d.index).to_numpy(),
                  grupo=info["grupo"].reindex(d.index).to_numpy())
     t = t[t["err"].notna()]
     return (t.groupby(["grupo", "periodo_objetivo"])
@@ -231,11 +239,12 @@ def backtest(info, series, trimestres) -> pd.DataFrame:
             entreno = conjunto_entrenamiento(series, trimestres, variable, corte)
             prueba = filas(series, trimestres, corte, variable, H_MAX, CORTE_FINAL)
             prueba = prueba[prueba["objetivo"].notna()]
+            pesos = pesos_en(series, corte)
             for Modelo in MODELOS:
                 m = Modelo().fit(entreno, variable)
                 p = m.predict(prueba)
                 e = prueba["objetivo"].to_numpy() - p
-                agg = error_agregado(prueba, p, info)
+                agg = error_agregado(prueba, p, info, pesos)
                 for h in sorted(prueba["h"].unique()):
                     k = prueba["h"].to_numpy() == h
                     q = str(corte + h)

@@ -90,25 +90,27 @@ Se simulan cuatro momentos anteriores a la ley: **2021T2, 2021T4, 2022T2 y 2022T
 
 **Métrica principal:** el **error del grupo agregado**, la media ponderada por contratos de (real − previsto) en cada grupo (ola 1, ola 2 y control), en valor absoluto. Es la métrica que importa, porque el efecto de la ley se mide sobre el grupo. Como métrica secundaria se da el error mediano de un municipio individual.
 
+**Pesos sin mirar el futuro:** en cada corte, el peso de un municipio son sus contratos medios en los 4 trimestres que terminan en ese corte. Por ejemplo, el corte 2021T4 usa 2021T1–2021T4. Así los backtests no usan información de 2023. Una versión anterior ponderaba todos los cortes con los contratos de 2023; al corregirlo, los errores suben algo (sobre todo en contratos), pero el modelo elegido no cambia (`results/03_backtest_resumen.csv`).
+
 ### 3.3 Resultados
 
 `results/03_backtest_resumen.csv` (media de los 4 cortes y de todos los horizontes)
 
 | Modelo | Renta: error grupo | Renta: error municipio | Contratos: error grupo | Contratos: error municipio |
 |---|---:|---:|---:|---:|
-| B0 · Persistencia | 9,3 % | 9,5 % | 9,4 % | 16,5 % |
-| B1 · Tendencia propia | 8,1 % | 9,6 % | 16,0 % | 25,5 % |
-| **M1 · Ridge** | **6,9 %** | **7,5 %** | **8,7 %** | **15,7 %** |
-| M2 · LightGBM | 7,4 % | 8,2 % | 12,8 % | 18,4 % |
+| B0 · Persistencia | 9,5 % | 9,5 % | 11,1 % | 16,5 % |
+| B1 · Tendencia propia | 8,3 % | 9,6 % | 18,8 % | 25,5 % |
+| **M1 · Ridge** | **7,0 %** | **7,5 %** | **9,7 %** | **15,7 %** |
+| M2 · LightGBM | 7,5 % | 8,2 % | 14,5 % | 18,4 % |
 
 ### 3.4 Modelo elegido
 
 **Ridge (M1) para las dos variables.** La regla, fijada antes de ejecutar los backtests, era elegir el menor error de grupo y, si otro más sencillo quedaba a menos de 0,25 puntos, quedarse con el más sencillo.
 
-- Frente al baseline B1, Ridge reduce el error de grupo del 8,1 % al 6,9 % en renta y del 16,0 % al 8,7 % en contratos. La tendencia en línea recta funciona mal con los contratos porque la serie tiene mucha estacionalidad y caídas puntuales, como la del confinamiento de 2020.
+- Frente al baseline B1, Ridge reduce el error de grupo del 8,3 % al 7,0 % en renta y del 18,8 % al 9,7 % en contratos. La tendencia en línea recta funciona mal con los contratos porque la serie tiene mucha estacionalidad y caídas puntuales, como la del confinamiento de 2020.
 - LightGBM no mejora a Ridge. Hay pocos datos (250 municipios y unos 12 orígenes) y los árboles no extrapolan tendencias. No se valora la complejidad por sí misma.
 
-Aun así, el error de grupo del 7–9 % es grande. La subida de 2022–2023 fue más fuerte de lo que ninguna tendencia anterior anticipaba. Por eso el efecto no se lee solo como "real − previsto": se contrasta con municipios sin ley y con placebos (apartado 4).
+Aun así, el error de grupo del 7–10 % es grande. La subida de 2022–2023 fue más fuerte de lo que ninguna tendencia anterior anticipaba. Por eso el efecto no se lee solo como "real − previsto": se contrasta con municipios sin ley y con placebos (apartado 4).
 
 ---
 
@@ -141,11 +143,11 @@ La separación es **temporal**: no hay validación aleatoria, que mezclaría tri
 
 | | Efecto | IC 95 % | Efecto falso en placebos |
 |---|---:|---:|---:|
-| Ola 1 · sin ajustar | **−3,8 %** | −4,8 / −2,1 | +8,0 a +12,0 % |
-| Ola 1 · ajustado por control | **−5,9 %** | −8,2 / −3,4 | +5,3 a +6,8 % |
-| Ola 1 · frente a ola 2 (2024T2–T3) | **−4,8 %** | −6,3 / −3,4 | +3,3 a +5,9 % |
-| Ola 2 · sin ajustar | **−3,4 %** | −4,5 / −2,3 | +2,2 a +5,8 % |
-| Ola 2 · ajustado por control | **−6,9 %** | −9,3 / −4,7 | +0,1 a +1,9 % |
+| Ola 1 · sin ajustar | **−3,8 %** | −4,8 / −2,1 | +8,2 a +12,5 % |
+| Ola 1 · ajustado por control | **−5,9 %** | −8,2 / −3,4 | +5,4 a +7,2 % |
+| Ola 1 · frente a ola 2 (2024T2–T3) | **−4,8 %** | −6,3 / −3,4 | +3,6 a +6,3 % |
+| Ola 2 · sin ajustar | **−3,4 %** | −4,5 / −2,3 | +2,4 a +5,8 % |
+| Ola 2 · ajustado por control | **−6,9 %** | −9,3 / −4,7 | +0,1 a +1,8 % |
 | *Contraste: DiD clásico (tensionados)* | −4,9 % | −6,1 / −3,7 | — |
 
 **Lectura:**
@@ -161,15 +163,15 @@ La separación es **temporal**: no hay validación aleatoria, que mezclaría tri
 
 | | Efecto | IC 95 % | Efecto falso en placebos |
 |---|---:|---:|---:|
-| Ola 1 · sin ajustar | −7,0 % | −8,3 / −4,9 | −3,3 a −16,9 % |
-| Ola 1 · ajustado por control | −12,7 % | −18,1 / −5,4 | −4,2 a −10,1 % |
-| Ola 1 · frente a ola 2 (2024T2–T3) | −14,5 % | −18,4 / −9,0 | −2,9 a −6,7 % |
-| Ola 2 · sin ajustar | +3,5 % | −1,7 / +8,8 | −11,0 a +3,7 % |
-| Ola 2 · ajustado por control | −3,3 % | −11,1 / +5,9 | −4,4 a +2,7 % |
+| Ola 1 · sin ajustar | −7,0 % | −8,3 / −4,9 | −3,8 a −17,7 % |
+| Ola 1 · ajustado por control | −12,7 % | −18,1 / −5,4 | −2,9 a −9,2 % |
+| Ola 1 · frente a ola 2 (2024T2–T3) | −14,5 % | −18,4 / −9,0 | −1,5 a −5,6 % |
+| Ola 2 · sin ajustar | +3,5 % | −1,7 / +8,8 | −13,3 a +2,0 % |
+| Ola 2 · ajustado por control | −3,3 % | −11,1 / +5,9 | −5,3 a +2,9 % |
 | *Contraste: DiD clásico (tensionados)* | −17,8 % | −23,2 / −12,0 | — |
 
-**Lectura:** los contratos cayeron en la ola 1 más de lo previsto. El problema es que en los placebos ya salían "efectos" de −3 % a −17 % sin ajustar y de −4 % a −10 % ajustados: esos municipios ya perdían contratos más rápido antes de la ley. Además:
-- La comparación ola 1 frente a ola 2 se separa algo más de sus placebos (−14,5 % frente a −3 % a −7 %), pero solo cubre 2 trimestres.
+**Lectura:** los contratos cayeron en la ola 1 más de lo previsto. El problema es que en los placebos ya salían "efectos" de −4 % a −18 % sin ajustar y de −3 % a −9 % ajustados: esos municipios ya perdían contratos más rápido antes de la ley. Además:
+- La comparación ola 1 frente a ola 2 se separa algo más de sus placebos (−14,5 % frente a −2 % a −6 %), pero solo cubre 2 trimestres.
 - La ola 2 no muestra efecto claro: sus intervalos incluyen el 0.
 - El resultado cambia mucho según el modelo: de +1,9 % con la tendencia en línea recta a −13 % con la persistencia o LightGBM.
 - El DiD clásico (−17,8 %) no tiene en cuenta esa tendencia previa y probablemente exagera.
@@ -191,7 +193,7 @@ En renta, todos los modelos dan un efecto negativo. Los tres con menor error de 
 
 ### 4.5 Análisis de errores
 
-**1. Error de previsión alto en términos absolutos.** Incluso el mejor modelo falla un 6,9 % en el agregado de grupo y un 7,5 % en un municipio típico (renta). En contratos, un 8,7 % y un 15,7 %. La subida de 2022–2023 no estaba en ninguna tendencia previa. Por eso no se usa nunca el "sin ajustar" solo.
+**1. Error de previsión alto en términos absolutos.** Incluso el mejor modelo falla un 7,0 % en el agregado de grupo y un 7,5 % en un municipio típico (renta). En contratos, un 9,7 % y un 15,7 %. La subida de 2022–2023 no estaba en ninguna tendencia previa. Por eso no se usa nunca el "sin ajustar" solo.
 
 **2. El rango por municipio está sesgado hacia arriba.** El rango del 80 % de cada municipio se calibra con los errores de los backtests. Como en 2022–2023 la renta subió más de lo previsto, el rango queda asimétrico: a 10 trimestres va de −1 % a +24 % sobre la previsión. Con ese rango:
 - En los municipios de control, el 31 % acaba fuera en el último trimestre (cobertura del 69 %, por debajo del 80 % nominal), repartidos por arriba (17 %) y por abajo (14 %).
@@ -232,7 +234,7 @@ Badalona es la excepción: su renta real supera la prevista. Un solo municipio p
 **Regresión Ridge entrenada solo con datos hasta 2023T4**, que prevé la renta y los contratos de cada municipio "sin ley". El efecto se calcula como real − previsto, ajustado por los municipios sin ley y contrastado con placebos.
 
 **Por qué:**
-- Es el modelo que mejor prevé antes de la ley: 6,9 % de error de grupo en renta, frente al 8,1 % del baseline de tendencia.
+- Es el modelo que mejor prevé antes de la ley: 7,0 % de error de grupo en renta, frente al 8,3 % del baseline de tendencia.
 - Es lineal e interpretable.
 - Su estimación coincide con el DiD clásico y con los demás modelos.
 
@@ -280,11 +282,13 @@ Una fila por municipio y variable (`results/05_efecto_por_municipio.csv`), más 
 | `prevista_sin_ley_*` | Lo que el modelo, congelado en 2023T4, esperaba para ese trimestre. | Es una estimación, no un dato. |
 | `rango_prevision_*` | Dónde habría caído el dato sin ley en 8 de cada 10 casos, según los errores históricos del modelo. | Es asimétrico porque el modelo tendía a quedarse corto. En municipios sin ley se cumple en un 69 % de los casos. |
 | `diferencia_media_desde_la_ley_pct` | Media de (real − previsto) en todos los trimestres desde la ley. | Incluye cambios de mercado que el modelo no podía prever. |
-| `diferencia_ajustada_por_control_pct` | Lo mismo, descontando lo que se desviaron los municipios sin ley. | **Cifra principal**, pero apoyada en solo 29 municipios de control. |
+| `diferencia_ajustada_por_control_pct` | Lo mismo, descontando lo que se desviaron los municipios sin ley. | **Cifra principal**, pero apoyada en solo 29 municipios de control. Es una estimación: si el municipio ya seguía una tendencia distinta antes de 2024, parte de la diferencia puede venir de ahí. |
 | `efecto_conjunto_ola` | Efecto del grupo, con intervalo del 95 %. | Es la cifra fiable. La de un municipio concreto es orientativa. |
 | `avisos` | Textos que deben verse siempre. | Visibles, no en letra pequeña. |
 
 **Cómo se mostraría:** un mapa de Cataluña coloreado por `diferencia_ajustada_por_control_pct` y, al pulsar un municipio, su gráfico real frente a previsto (como los de este documento). En contratos, una etiqueta "indicador no concluyente".
+
+**Aviso fijo junto al mapa:** *"El color muestra cuánto se ha desviado cada municipio de lo que se esperaba sin la ley. Es una estimación, no una medida directa del efecto de la ley: los municipios tensionados ya seguían tendencias distintas antes de 2024, y parte de la diferencia puede venir de ahí."* Los placebos del apartado 4 muestran que ese sesgo existe: en renta va en sentido contrario al efecto estimado, y en contratos en el mismo sentido. Por eso la renta se presenta como resultado y los contratos solo como indicio.
 
 ---
 

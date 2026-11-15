@@ -52,14 +52,16 @@ def a_nivel(variable: str, x):
 
 # --------------------------------------------------------------------------------------------- Previsión
 def prever(info, series, trimestres, variable, Modelo, corte=CORTE, limite=None):
-    """Entrena con objetivos <= corte y prevé desde el corte. Devuelve una fila por municipio y trimestre."""
+    """Entrena con objetivos <= corte y prevé desde el corte. Devuelve una fila por municipio y trimestre.
+    Los pesos de cada municipio son sus contratos de los 4 trimestres hasta el corte (en el corte final,
+    2023T1–2023T4), así que tampoco usan información posterior."""
     entreno = M.conjunto_entrenamiento(series, trimestres, variable, corte)
     prueba = M.filas(series, trimestres, corte, variable, M.H_MAX, limite)
     m = Modelo().fit(entreno, variable)
     p = prueba.assign(previsto_log=prueba["base"] + m.predict(prueba))
     p["brecha"] = p["real"] - p["previsto_log"]          # log(real / previsto)
     p["ola"] = info["ola"].reindex(p.index).to_numpy()
-    p["peso"] = info["peso"].reindex(p.index).to_numpy()
+    p["peso"] = M.pesos_en(series, corte).reindex(p.index).to_numpy()
     return p
 
 
@@ -286,6 +288,8 @@ def main():
         "efecto_conjunto_ola": {v: resumen[v]["efectos_pct"]["ola1_ajustado_control"] for v in M.VARIABLES},
         "avisos": [
             "La previsión 'sin ley' es una estimación: el rango indica dónde habría caído en 8 de cada 10 casos.",
+            "La diferencia frente a lo previsto es una estimación, no una medida directa del efecto de la ley: "
+            "si el municipio ya seguía una tendencia distinta antes de 2024, parte de la diferencia puede venir de ahí.",
             "Los municipios tensionados ya subían más que los de control antes de 2024 (ver placebos).",
             "Datos de fianzas del Incasòl: contratos nuevos, no el parque de alquiler completo; sin alquiler de temporada.",
         ],

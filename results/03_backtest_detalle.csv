@@ -1,225 +1,225 @@
 variable,corte,h,modelo,n_municipios,error_municipio_mediano_pct,error_grupo_ola1_pct,error_grupo_ola2_pct,error_grupo_control_pct
-log_renta,2021Q2,1,B0 · Persistencia,248,4.157,0.616,1.231,0.791
-log_renta,2021Q2,2,B0 · Persistencia,249,4.485,0.343,2.138,-1.227
-log_renta,2021Q2,3,B0 · Persistencia,250,4.413,2.362,3.822,1.288
-log_renta,2021Q2,4,B0 · Persistencia,247,6.616,5.591,4.68,1.832
-log_renta,2021Q2,5,B0 · Persistencia,250,8.457,11.084,8.411,8.499
-log_renta,2021Q2,6,B0 · Persistencia,250,10.445,12.688,11.527,9.273
-log_renta,2021Q2,7,B0 · Persistencia,249,11.027,12.977,10.678,11.609
-log_renta,2021Q2,8,B0 · Persistencia,250,13.22,15.683,14.251,11.403
-log_renta,2021Q2,9,B0 · Persistencia,248,13.226,18.926,12.982,11.493
-log_renta,2021Q2,10,B0 · Persistencia,248,16.279,20.771,15.63,11.474
-log_renta,2021Q2,1,B1 · Tendencia propia,248,4.441,2.629,0.172,0.57
-log_renta,2021Q2,2,B1 · Tendencia propia,249,5.468,3.169,0.661,-1.635
-log_renta,2021Q2,3,B1 · Tendencia propia,250,5.63,6.078,1.895,0.75
-log_renta,2021Q2,4,B1 · Tendencia propia,247,8.695,10.295,2.337,1.108
-log_renta,2021Q2,5,B1 · Tendencia propia,250,9.888,16.956,5.517,7.668
-log_renta,2021Q2,6,B1 · Tendencia propia,250,12.324,19.588,8.099,8.308
-log_renta,2021Q2,7,B1 · Tendencia propia,249,12.158,20.849,6.865,10.493
-log_renta,2021Q2,8,B1 · Tendencia propia,250,14.33,24.728,9.822,10.158
-log_renta,2021Q2,9,B1 · Tendencia propia,248,15.312,29.255,8.244,10.117
-log_renta,2021Q2,10,B1 · Tendencia propia,248,17.336,32.293,10.225,10.114
-log_renta,2021Q2,1,M1 · Ridge,248,3.712,3.131,0.503,-0.51
-log_renta,2021Q2,2,M1 · Ridge,249,4.229,2.475,1.151,-2.591
-log_renta,2021Q2,3,M1 · Ridge,250,4.362,4.258,2.694,-0.181
-log_renta,2021Q2,4,M1 · Ridge,247,5.936,6.944,3.098,-0.013
-log_renta,2021Q2,5,M1 · Ridge,250,6.966,12.207,6.659,6.464
-log_renta,2021Q2,6,M1 · Ridge,250,9.377,13.41,9.484,7.043
-log_renta,2021Q2,7,M1 · Ridge,249,9.715,13.398,8.502,9.256
-log_renta,2021Q2,8,M1 · Ridge,250,11.49,15.462,11.558,8.658
-log_renta,2021Q2,9,M1 · Ridge,248,11.503,18.379,10.199,8.671
-log_renta,2021Q2,10,M1 · Ridge,248,13.76,19.779,12.52,8.329
-log_renta,2021Q2,1,M2 · LightGBM,248,4.83,1.544,1.422,0.61
-log_renta,2021Q2,2,M2 · LightGBM,249,4.679,0.958,2.192,-1.612
-log_renta,2021Q2,3,M2 · LightGBM,250,5.419,2.884,3.738,1.028
-log_renta,2021Q2,4,M2 · LightGBM,247,6.574,5.805,4.147,1.141
-log_renta,2021Q2,5,M2 · LightGBM,250,9.14,11.638,8.33,8.211
-log_renta,2021Q2,6,M2 · LightGBM,250,11.629,13.273,11.434,8.911
-log_renta,2021Q2,7,M2 · LightGBM,249,12.348,13.559,10.601,11.185
-log_renta,2021Q2,8,M2 · LightGBM,250,13.283,15.972,13.676,10.534
-log_renta,2021Q2,9,M2 · LightGBM,248,14.699,19.546,12.919,11.01
-log_renta,2021Q2,10,M2 · LightGBM,248,16.799,21.393,15.559,11.05
-log_renta,2021Q4,1,B0 · Persistencia,250,4.589,3.372,2.914,2.106
-log_renta,2021Q4,2,B0 · Persistencia,247,6.32,6.633,3.787,2.581
-log_renta,2021Q4,3,B0 · Persistencia,250,8.307,12.181,7.463,9.375
-log_renta,2021Q4,4,B0 · Persistencia,250,10.572,13.8,10.552,10.155
-log_renta,2021Q4,5,B0 · Persistencia,249,11.166,14.092,9.718,12.51
-log_renta,2021Q4,6,B0 · Persistencia,250,13.235,16.825,13.253,12.303
-log_renta,2021Q4,7,B0 · Persistencia,248,14.316,20.099,12.0,12.394
-log_renta,2021Q4,8,B0 · Persistencia,248,16.24,21.962,14.619,12.184
-log_renta,2021Q4,1,B1 · Tendencia propia,250,5.678,4.493,1.193,1.576
-log_renta,2021Q4,2,B1 · Tendencia propia,247,6.935,8.256,1.4,1.709
-log_renta,2021Q4,3,B1 · Tendencia propia,250,9.185,14.38,4.25,8.356
-log_renta,2021Q4,4,B1 · Tendencia propia,250,10.024,16.533,6.525,8.902
-log_renta,2021Q4,5,B1 · Tendencia propia,249,10.877,17.338,5.07,10.999
-log_renta,2021Q4,6,B1 · Tendencia propia,250,12.291,20.667,7.665,10.564
-log_renta,2021Q4,7,B1 · Tendencia propia,248,13.753,24.591,5.819,10.424
-log_renta,2021Q4,8,B1 · Tendencia propia,248,15.615,27.066,7.504,9.683
-log_renta,2021Q4,1,M1 · Ridge,250,4.226,3.687,1.685,0.017
-log_renta,2021Q4,2,M1 · Ridge,247,5.415,6.32,1.881,-0.023
-log_renta,2021Q4,3,M1 · Ridge,250,6.255,10.742,4.382,5.552
-log_renta,2021Q4,4,M1 · Ridge,250,8.019,12.364,7.345,6.382
-log_renta,2021Q4,5,M1 · Ridge,249,8.969,12.322,6.16,8.393
-log_renta,2021Q4,6,M1 · Ridge,250,10.073,14.326,8.868,7.603
-log_renta,2021Q4,7,M1 · Ridge,248,9.777,16.365,6.542,6.678
-log_renta,2021Q4,8,M1 · Ridge,248,11.941,18.195,8.99,6.537
-log_renta,2021Q4,1,M2 · LightGBM,250,4.943,4.011,2.261,1.057
-log_renta,2021Q4,2,M2 · LightGBM,247,5.598,5.928,2.049,1.115
-log_renta,2021Q4,3,M2 · LightGBM,250,6.331,10.585,4.394,6.559
-log_renta,2021Q4,4,M2 · LightGBM,250,7.869,11.457,7.542,6.996
-log_renta,2021Q4,5,M2 · LightGBM,249,9.027,12.572,7.249,9.806
-log_renta,2021Q4,6,M2 · LightGBM,250,11.142,15.04,10.52,9.27
-log_renta,2021Q4,7,M2 · LightGBM,248,10.671,18.004,8.642,8.494
-log_renta,2021Q4,8,M2 · LightGBM,248,13.096,19.279,11.46,8.082
-log_renta,2022Q2,1,B0 · Persistencia,250,6.283,8.685,5.288,7.797
-log_renta,2022Q2,2,B0 · Persistencia,250,8.101,10.254,8.314,8.566
-log_renta,2022Q2,3,B0 · Persistencia,249,9.299,10.537,7.477,10.887
-log_renta,2022Q2,4,B0 · Persistencia,250,10.837,13.185,10.961,10.682
-log_renta,2022Q2,5,B0 · Persistencia,248,11.741,16.355,9.706,10.772
-log_renta,2022Q2,6,B0 · Persistencia,248,14.041,18.162,12.299,10.384
-log_renta,2022Q2,1,B1 · Tendencia propia,250,6.505,7.781,3.474,7.653
-log_renta,2022Q2,2,B1 · Tendencia propia,250,7.682,8.972,5.71,8.362
-log_renta,2022Q2,3,B1 · Tendencia propia,249,8.58,8.888,4.149,10.62
-log_renta,2022Q2,4,B1 · Tendencia propia,250,9.823,11.124,6.797,10.357
-log_renta,2022Q2,5,B1 · Tendencia propia,248,10.671,13.849,4.833,10.387
-log_renta,2022Q2,6,B1 · Tendencia propia,248,11.843,15.238,6.593,9.559
-log_renta,2022Q2,1,M1 · Ridge,250,5.327,8.42,2.934,4.595
-log_renta,2022Q2,2,M1 · Ridge,250,6.318,9.79,5.743,5.068
-log_renta,2022Q2,3,M1 · Ridge,249,6.296,8.947,3.9,6.132
-log_renta,2022Q2,4,M1 · Ridge,250,7.196,10.98,6.742,5.303
-log_renta,2022Q2,5,M1 · Ridge,248,7.683,13.17,4.736,4.454
-log_renta,2022Q2,6,M1 · Ridge,248,9.472,14.724,7.045,4.059
-log_renta,2022Q2,1,M2 · LightGBM,250,5.389,7.665,2.59,5.411
-log_renta,2022Q2,2,M2 · LightGBM,250,6.225,9.168,5.248,5.844
-log_renta,2022Q2,3,M2 · LightGBM,249,5.909,8.433,3.218,6.234
-log_renta,2022Q2,4,M2 · LightGBM,250,7.065,10.048,6.165,5.681
-log_renta,2022Q2,5,M2 · LightGBM,248,7.773,13.145,4.306,5.167
-log_renta,2022Q2,6,M2 · LightGBM,248,9.892,14.94,7.273,4.977
-log_renta,2022Q4,1,B0 · Persistencia,249,5.566,4.753,3.332,6.11
-log_renta,2022Q4,2,B0 · Persistencia,250,6.627,7.262,6.697,5.914
-log_renta,2022Q4,3,B0 · Persistencia,248,7.65,10.266,5.495,6.0
-log_renta,2022Q4,4,B0 · Persistencia,248,9.84,11.979,7.984,5.756
-log_renta,2022Q4,1,B1 · Tendencia propia,249,5.098,-0.782,-0.563,2.172
-log_renta,2022Q4,2,B1 · Tendencia propia,250,5.277,-0.588,1.131,0.452
-log_renta,2022Q4,3,B1 · Tendencia propia,248,6.525,-0.001,-1.532,-0.976
-log_renta,2022Q4,4,B1 · Tendencia propia,248,6.522,-0.627,-0.735,-2.856
-log_renta,2022Q4,1,M1 · Ridge,249,3.73,2.001,-1.784,0.597
-log_renta,2022Q4,2,M1 · Ridge,250,6.028,7.405,4.147,3.128
-log_renta,2022Q4,3,M1 · Ridge,248,5.313,8.086,0.7,0.908
-log_renta,2022Q4,4,M1 · Ridge,248,5.72,8.474,1.741,-0.602
-log_renta,2022Q4,1,M2 · LightGBM,249,4.2,2.183,1.142,3.718
-log_renta,2022Q4,2,M2 · LightGBM,250,5.283,4.726,4.567,4.133
-log_renta,2022Q4,3,M2 · LightGBM,248,4.956,4.792,-0.066,0.258
-log_renta,2022Q4,4,M2 · LightGBM,248,5.004,5.88,0.992,-2.061
-log_contratos,2021Q2,1,B0 · Persistencia,250,14.776,0.679,-7.487,-4.668
-log_contratos,2021Q2,2,B0 · Persistencia,250,13.102,1.434,5.424,-3.162
-log_contratos,2021Q2,3,B0 · Persistencia,250,13.516,-6.73,4.508,-3.257
-log_contratos,2021Q2,4,B0 · Persistencia,250,14.422,-7.948,-7.933,-4.255
-log_contratos,2021Q2,5,B0 · Persistencia,250,15.841,-5.692,-15.308,-11.102
-log_contratos,2021Q2,6,B0 · Persistencia,250,13.844,-4.597,-0.717,4.04
-log_contratos,2021Q2,7,B0 · Persistencia,250,14.623,-10.395,-3.344,-1.895
-log_contratos,2021Q2,8,B0 · Persistencia,250,16.699,-13.963,-10.187,-8.628
-log_contratos,2021Q2,9,B0 · Persistencia,250,24.302,-23.403,-23.637,-15.212
-log_contratos,2021Q2,10,B0 · Persistencia,249,24.713,-26.478,-12.623,-10.081
-log_contratos,2021Q2,1,B1 · Tendencia propia,250,18.041,-4.088,-11.153,-6.748
-log_contratos,2021Q2,2,B1 · Tendencia propia,250,16.678,-5.225,-0.378,-6.107
-log_contratos,2021Q2,3,B1 · Tendencia propia,250,20.326,-14.527,-2.828,-7.023
-log_contratos,2021Q2,4,B1 · Tendencia propia,250,24.034,-17.265,-15.769,-8.792
-log_contratos,2021Q2,5,B1 · Tendencia propia,250,27.597,-16.865,-23.76,-16.058
-log_contratos,2021Q2,6,B1 · Tendencia propia,250,25.039,-17.516,-12.058,-2.623
-log_contratos,2021Q2,7,B1 · Tendencia propia,250,29.123,-24.017,-15.759,-8.985
-log_contratos,2021Q2,8,B1 · Tendencia propia,250,33.298,-28.444,-22.979,-15.976
-log_contratos,2021Q2,9,B1 · Tendencia propia,250,40.467,-37.52,-35.564,-22.716
-log_contratos,2021Q2,10,B1 · Tendencia propia,249,40.743,-41.18,-27.453,-19.253
-log_contratos,2021Q2,1,M1 · Ridge,250,13.523,-4.332,-7.673,-6.702
-log_contratos,2021Q2,2,M1 · Ridge,250,13.363,-1.457,7.378,-3.422
-log_contratos,2021Q2,3,M1 · Ridge,250,13.285,-7.807,8.114,-2.152
-log_contratos,2021Q2,4,M1 · Ridge,250,13.993,-6.072,-1.851,-0.359
-log_contratos,2021Q2,5,M1 · Ridge,250,13.227,-2.089,-8.298,-6.176
-log_contratos,2021Q2,6,M1 · Ridge,250,12.962,1.264,9.716,11.898
-log_contratos,2021Q2,7,M1 · Ridge,250,15.162,-3.23,8.487,7.007
-log_contratos,2021Q2,8,M1 · Ridge,250,14.2,-4.082,3.881,2.548
-log_contratos,2021Q2,9,M1 · Ridge,250,16.599,-13.116,-10.291,-3.495
-log_contratos,2021Q2,10,M1 · Ridge,249,16.584,-14.737,4.762,4.452
-log_contratos,2021Q2,1,M2 · LightGBM,250,17.659,-7.274,-15.916,-11.186
-log_contratos,2021Q2,2,M2 · LightGBM,250,14.418,-6.824,-4.638,-10.085
-log_contratos,2021Q2,3,M2 · LightGBM,250,16.127,-14.325,-5.372,-10.416
-log_contratos,2021Q2,4,M2 · LightGBM,250,18.607,-13.987,-15.335,-10.075
-log_contratos,2021Q2,5,M2 · LightGBM,250,20.019,-13.281,-23.125,-17.059
-log_contratos,2021Q2,6,M2 · LightGBM,250,17.409,-12.303,-9.61,-3.02
-log_contratos,2021Q2,7,M2 · LightGBM,250,18.236,-17.733,-11.902,-8.387
-log_contratos,2021Q2,8,M2 · LightGBM,250,20.488,-19.693,-16.992,-13.362
-log_contratos,2021Q2,9,M2 · LightGBM,250,29.258,-29.675,-30.44,-20.726
-log_contratos,2021Q2,10,M2 · LightGBM,249,29.096,-32.489,-20.381,-16.346
-log_contratos,2021Q4,1,B0 · Persistencia,250,12.007,-9.454,4.395,-1.97
-log_contratos,2021Q4,2,B0 · Persistencia,250,13.777,-10.637,-8.032,-2.982
-log_contratos,2021Q4,3,B0 · Persistencia,250,15.084,-8.446,-15.4,-9.92
-log_contratos,2021Q4,4,B0 · Persistencia,250,13.244,-7.383,-0.823,5.424
-log_contratos,2021Q4,5,B0 · Persistencia,250,15.119,-13.012,-3.448,-0.59
-log_contratos,2021Q4,6,B0 · Persistencia,250,17.564,-16.476,-10.284,-7.413
-log_contratos,2021Q4,7,B0 · Persistencia,250,22.816,-25.64,-23.719,-14.084
-log_contratos,2021Q4,8,B0 · Persistencia,249,23.526,-28.625,-12.717,-8.891
-log_contratos,2021Q4,1,B1 · Tendencia propia,250,17.891,-21.459,-3.575,-8.49
-log_contratos,2021Q4,2,B1 · Tendencia propia,250,21.655,-26.772,-17.71,-11.894
-log_contratos,2021Q4,3,B1 · Tendencia propia,250,26.87,-29.126,-26.67,-20.416
-log_contratos,2021Q4,4,B1 · Tendencia propia,250,24.868,-32.269,-16.723,-9.39
-log_contratos,2021Q4,5,B1 · Tendencia propia,250,30.846,-39.903,-21.462,-16.879
-log_contratos,2021Q4,6,B1 · Tendencia propia,250,35.758,-45.487,-29.305,-24.687
-log_contratos,2021Q4,7,B1 · Tendencia propia,250,44.865,-54.153,-41.772,-32.011
-log_contratos,2021Q4,8,B1 · Tendencia propia,249,46.274,-58.427,-35.457,-30.03
-log_contratos,2021Q4,1,M1 · Ridge,250,12.604,-12.175,-1.236,-8.454
-log_contratos,2021Q4,2,M1 · Ridge,250,15.328,-10.359,-9.553,-6.129
-log_contratos,2021Q4,3,M1 · Ridge,250,14.027,-2.24,-10.977,-7.051
-log_contratos,2021Q4,4,M1 · Ridge,250,14.732,-8.548,-2.993,0.78
-log_contratos,2021Q4,5,M1 · Ridge,250,15.974,-17.219,-8.514,-8.245
-log_contratos,2021Q4,6,M1 · Ridge,250,18.044,-17.798,-11.63,-11.458
-log_contratos,2021Q4,7,M1 · Ridge,250,20.854,-22.099,-19.606,-12.379
-log_contratos,2021Q4,8,M1 · Ridge,249,24.923,-30.853,-14.494,-14.075
-log_contratos,2021Q4,1,M2 · LightGBM,250,12.397,-11.322,-1.645,-7.485
-log_contratos,2021Q4,2,M2 · LightGBM,250,16.112,-11.92,-12.517,-8.151
-log_contratos,2021Q4,3,M2 · LightGBM,250,15.622,-6.523,-12.909,-7.828
-log_contratos,2021Q4,4,M2 · LightGBM,250,15.194,-9.435,-6.414,-0.919
-log_contratos,2021Q4,5,M2 · LightGBM,250,17.21,-16.294,-10.009,-7.627
-log_contratos,2021Q4,6,M2 · LightGBM,250,19.236,-19.352,-15.262,-12.812
-log_contratos,2021Q4,7,M2 · LightGBM,250,22.168,-25.1,-22.528,-13.266
-log_contratos,2021Q4,8,M2 · LightGBM,249,26.699,-30.721,-18.137,-14.535
-log_contratos,2022Q2,1,B0 · Persistencia,250,15.892,-2.54,-13.952,-7.555
-log_contratos,2022Q2,2,B0 · Persistencia,250,11.048,-1.409,0.874,8.192
-log_contratos,2022Q2,3,B0 · Persistencia,250,13.297,-7.401,-1.796,2.02
-log_contratos,2022Q2,4,B0 · Persistencia,250,15.61,-11.088,-8.749,-4.982
-log_contratos,2022Q2,5,B0 · Persistencia,250,19.61,-20.843,-22.414,-11.828
-log_contratos,2022Q2,6,B0 · Persistencia,249,20.844,-24.021,-11.224,-6.216
-log_contratos,2022Q2,1,B1 · Tendencia propia,250,18.223,-1.082,-13.331,-5.979
-log_contratos,2022Q2,2,B1 · Tendencia propia,250,16.408,0.662,1.895,10.783
-log_contratos,2022Q2,3,B1 · Tendencia propia,250,17.557,-4.893,-0.516,5.171
-log_contratos,2022Q2,4,B1 · Tendencia propia,250,21.874,-8.136,-7.293,-1.382
-log_contratos,2022Q2,5,B1 · Tendencia propia,250,23.595,-17.728,-20.95,-7.867
-log_contratos,2022Q2,6,B1 · Tendencia propia,249,24.334,-20.56,-9.287,-1.196
-log_contratos,2022Q2,1,M1 · Ridge,250,14.445,0.106,-12.976,-8.178
-log_contratos,2022Q2,2,M1 · Ridge,250,13.325,-5.229,-4.506,0.495
-log_contratos,2022Q2,3,M1 · Ridge,250,13.982,-9.231,-5.176,-3.438
-log_contratos,2022Q2,4,M1 · Ridge,250,15.487,-11.308,-10.316,-8.546
-log_contratos,2022Q2,5,M1 · Ridge,250,17.999,-16.282,-19.134,-10.087
-log_contratos,2022Q2,6,M1 · Ridge,249,21.467,-24.797,-13.387,-10.645
-log_contratos,2022Q2,1,M2 · LightGBM,250,16.231,-6.634,-13.582,-10.246
-log_contratos,2022Q2,2,M2 · LightGBM,250,13.587,-8.333,-5.441,-1.035
-log_contratos,2022Q2,3,M2 · LightGBM,250,15.094,-12.64,-7.134,-5.815
-log_contratos,2022Q2,4,M2 · LightGBM,250,16.083,-14.707,-10.088,-10.142
-log_contratos,2022Q2,5,M2 · LightGBM,250,19.669,-22.935,-20.516,-12.937
-log_contratos,2022Q2,6,M2 · LightGBM,249,23.024,-27.69,-14.83,-12.764
-log_contratos,2022Q4,1,B0 · Persistencia,250,12.897,-4.421,1.915,1.973
-log_contratos,2022Q4,2,B0 · Persistencia,250,13.85,-8.227,-5.301,-5.026
-log_contratos,2022Q4,3,B0 · Persistencia,250,19.634,-18.296,-19.483,-11.869
-log_contratos,2022Q4,4,B0 · Persistencia,249,19.045,-21.576,-7.869,-6.364
-log_contratos,2022Q4,1,B1 · Tendencia propia,250,16.145,0.177,5.442,3.559
-log_contratos,2022Q4,2,B1 · Tendencia propia,250,14.724,-1.986,-0.681,-2.951
-log_contratos,2022Q4,3,B1 · Tendencia propia,250,17.402,-11.085,-14.397,-9.385
-log_contratos,2022Q4,4,B1 · Tendencia propia,249,20.244,-13.035,-0.708,-2.825
-log_contratos,2022Q4,1,M1 · Ridge,250,12.839,-5.624,1.568,1.748
-log_contratos,2022Q4,2,M1 · Ridge,250,13.81,-9.667,-5.897,-5.535
-log_contratos,2022Q4,3,M1 · Ridge,250,16.728,-15.604,-16.014,-8.011
-log_contratos,2022Q4,4,M1 · Ridge,249,21.128,-24.718,-10.67,-9.192
-log_contratos,2022Q4,1,M2 · LightGBM,250,12.453,-5.477,1.529,0.537
-log_contratos,2022Q4,2,M2 · LightGBM,250,13.597,-8.404,-3.449,-4.688
-log_contratos,2022Q4,3,M2 · LightGBM,250,17.087,-19.219,-14.658,-7.673
-log_contratos,2022Q4,4,M2 · LightGBM,249,21.64,-23.586,-10.237,-10.035
+log_renta,2021Q2,1,B0 · Persistencia,248,4.157,0.618,1.283,0.864
+log_renta,2021Q2,2,B0 · Persistencia,249,4.485,0.366,2.25,-1.136
+log_renta,2021Q2,3,B0 · Persistencia,250,4.413,2.433,3.686,1.151
+log_renta,2021Q2,4,B0 · Persistencia,247,6.616,5.724,4.918,2.358
+log_renta,2021Q2,5,B0 · Persistencia,250,8.457,11.296,8.239,8.994
+log_renta,2021Q2,6,B0 · Persistencia,250,10.445,12.836,11.282,9.313
+log_renta,2021Q2,7,B0 · Persistencia,249,11.027,13.278,10.785,12.025
+log_renta,2021Q2,8,B0 · Persistencia,250,13.22,16.004,14.339,11.889
+log_renta,2021Q2,9,B0 · Persistencia,248,13.226,19.333,13.116,11.832
+log_renta,2021Q2,10,B0 · Persistencia,248,16.279,21.053,15.589,11.508
+log_renta,2021Q2,1,B1 · Tendencia propia,248,4.441,2.708,0.348,0.633
+log_renta,2021Q2,2,B1 · Tendencia propia,249,5.468,3.301,0.952,-1.508
+log_renta,2021Q2,3,B1 · Tendencia propia,250,5.63,6.296,1.996,0.662
+log_renta,2021Q2,4,B1 · Tendencia propia,247,8.695,10.617,2.86,1.709
+log_renta,2021Q2,5,B1 · Tendencia propia,250,9.888,17.409,5.699,8.233
+log_renta,2021Q2,6,B1 · Tendencia propia,250,12.324,20.016,8.275,8.433
+log_renta,2021Q2,7,B1 · Tendencia propia,249,12.158,21.481,7.445,11.004
+log_renta,2021Q2,8,B1 · Tendencia propia,250,14.33,25.432,10.44,10.749
+log_renta,2021Q2,9,B1 · Tendencia propia,248,15.312,30.111,8.954,10.574
+log_renta,2021Q2,10,B1 · Tendencia propia,248,17.336,33.063,10.835,10.375
+log_renta,2021Q2,1,M1 · Ridge,248,3.712,3.236,0.604,-0.398
+log_renta,2021Q2,2,M1 · Ridge,249,4.229,2.591,1.277,-2.543
+log_renta,2021Q2,3,M1 · Ridge,250,4.362,4.413,2.548,-0.403
+log_renta,2021Q2,4,M1 · Ridge,247,5.936,7.151,3.293,0.368
+log_renta,2021Q2,5,M1 · Ridge,250,6.966,12.485,6.422,6.757
+log_renta,2021Q2,6,M1 · Ridge,250,9.377,13.612,9.146,6.841
+log_renta,2021Q2,7,M1 · Ridge,249,9.715,13.74,8.477,9.366
+log_renta,2021Q2,8,M1 · Ridge,250,11.49,15.811,11.487,8.786
+log_renta,2021Q2,9,M1 · Ridge,248,11.503,18.801,10.145,8.606
+log_renta,2021Q2,10,M1 · Ridge,248,13.76,20.063,12.264,7.874
+log_renta,2021Q2,1,M2 · LightGBM,248,4.83,1.48,1.562,0.549
+log_renta,2021Q2,2,M2 · LightGBM,249,4.679,0.904,2.373,-1.669
+log_renta,2021Q2,3,M2 · LightGBM,250,5.419,2.878,3.71,0.759
+log_renta,2021Q2,4,M2 · LightGBM,247,6.574,5.858,4.475,1.544
+log_renta,2021Q2,5,M2 · LightGBM,250,9.14,11.763,8.261,8.566
+log_renta,2021Q2,6,M2 · LightGBM,250,11.629,13.335,11.3,8.811
+log_renta,2021Q2,7,M2 · LightGBM,249,12.348,13.772,10.811,11.444
+log_renta,2021Q2,8,M2 · LightGBM,250,13.283,16.205,13.85,10.846
+log_renta,2021Q2,9,M2 · LightGBM,248,14.699,19.863,13.15,11.162
+log_renta,2021Q2,10,M2 · LightGBM,248,16.799,21.583,15.619,10.895
+log_renta,2021Q4,1,B0 · Persistencia,250,4.589,3.501,2.884,2.13
+log_renta,2021Q4,2,B0 · Persistencia,247,6.32,6.803,3.976,2.836
+log_renta,2021Q4,3,B0 · Persistencia,250,8.307,12.501,7.47,9.34
+log_renta,2021Q4,4,B0 · Persistencia,250,10.572,14.053,10.456,9.943
+log_renta,2021Q4,5,B0 · Persistencia,249,11.166,14.539,9.75,12.874
+log_renta,2021Q4,6,B0 · Persistencia,250,13.235,17.314,13.291,12.418
+log_renta,2021Q4,7,B0 · Persistencia,248,14.316,20.759,12.144,12.361
+log_renta,2021Q4,8,B0 · Persistencia,248,16.24,22.478,14.762,12.141
+log_renta,2021Q4,1,B1 · Tendencia propia,250,5.678,4.71,1.185,1.55
+log_renta,2021Q4,2,B1 · Tendencia propia,247,6.935,8.553,1.613,1.929
+log_renta,2021Q4,3,B1 · Tendencia propia,250,9.185,14.877,4.296,8.224
+log_renta,2021Q4,4,B1 · Tendencia propia,250,10.024,17.004,6.483,8.574
+log_renta,2021Q4,5,B1 · Tendencia propia,249,10.877,18.05,5.182,11.215
+log_renta,2021Q4,6,B1 · Tendencia propia,250,12.291,21.472,7.77,10.514
+log_renta,2021Q4,7,B1 · Tendencia propia,248,13.753,25.628,6.029,10.206
+log_renta,2021Q4,8,B1 · Tendencia propia,248,15.615,28.002,7.725,9.491
+log_renta,2021Q4,1,M1 · Ridge,250,4.226,3.927,1.65,0.113
+log_renta,2021Q4,2,M1 · Ridge,247,5.415,6.59,2.049,0.254
+log_renta,2021Q4,3,M1 · Ridge,250,6.255,11.15,4.357,5.529
+log_renta,2021Q4,4,M1 · Ridge,250,8.019,12.694,7.206,6.156
+log_renta,2021Q4,5,M1 · Ridge,249,8.969,12.829,6.131,8.69
+log_renta,2021Q4,6,M1 · Ridge,250,10.073,14.858,8.832,7.627
+log_renta,2021Q4,7,M1 · Ridge,248,9.777,17.045,6.593,6.529
+log_renta,2021Q4,8,M1 · Ridge,248,11.941,18.722,9.026,6.34
+log_renta,2021Q4,1,M2 · LightGBM,250,4.943,4.227,2.267,1.222
+log_renta,2021Q4,2,M2 · LightGBM,247,5.598,6.062,2.266,1.446
+log_renta,2021Q4,3,M2 · LightGBM,250,6.331,10.926,4.447,6.579
+log_renta,2021Q4,4,M2 · LightGBM,250,7.869,11.73,7.452,6.748
+log_renta,2021Q4,5,M2 · LightGBM,249,9.027,13.037,7.321,10.204
+log_renta,2021Q4,6,M2 · LightGBM,250,11.142,15.539,10.603,9.436
+log_renta,2021Q4,7,M2 · LightGBM,248,10.671,18.706,8.83,8.476
+log_renta,2021Q4,8,M2 · LightGBM,248,13.096,19.821,11.582,8.103
+log_renta,2022Q2,1,B0 · Persistencia,250,6.283,8.847,5.107,7.437
+log_renta,2022Q2,2,B0 · Persistencia,250,8.101,10.369,8.182,8.437
+log_renta,2022Q2,3,B0 · Persistencia,249,9.299,10.798,7.604,11.17
+log_renta,2022Q2,4,B0 · Persistencia,250,10.837,13.487,11.123,10.365
+log_renta,2022Q2,5,B0 · Persistencia,248,11.741,16.8,9.809,10.749
+log_renta,2022Q2,6,B0 · Persistencia,248,14.041,18.508,12.436,10.342
+log_renta,2022Q2,1,B1 · Tendencia propia,250,6.505,7.9,3.362,7.205
+log_renta,2022Q2,2,B1 · Tendencia propia,250,7.682,9.027,5.677,8.108
+log_renta,2022Q2,3,B1 · Tendencia propia,249,8.58,9.069,4.391,10.737
+log_renta,2022Q2,4,B1 · Tendencia propia,250,9.823,11.327,7.106,9.84
+log_renta,2022Q2,5,B1 · Tendencia propia,248,10.671,14.171,5.107,10.128
+log_renta,2022Q2,6,B1 · Tendencia propia,248,11.843,15.443,6.93,9.188
+log_renta,2022Q2,1,M1 · Ridge,250,5.327,8.715,2.738,4.211
+log_renta,2022Q2,2,M1 · Ridge,250,6.318,10.042,5.588,4.911
+log_renta,2022Q2,3,M1 · Ridge,249,6.296,9.343,3.993,6.371
+log_renta,2022Q2,4,M1 · Ridge,250,7.196,11.421,6.859,4.972
+log_renta,2022Q2,5,M1 · Ridge,248,7.683,13.755,4.79,4.405
+log_renta,2022Q2,6,M1 · Ridge,248,9.472,15.215,7.123,4.025
+log_renta,2022Q2,1,M2 · LightGBM,250,5.389,7.895,2.39,5.05
+log_renta,2022Q2,2,M2 · LightGBM,250,6.225,9.364,5.097,5.76
+log_renta,2022Q2,3,M2 · LightGBM,249,5.909,8.809,3.311,6.533
+log_renta,2022Q2,4,M2 · LightGBM,250,7.065,10.456,6.259,5.416
+log_renta,2022Q2,5,M2 · LightGBM,248,7.773,13.704,4.403,5.12
+log_renta,2022Q2,6,M2 · LightGBM,248,9.892,15.403,7.372,4.94
+log_renta,2022Q4,1,B0 · Persistencia,249,5.566,4.835,3.609,6.465
+log_renta,2022Q4,2,B0 · Persistencia,250,6.627,7.395,6.962,5.546
+log_renta,2022Q4,3,B0 · Persistencia,248,7.65,10.454,5.797,6.233
+log_renta,2022Q4,4,B0 · Persistencia,248,9.84,12.113,8.091,5.592
+log_renta,2022Q4,1,B1 · Tendencia propia,249,5.098,-0.755,-0.23,2.653
+log_renta,2022Q4,2,B1 · Tendencia propia,250,5.277,-0.536,1.48,0.292
+log_renta,2022Q4,3,B1 · Tendencia propia,248,6.525,0.078,-1.127,-0.517
+log_renta,2022Q4,4,B1 · Tendencia propia,248,6.522,-0.619,-0.486,-2.726
+log_renta,2022Q4,1,M1 · Ridge,249,3.73,2.156,-1.546,0.843
+log_renta,2022Q4,2,M1 · Ridge,250,6.028,7.622,4.37,2.667
+log_renta,2022Q4,3,M1 · Ridge,248,5.313,8.359,0.949,1.02
+log_renta,2022Q4,4,M1 · Ridge,248,5.72,8.699,1.795,-0.873
+log_renta,2022Q4,1,M2 · LightGBM,249,4.2,2.257,1.34,3.97
+log_renta,2022Q4,2,M2 · LightGBM,250,5.283,4.847,4.732,3.672
+log_renta,2022Q4,3,M2 · LightGBM,248,4.956,4.993,0.212,0.421
+log_renta,2022Q4,4,M2 · LightGBM,248,5.004,6.064,1.047,-2.297
+log_contratos,2021Q2,1,B0 · Persistencia,250,14.776,0.945,-9.927,-5.7
+log_contratos,2021Q2,2,B0 · Persistencia,250,13.102,1.576,2.965,-4.665
+log_contratos,2021Q2,3,B0 · Persistencia,250,13.516,-7.025,2.354,-7.056
+log_contratos,2021Q2,4,B0 · Persistencia,250,14.422,-8.585,-10.867,-6.929
+log_contratos,2021Q2,5,B0 · Persistencia,250,15.841,-6.225,-17.233,-12.892
+log_contratos,2021Q2,6,B0 · Persistencia,250,13.844,-5.085,-3.319,1.5
+log_contratos,2021Q2,7,B0 · Persistencia,250,14.623,-11.386,-7.588,-5.375
+log_contratos,2021Q2,8,B0 · Persistencia,250,16.699,-15.1,-14.741,-12.452
+log_contratos,2021Q2,9,B0 · Persistencia,250,24.302,-24.537,-27.914,-18.36
+log_contratos,2021Q2,10,B0 · Persistencia,249,24.713,-27.43,-17.289,-13.786
+log_contratos,2021Q2,1,B1 · Tendencia propia,250,18.041,-4.0,-14.542,-8.578
+log_contratos,2021Q2,2,B1 · Tendencia propia,250,16.678,-5.321,-4.343,-8.714
+log_contratos,2021Q2,3,B1 · Tendencia propia,250,20.326,-15.062,-6.889,-12.101
+log_contratos,2021Q2,4,B1 · Tendencia propia,250,24.034,-18.148,-20.604,-13.065
+log_contratos,2021Q2,5,B1 · Tendencia propia,250,27.597,-17.705,-27.81,-19.637
+log_contratos,2021Q2,6,B1 · Tendencia propia,250,25.039,-18.361,-17.428,-7.515
+log_contratos,2021Q2,7,B1 · Tendencia propia,250,29.123,-25.297,-22.717,-14.841
+log_contratos,2021Q2,8,B1 · Tendencia propia,250,33.298,-29.852,-30.183,-22.181
+log_contratos,2021Q2,9,B1 · Tendencia propia,250,40.467,-38.889,-42.199,-28.327
+log_contratos,2021Q2,10,B1 · Tendencia propia,249,40.743,-42.4,-35.06,-25.709
+log_contratos,2021Q2,1,M1 · Ridge,250,13.523,-4.166,-9.605,-7.288
+log_contratos,2021Q2,2,M1 · Ridge,250,13.363,-1.385,5.642,-4.368
+log_contratos,2021Q2,3,M1 · Ridge,250,13.285,-8.139,6.844,-5.334
+log_contratos,2021Q2,4,M1 · Ridge,250,13.993,-6.741,-3.955,-2.343
+log_contratos,2021Q2,5,M1 · Ridge,250,13.227,-2.641,-9.262,-7.193
+log_contratos,2021Q2,6,M1 · Ridge,250,12.962,0.771,8.361,10.333
+log_contratos,2021Q2,7,M1 · Ridge,250,15.162,-4.254,5.38,4.442
+log_contratos,2021Q2,8,M1 · Ridge,250,14.2,-5.282,0.36,-0.452
+log_contratos,2021Q2,9,M1 · Ridge,250,16.599,-14.321,-13.669,-5.743
+log_contratos,2021Q2,10,M1 · Ridge,249,16.584,-15.742,1.27,1.722
+log_contratos,2021Q2,1,M2 · LightGBM,250,17.659,-7.079,-18.141,-11.834
+log_contratos,2021Q2,2,M2 · LightGBM,250,14.418,-6.767,-6.955,-11.087
+log_contratos,2021Q2,3,M2 · LightGBM,250,16.127,-14.657,-7.416,-13.482
+log_contratos,2021Q2,4,M2 · LightGBM,250,18.607,-14.647,-18.114,-12.052
+log_contratos,2021Q2,5,M2 · LightGBM,250,20.019,-13.843,-24.954,-18.246
+log_contratos,2021Q2,6,M2 · LightGBM,250,17.409,-12.819,-12.03,-4.849
+log_contratos,2021Q2,7,M2 · LightGBM,250,18.236,-18.697,-15.823,-11.11
+log_contratos,2021Q2,8,M2 · LightGBM,250,20.488,-20.815,-21.256,-16.478
+log_contratos,2021Q2,9,M2 · LightGBM,250,29.258,-30.764,-34.381,-23.232
+log_contratos,2021Q2,10,M2 · LightGBM,249,29.096,-33.411,-24.68,-19.307
+log_contratos,2021Q4,1,B0 · Persistencia,250,12.007,-10.166,2.693,-4.774
+log_contratos,2021Q4,2,B0 · Persistencia,250,13.777,-11.917,-10.025,-5.419
+log_contratos,2021Q4,3,B0 · Persistencia,250,15.084,-9.522,-17.313,-11.678
+log_contratos,2021Q4,4,B0 · Persistencia,250,13.244,-8.38,-2.677,3.51
+log_contratos,2021Q4,5,B0 · Persistencia,250,15.119,-14.681,-7.262,-4.487
+log_contratos,2021Q4,6,B0 · Persistencia,250,17.564,-18.318,-14.092,-11.654
+log_contratos,2021Q4,7,B0 · Persistencia,250,22.816,-27.405,-27.085,-17.151
+log_contratos,2021Q4,8,B0 · Persistencia,249,23.526,-30.268,-16.668,-12.498
+log_contratos,2021Q4,1,B1 · Tendencia propia,250,17.891,-22.638,-5.689,-11.993
+log_contratos,2021Q4,2,B1 · Tendencia propia,250,21.655,-28.548,-20.135,-15.302
+log_contratos,2021Q4,3,B1 · Tendencia propia,250,26.87,-30.864,-29.063,-23.362
+log_contratos,2021Q4,4,B1 · Tendencia propia,250,24.868,-34.055,-19.302,-12.972
+log_contratos,2021Q4,5,B1 · Tendencia propia,250,30.846,-42.154,-25.678,-22.188
+log_contratos,2021Q4,6,B1 · Tendencia propia,250,35.758,-47.833,-33.458,-30.261
+log_contratos,2021Q4,7,B1 · Tendencia propia,250,44.865,-56.328,-45.412,-36.631
+log_contratos,2021Q4,8,B1 · Tendencia propia,249,46.274,-60.485,-39.703,-35.333
+log_contratos,2021Q4,1,M1 · Ridge,250,12.604,-12.478,-2.184,-10.421
+log_contratos,2021Q4,2,M1 · Ridge,250,15.328,-11.266,-10.966,-7.81
+log_contratos,2021Q4,3,M1 · Ridge,250,14.027,-2.994,-12.508,-8.187
+log_contratos,2021Q4,4,M1 · Ridge,250,14.732,-9.179,-4.338,-0.307
+log_contratos,2021Q4,5,M1 · Ridge,250,15.974,-18.506,-11.751,-11.175
+log_contratos,2021Q4,6,M1 · Ridge,250,18.044,-19.326,-15.072,-14.87
+log_contratos,2021Q4,7,M1 · Ridge,250,20.854,-23.693,-22.921,-14.858
+log_contratos,2021Q4,8,M1 · Ridge,249,24.923,-32.23,-18.169,-16.814
+log_contratos,2021Q4,1,M2 · LightGBM,250,12.397,-12.033,-2.914,-9.351
+log_contratos,2021Q4,2,M2 · LightGBM,250,16.112,-13.143,-14.124,-9.553
+log_contratos,2021Q4,3,M2 · LightGBM,250,15.622,-7.773,-14.408,-8.435
+log_contratos,2021Q4,4,M2 · LightGBM,250,15.194,-10.351,-7.835,-1.877
+log_contratos,2021Q4,5,M2 · LightGBM,250,17.21,-17.809,-13.307,-10.424
+log_contratos,2021Q4,6,M2 · LightGBM,250,19.236,-21.07,-18.612,-16.057
+log_contratos,2021Q4,7,M2 · LightGBM,250,22.168,-26.889,-25.551,-15.299
+log_contratos,2021Q4,8,M2 · LightGBM,249,26.699,-32.218,-21.576,-17.13
+log_contratos,2022Q2,1,B0 · Persistencia,250,15.892,-3.177,-15.448,-8.64
+log_contratos,2022Q2,2,B0 · Persistencia,250,11.048,-2.002,-0.779,7.183
+log_contratos,2022Q2,3,B0 · Persistencia,250,13.297,-8.608,-4.513,-0.668
+log_contratos,2022Q2,4,B0 · Persistencia,250,15.61,-12.472,-11.604,-8.172
+log_contratos,2022Q2,5,B0 · Persistencia,250,19.61,-22.159,-25.049,-13.673
+log_contratos,2022Q2,6,B0 · Persistencia,249,20.844,-25.317,-14.673,-8.639
+log_contratos,2022Q2,1,B1 · Tendencia propia,250,18.223,-1.906,-15.209,-7.662
+log_contratos,2022Q2,2,B1 · Tendencia propia,250,16.408,-0.196,-0.386,8.792
+log_contratos,2022Q2,3,B1 · Tendencia propia,250,17.557,-6.436,-4.027,1.253
+log_contratos,2022Q2,4,B1 · Tendencia propia,250,21.874,-9.924,-11.054,-5.997
+log_contratos,2022Q2,5,B1 · Tendencia propia,250,23.595,-19.473,-24.497,-11.252
+log_contratos,2022Q2,6,B1 · Tendencia propia,249,24.334,-22.337,-13.948,-5.562
+log_contratos,2022Q2,1,M1 · Ridge,250,14.445,-0.304,-14.231,-8.8
+log_contratos,2022Q2,2,M1 · Ridge,250,13.325,-5.563,-5.79,0.066
+log_contratos,2022Q2,3,M1 · Ridge,250,13.982,-10.185,-7.529,-5.494
+log_contratos,2022Q2,4,M1 · Ridge,250,15.487,-12.461,-12.87,-11.151
+log_contratos,2022Q2,5,M1 · Ridge,250,17.999,-17.454,-21.656,-11.498
+log_contratos,2022Q2,6,M1 · Ridge,249,21.467,-25.88,-16.516,-12.479
+log_contratos,2022Q2,1,M2 · LightGBM,250,16.231,-7.366,-14.859,-10.572
+log_contratos,2022Q2,2,M2 · LightGBM,250,13.587,-8.955,-6.808,-1.219
+log_contratos,2022Q2,3,M2 · LightGBM,250,15.094,-13.874,-9.423,-7.406
+log_contratos,2022Q2,4,M2 · LightGBM,250,16.083,-16.172,-12.621,-12.321
+log_contratos,2022Q2,5,M2 · LightGBM,250,19.669,-24.38,-22.897,-13.968
+log_contratos,2022Q2,6,M2 · LightGBM,249,23.024,-29.039,-17.833,-14.226
+log_contratos,2022Q4,1,B0 · Persistencia,250,12.897,-5.048,-0.559,0.007
+log_contratos,2022Q4,2,B0 · Persistencia,250,13.85,-8.993,-7.895,-7.613
+log_contratos,2022Q4,3,B0 · Persistencia,250,19.634,-18.995,-21.695,-13.138
+log_contratos,2022Q4,4,B0 · Persistencia,249,19.045,-22.328,-10.826,-8.292
+log_contratos,2022Q4,1,B1 · Tendencia propia,250,16.145,-0.35,2.843,1.486
+log_contratos,2022Q4,2,B1 · Tendencia propia,250,14.724,-2.627,-3.452,-5.695
+log_contratos,2022Q4,3,B1 · Tendencia propia,250,17.402,-11.637,-16.806,-10.813
+log_contratos,2022Q4,4,B1 · Tendencia propia,249,20.244,-13.62,-3.974,-4.974
+log_contratos,2022Q4,1,M1 · Ridge,250,12.839,-6.352,-0.628,-0.101
+log_contratos,2022Q4,2,M1 · Ridge,250,13.81,-10.525,-8.223,-8.003
+log_contratos,2022Q4,3,M1 · Ridge,250,16.728,-16.422,-18.095,-9.23
+log_contratos,2022Q4,4,M1 · Ridge,249,21.128,-25.525,-13.295,-10.954
+log_contratos,2022Q4,1,M2 · LightGBM,250,12.453,-6.093,-0.676,-1.238
+log_contratos,2022Q4,2,M2 · LightGBM,250,13.597,-9.137,-5.882,-7.188
+log_contratos,2022Q4,3,M2 · LightGBM,250,17.087,-19.97,-16.693,-8.829
+log_contratos,2022Q4,4,M2 · LightGBM,249,21.64,-24.322,-12.896,-11.776
