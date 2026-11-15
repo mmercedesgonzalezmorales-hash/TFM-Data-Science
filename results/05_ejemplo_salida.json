@@ -31,10 +31,10 @@
         -3.4
       ],
       "placebos_pct": [
-        5.29,
-        5.96,
-        6.19,
-        6.78
+        5.42,
+        6.35,
+        6.67,
+        7.23
       ]
     },
     "log_contratos": {
@@ -44,15 +44,16 @@
         -5.42
       ],
       "placebos_pct": [
-        -4.18,
-        -6.26,
-        -7.6,
-        -10.07
+        -2.88,
+        -5.29,
+        -6.94,
+        -9.19
       ]
     }
   },
   "avisos": [
     "La previsión 'sin ley' es una estimación: el rango indica dónde habría caído en 8 de cada 10 casos.",
+    "La diferencia frente a lo previsto es una estimación, no una medida directa del efecto de la ley: si el municipio ya seguía una tendencia distinta antes de 2024, parte de la diferencia puede venir de ahí.",
     "Los municipios tensionados ya subían más que los de control antes de 2024 (ver placebos).",
     "Datos de fianzas del Incasòl: contratos nuevos, no el parque de alquiler completo; sin alquiler de temporada."
   ]
