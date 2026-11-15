@@ -124,11 +124,11 @@ def residuos_municipio(info, series, trimestres, variable, Modelo) -> pd.DataFra
 
 
 # --------------------------------------------------------------------------------------------- Contraste clásico
-def did_clasico(variable: str) -> dict:
+def did_clasico(variable: str, muestra: str = "muestra_principal") -> dict:
     """Diferencias en diferencias con efectos fijos de municipio y trimestre (errores agrupados por municipio).
     Excluye los trimestres de transición y el trimestre anómalo de la fuente."""
     g = pd.read_parquet(M.GOLD)
-    g = g[g["muestra_principal"] & ~g["trimestre_transicion"] & ~g["trimestre_anomalo_fuente"]].dropna(subset=[variable])
+    g = g[g[muestra] & ~g["trimestre_transicion"] & ~g["trimestre_anomalo_fuente"]].dropna(subset=[variable])
     g["tratado"] = g["post"].astype(int)
     r = smf.wls(f"{variable} ~ tratado + C(codigo_ine) + C(periodo)", data=g,
                 weights=g.groupby("codigo_ine")["contratos"].transform("mean")).fit(
@@ -172,6 +172,32 @@ def grafico(variable, series, info, p, nombre_fichero):
 # --------------------------------------------------------------------------------------------- Main
 def pct(x):
     return float(np.expm1(x) * 100)
+
+
+def robustez_muestra(elegido: dict) -> dict:
+    """Repite la estimación con la muestra alternativa de la Entrega 02 (municipios con renta en >= 90 %
+    de los trimestres de 2019T1–2023T4, sin mirar después de la ley). Mismo modelo y mismo procedimiento."""
+    original = M.MUESTRA
+    M.MUESTRA = "muestra_pre_tratamiento"
+    try:
+        info, series, trimestres = M.cargar()
+        out = {"municipios_por_grupo": info["grupo"].value_counts().to_dict()}
+        for variable in M.VARIABLES:
+            Modelo = nombre_a_clase(elegido[variable])
+            p = prever(info, series, trimestres, variable, Modelo)
+            ef, ic = efectos(agregar(p)), bootstrap(p)
+            pl = placebos(info, series, trimestres, variable, Modelo)
+            did = did_clasico(variable, "muestra_pre_tratamiento")
+            out[variable] = {
+                "efectos_pct": {k: {"estimacion": round(pct(v), 2),
+                                    "ic95_bootstrap": [round(pct(ic[k][0]), 2), round(pct(ic[k][1]), 2)],
+                                    "placebos_pct": [round(pct(x), 2) for x in pl[k]]} for k, v in ef.items()},
+                "did_clasico_pct": {"estimacion": round(pct(did["efecto_log"]), 2),
+                                    "ic95": [round(pct(did["ic95"][0]), 2), round(pct(did["ic95"][1]), 2)]},
+            }
+        return out
+    finally:
+        M.MUESTRA = original
 
 
 def main():
@@ -246,6 +272,12 @@ def main():
     pm = pd.DataFrame(por_municipio)
     pm.to_csv(OUT / "05_efecto_por_municipio.csv", index=False)
     json.dump(resumen, open(OUT / "04_resultados.json", "w"), ensure_ascii=False, indent=2)
+
+    # Robustez: la misma estimación con la muestra elegida solo con datos anteriores a la ley (Entrega 02)
+    rob = robustez_muestra(elegido)
+    json.dump(rob, open(OUT / "04_robustez_muestra_pre.json", "w"), ensure_ascii=False, indent=2)
+    print("\nRobustez con la muestra pre-tratamiento:")
+    print(json.dumps(rob, ensure_ascii=False, indent=1))
 
     # Errores: ¿acierta el modelo donde no hubo ley? ¿qué municipios se salen del rango?
     print("\nControl (sin ley): diferencia media real − previsto por municipio (%):")
