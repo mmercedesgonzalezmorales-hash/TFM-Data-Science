@@ -1,0 +1,9 @@
+variable,modelo,error_municipio_mediano_pct,error_grupo_ola1_pct,error_grupo_ola2_pct,error_grupo_control_pct,error_grupos_medio_pct
+log_contratos,B0 · Persistencia,16.45,12.17,9.41,6.56,9.38
+log_contratos,B1 · Tendencia propia,25.53,21.2,15.53,11.4,16.04
+log_contratos,M1 · Ridge,15.74,10.79,8.9,6.52,8.74
+log_contratos,M2 · LightGBM,18.37,16.0,12.66,9.61,12.76
+log_renta,B0 · Persistencia,9.54,11.48,8.47,8.05,9.33
+log_renta,B1 · Tendencia propia,9.59,13.11,4.6,6.66,8.12
+log_renta,M1 · Ridge,7.46,10.56,5.42,4.56,6.85
+log_renta,M2 · LightGBM,8.21,10.16,6.2,5.72,7.36

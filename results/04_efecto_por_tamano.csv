@@ -1,0 +1,13 @@
+variable,grupo,tamano,diferencia_ajustada_media_pct
+log_contratos,ola 1,pequeño,-7.81
+log_contratos,ola 1,mediano,-11.77
+log_contratos,ola 1,grande,-10.14
+log_contratos,ola 2,pequeño,-4.01
+log_contratos,ola 2,mediano,-9.7
+log_contratos,ola 2,grande,16.04
+log_renta,ola 1,pequeño,-6.33
+log_renta,ola 1,mediano,-5.37
+log_renta,ola 1,grande,-5.98
+log_renta,ola 2,pequeño,-6.1
+log_renta,ola 2,mediano,-6.96
+log_renta,ola 2,grande,-6.33

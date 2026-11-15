@@ -1,0 +1,59 @@
+{
+  "municipio": "Barcelona",
+  "codigo_ine": "08019",
+  "grupo": "ola 1 (zona tensionada desde 16/03/2024)",
+  "ultimo_trimestre": "2026Q2",
+  "renta": {
+    "real_eur_mes": 1140.9,
+    "prevista_sin_ley_eur_mes": 1229.8,
+    "rango_prevision_eur_mes": [
+      1219.3,
+      1530.9
+    ],
+    "diferencia_media_desde_la_ley_pct": -5.76,
+    "diferencia_ajustada_por_control_pct": -7.78
+  },
+  "contratos": {
+    "real_trimestre": 7845.0,
+    "previstos_sin_ley": 8050.2,
+    "rango_prevision": [
+      5473.2,
+      11580.6
+    ],
+    "diferencia_media_desde_la_ley_pct": -8.44,
+    "diferencia_ajustada_por_control_pct": -14.02
+  },
+  "efecto_conjunto_ola": {
+    "log_renta": {
+      "estimacion": -5.87,
+      "ic95_bootstrap": [
+        -8.18,
+        -3.4
+      ],
+      "placebos_pct": [
+        5.29,
+        5.96,
+        6.19,
+        6.78
+      ]
+    },
+    "log_contratos": {
+      "estimacion": -12.67,
+      "ic95_bootstrap": [
+        -18.14,
+        -5.42
+      ],
+      "placebos_pct": [
+        -4.18,
+        -6.26,
+        -7.6,
+        -10.07
+      ]
+    }
+  },
+  "avisos": [
+    "La previsión 'sin ley' es una estimación: el rango indica dónde habría caído en 8 de cada 10 casos.",
+    "Los municipios tensionados ya subían más que los de control antes de 2024 (ver placebos).",
+    "Datos de fianzas del Incasòl: contratos nuevos, no el parque de alquiler completo; sin alquiler de temporada."
+  ]
+}

@@ -1,0 +1,9 @@
+variable,provincia,median,size
+log_contratos,Barcelona,-12.13,133
+log_contratos,Girona,-6.18,36
+log_contratos,Lleida,-7.74,17
+log_contratos,Tarragona,-0.03,35
+log_renta,Barcelona,-5.2,133
+log_renta,Girona,-6.72,36
+log_renta,Lleida,-6.39,17
+log_renta,Tarragona,-8.12,35

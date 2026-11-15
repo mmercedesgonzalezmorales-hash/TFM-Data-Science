@@ -1,0 +1,88 @@
+{
+  "modelo_elegido": {
+    "log_renta": "M1 · Ridge",
+    "log_contratos": "M1 · Ridge"
+  },
+  "corte_final": "2023Q4",
+  "cortes_backtest": [
+    "2021Q2",
+    "2021Q4",
+    "2022Q2",
+    "2022Q4"
+  ],
+  "criterio": "menor error medio del grupo agregado en el backtest; si otro más sencillo está a menos de 0,25 puntos, se elige el más sencillo (orden: B0, B1, M1, M2)",
+  "resumen": [
+    {
+      "variable": "log_contratos",
+      "modelo": "B0 · Persistencia",
+      "error_municipio_mediano_pct": 16.454,
+      "error_grupo_ola1_pct": 12.172,
+      "error_grupo_ola2_pct": 9.413,
+      "error_grupo_control_pct": 6.557,
+      "error_grupos_medio_pct": 9.381
+    },
+    {
+      "variable": "log_contratos",
+      "modelo": "B1 · Tendencia propia",
+      "error_municipio_mediano_pct": 25.531,
+      "error_grupo_ola1_pct": 21.199,
+      "error_grupo_ola2_pct": 15.531,
+      "error_grupo_control_pct": 11.399,
+      "error_grupos_medio_pct": 16.043
+    },
+    {
+      "variable": "log_contratos",
+      "modelo": "M1 · Ridge",
+      "error_municipio_mediano_pct": 15.735,
+      "error_grupo_ola1_pct": 10.787,
+      "error_grupo_ola2_pct": 8.896,
+      "error_grupo_control_pct": 6.524,
+      "error_grupos_medio_pct": 8.736
+    },
+    {
+      "variable": "log_contratos",
+      "modelo": "M2 · LightGBM",
+      "error_municipio_mediano_pct": 18.372,
+      "error_grupo_ola1_pct": 15.996,
+      "error_grupo_ola2_pct": 12.664,
+      "error_grupo_control_pct": 9.613,
+      "error_grupos_medio_pct": 12.758
+    },
+    {
+      "variable": "log_renta",
+      "modelo": "B0 · Persistencia",
+      "error_municipio_mediano_pct": 9.538,
+      "error_grupo_ola1_pct": 11.48,
+      "error_grupo_ola2_pct": 8.472,
+      "error_grupo_control_pct": 8.049,
+      "error_grupos_medio_pct": 9.334
+    },
+    {
+      "variable": "log_renta",
+      "modelo": "B1 · Tendencia propia",
+      "error_municipio_mediano_pct": 9.588,
+      "error_grupo_ola1_pct": 13.108,
+      "error_grupo_ola2_pct": 4.599,
+      "error_grupo_control_pct": 6.662,
+      "error_grupos_medio_pct": 8.123
+    },
+    {
+      "variable": "log_renta",
+      "modelo": "M1 · Ridge",
+      "error_municipio_mediano_pct": 7.457,
+      "error_grupo_ola1_pct": 10.563,
+      "error_grupo_ola2_pct": 5.418,
+      "error_grupo_control_pct": 4.562,
+      "error_grupos_medio_pct": 6.848
+    },
+    {
+      "variable": "log_renta",
+      "modelo": "M2 · LightGBM",
+      "error_municipio_mediano_pct": 8.206,
+      "error_grupo_ola1_pct": 10.158,
+      "error_grupo_ola2_pct": 6.204,
+      "error_grupo_control_pct": 5.72,
+      "error_grupos_medio_pct": 7.361
+    }
+  ]
+}
