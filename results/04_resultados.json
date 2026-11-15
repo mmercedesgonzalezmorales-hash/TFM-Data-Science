@@ -1,0 +1,218 @@
+{
+  "log_renta": {
+    "modelo": "M1 · Ridge",
+    "efectos_pct": {
+      "ola1_sin_ajustar": {
+        "estimacion": -3.81,
+        "ic95_bootstrap": [
+          -4.78,
+          -2.1
+        ],
+        "placebos_pct": [
+          8.69,
+          12.03,
+          11.5,
+          7.99
+        ]
+      },
+      "ola1_ajustado_control": {
+        "estimacion": -5.87,
+        "ic95_bootstrap": [
+          -8.18,
+          -3.4
+        ],
+        "placebos_pct": [
+          5.29,
+          5.96,
+          6.19,
+          6.78
+        ]
+      },
+      "ola2_sin_ajustar": {
+        "estimacion": -3.4,
+        "ic95_bootstrap": [
+          -4.53,
+          -2.27
+        ],
+        "placebos_pct": [
+          5.22,
+          5.84,
+          5.63,
+          2.19
+        ]
+      },
+      "ola2_ajustado_control": {
+        "estimacion": -6.87,
+        "ic95_bootstrap": [
+          -9.26,
+          -4.74
+        ],
+        "placebos_pct": [
+          1.92,
+          0.11,
+          0.6,
+          1.04
+        ]
+      },
+      "ola1_ajustado_ola2": {
+        "estimacion": -4.82,
+        "ic95_bootstrap": [
+          -6.3,
+          -3.36
+        ],
+        "placebos_pct": [
+          3.3,
+          5.85,
+          5.56,
+          5.68
+        ]
+      }
+    },
+    "did_clasico_pct": {
+      "estimacion": -4.9,
+      "ic95": [
+        -6.1,
+        -3.68
+      ],
+      "p_valor": 0.0
+    },
+    "robustez_otros_modelos_pct": {
+      "B0 · Persistencia": {
+        "ola1_sin_ajustar": 3.05,
+        "ola1_ajustado_control": -7.19,
+        "ola2_sin_ajustar": 6.05,
+        "ola2_ajustado_control": -7.1,
+        "ola1_ajustado_ola2": -5.7
+      },
+      "B1 · Tendencia propia": {
+        "ola1_sin_ajustar": -12.11,
+        "ola1_ajustado_control": -12.33,
+        "ola2_sin_ajustar": -7.09,
+        "ola2_ajustado_control": -7.74,
+        "ola1_ajustado_ola2": -8.3
+      },
+      "M1 · Ridge": {
+        "ola1_sin_ajustar": -3.81,
+        "ola1_ajustado_control": -5.87,
+        "ola2_sin_ajustar": -3.4,
+        "ola2_ajustado_control": -6.87,
+        "ola1_ajustado_ola2": -4.82
+      },
+      "M2 · LightGBM": {
+        "ola1_sin_ajustar": -3.14,
+        "ola1_ajustado_control": -6.64,
+        "ola2_sin_ajustar": -1.73,
+        "ola2_ajustado_control": -6.83,
+        "ola1_ajustado_ola2": -7.13
+      }
+    }
+  },
+  "log_contratos": {
+    "modelo": "M1 · Ridge",
+    "efectos_pct": {
+      "ola1_sin_ajustar": {
+        "estimacion": -7.0,
+        "ic95_bootstrap": [
+          -8.33,
+          -4.89
+        ],
+        "placebos_pct": [
+          -3.28,
+          -13.3,
+          -13.64,
+          -16.9
+        ]
+      },
+      "ola1_ajustado_control": {
+        "estimacion": -12.67,
+        "ic95_bootstrap": [
+          -18.14,
+          -5.42
+        ],
+        "placebos_pct": [
+          -4.18,
+          -6.26,
+          -7.6,
+          -10.07
+        ]
+      },
+      "ola2_sin_ajustar": {
+        "estimacion": 3.5,
+        "ic95_bootstrap": [
+          -1.7,
+          8.8
+        ],
+        "placebos_pct": [
+          3.7,
+          -10.68,
+          -10.67,
+          -10.96
+        ]
+      },
+      "ola2_ajustado_control": {
+        "estimacion": -3.31,
+        "ic95_bootstrap": [
+          -11.07,
+          5.87
+        ],
+        "placebos_pct": [
+          2.73,
+          -3.43,
+          -4.42,
+          -3.64
+        ]
+      },
+      "ola1_ajustado_ola2": {
+        "estimacion": -14.5,
+        "ic95_bootstrap": [
+          -18.44,
+          -9.01
+        ],
+        "placebos_pct": [
+          -6.73,
+          -2.93,
+          -3.32,
+          -6.67
+        ]
+      }
+    },
+    "did_clasico_pct": {
+      "estimacion": -17.79,
+      "ic95": [
+        -23.2,
+        -11.99
+      ],
+      "p_valor": 0.0
+    },
+    "robustez_otros_modelos_pct": {
+      "B0 · Persistencia": {
+        "ola1_sin_ajustar": -19.78,
+        "ola1_ajustado_control": -13.34,
+        "ola2_sin_ajustar": -11.44,
+        "ola2_ajustado_control": -2.66,
+        "ola1_ajustado_ola2": -15.88
+      },
+      "B1 · Tendencia propia": {
+        "ola1_sin_ajustar": 4.13,
+        "ola1_ajustado_control": 1.88,
+        "ola2_sin_ajustar": 10.18,
+        "ola2_ajustado_control": 7.51,
+        "ola1_ajustado_ola2": -12.27
+      },
+      "M1 · Ridge": {
+        "ola1_sin_ajustar": -7.0,
+        "ola1_ajustado_control": -12.67,
+        "ola2_sin_ajustar": 3.5,
+        "ola2_ajustado_control": -3.31,
+        "ola1_ajustado_ola2": -14.5
+      },
+      "M2 · LightGBM": {
+        "ola1_sin_ajustar": -19.63,
+        "ola1_ajustado_control": -13.07,
+        "ola2_sin_ajustar": -10.72,
+        "ola2_ajustado_control": -1.83,
+        "ola1_ajustado_ola2": -18.71
+      }
+    }
+  }
+}
