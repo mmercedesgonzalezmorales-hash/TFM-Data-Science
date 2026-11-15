@@ -2,7 +2,7 @@
 Entrega 02 · Pipeline Bronze -> Silver -> Gold
 
 Pregunta del proyecto: ¿qué efecto tuvo la declaración de zonas de mercado residencial
-tensionado (Ley 12/2023) sobre el precio y la oferta de alquiler en Cataluña?
+tensionado (Ley 12/2023) sobre la renta del alquiler y los contratos nuevos registrados en Cataluña?
 
 Fuentes:
   - Incasòl / Generalitat de Catalunya: registro de fianzas de alquiler por municipio
@@ -56,7 +56,10 @@ PRIMER_TRIMESTRE = pd.Period("2019Q1", "Q")  # desde 2019 la fuente es trimestra
 # (STC 37/2022, de 10 de marzo). Se marca el periodo para poder controlarlo en la fase de modelado.
 LEY_CATALANA_2020 = (pd.Period("2020Q4", "Q"), pd.Period("2022Q1", "Q"))
 
-UMBRAL_COBERTURA = 0.9  # % mínimo de trimestres con renta para entrar en la muestra principal
+UMBRAL_COBERTURA = 0.9  # % mínimo de trimestres con renta para entrar en la muestra
+# Muestra alternativa: la cobertura se calcula solo con trimestres anteriores a la medida, para que lo que
+# ocurre después (posible efecto de la ley) no influya en qué municipios entran.
+FIN_PRE_TRATAMIENTO = pd.Period("2023Q4", "Q")
 
 
 # --------------------------------------------------------------------------------------------- Bronze
@@ -230,6 +233,11 @@ def a_gold(trim: pd.DataFrame, trat: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     q_efecto = g["fecha_efectos"].dt.to_period("Q")
     g["primer_trimestre_tratado"] = q_efecto + 1
     g["trimestre_transicion"] = g["periodo_q"] == q_efecto
+    # Fracción del trimestre con la medida vigente (0 = nada, 1 = todo el trimestre)
+    inicio_q, fin_q = g["periodo_q"].dt.start_time, g["periodo_q"].dt.end_time.dt.normalize()
+    dias_q = (fin_q - inicio_q).dt.days + 1
+    dias_vigente = (fin_q - g["fecha_efectos"].clip(lower=inicio_q)).dt.days + 1
+    g["fraccion_trimestre_vigente"] = (dias_vigente.clip(lower=0) / dias_q).where(g["ola"] > 0, 0.0).fillna(0.0).clip(upper=1).round(3)
     g["post"] = (g["ola"] > 0) & (g["periodo_q"] >= g["primer_trimestre_tratado"])
     g["trimestres_desde_tratamiento"] = np.where(
         g["ola"] > 0,
@@ -252,14 +260,24 @@ def a_gold(trim: pd.DataFrame, trat: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     g["cobertura_renta"] = g["codigo_ine"].map(cobertura).round(3)
     g["muestra_principal"] = g["cobertura_renta"] >= UMBRAL_COBERTURA
 
+    # Muestra alternativa (comparación de robustez): misma regla, pero mirando solo 2019T1-2023T4
+    pre = g[g["periodo_q"] <= FIN_PRE_TRATAMIENTO].groupby("codigo_ine")["renta_disponible"].mean()
+    g["cobertura_renta_pre"] = g["codigo_ine"].map(pre).round(3)
+    g["muestra_pre_tratamiento"] = g["cobertura_renta_pre"] >= UMBRAL_COBERTURA
+
+    # Renta no publicada: la fuente da la fila (hay contratos) pero suprime la media por secreto estadístico
+    g["renta_no_publicada"] = g["fila_en_fuente"] & ~g["renta_disponible"]
+
     g["fecha_trimestre"] = g["periodo_q"].dt.start_time
     g["periodo"] = g["periodo_q"].astype(str)
     cols = [
         "codigo_ine", "municipio", "periodo", "fecha_trimestre", "anio", "trimestre",
-        "contratos", "renta_media", "tramo_renta", "fila_en_fuente", "renta_disponible",
+        "contratos", "renta_media", "tramo_renta", "fila_en_fuente", "renta_disponible", "renta_no_publicada",
         "log_renta", "log_contratos",
-        "ola", "grupo", "fecha_efectos", "trimestre_transicion", "post", "trimestres_desde_tratamiento",
+        "ola", "grupo", "fecha_efectos", "trimestre_transicion", "fraccion_trimestre_vigente", "post",
+        "trimestres_desde_tratamiento",
         "periodo_ley_catalana_2020", "trimestre_anomalo_fuente", "cobertura_renta", "muestra_principal",
+        "cobertura_renta_pre", "muestra_pre_tratamiento",
     ]
     g = g[cols].sort_values(["codigo_ine", "periodo"]).reset_index(drop=True)
 
@@ -271,14 +289,32 @@ def a_gold(trim: pd.DataFrame, trat: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         "rango": f"{trimestres[0]} - {trimestres[-1]}",
         "filas_sin_dato_en_fuente_pct": round(float((~g["fila_en_fuente"]).mean() * 100), 1),
         "filas_sin_renta_pct": round(float((~g["renta_disponible"]).mean() * 100), 1),
+        "filas_renta_no_publicada": int(g["renta_no_publicada"].sum()),
+        "filas_trimestre_transicion": int(g["trimestre_transicion"].sum()),
+        "fraccion_vigente_transicion": g.loc[g["trimestre_transicion"]].groupby("ola")["fraccion_trimestre_vigente"].first().to_dict(),
         "municipios_por_grupo": g.drop_duplicates("codigo_ine")["grupo"].value_counts().to_dict(),
         "trimestres_anomalos_fuente": [str(q) for q in anomalos],
         "umbral_cobertura_renta": UMBRAL_COBERTURA,
         "muestra_principal_por_grupo": pm["grupo"].value_counts().to_dict(),
         "muestra_principal_filas": int(g["muestra_principal"].sum()),
         "muestra_principal_pct_contratos": round(float(g.loc[g["muestra_principal"], "contratos"].sum() / g["contratos"].sum() * 100), 1),
+        "muestra_pre_tratamiento_por_grupo": g[g["muestra_pre_tratamiento"]].drop_duplicates("codigo_ine")["grupo"].value_counts().to_dict(),
+        "comparacion_muestras": comparar_muestras(g),
     }
     return g, resumen
+
+
+def comparar_muestras(g: pd.DataFrame) -> dict:
+    """Qué municipios entran en una muestra y no en la otra, por grupo."""
+    m = g.drop_duplicates("codigo_ine")
+    out = {}
+    for grupo, d in m.groupby("grupo"):
+        out[grupo] = {
+            "en_ambas": int((d["muestra_principal"] & d["muestra_pre_tratamiento"]).sum()),
+            "solo_principal": int((d["muestra_principal"] & ~d["muestra_pre_tratamiento"]).sum()),
+            "solo_pre_tratamiento": int((~d["muestra_principal"] & d["muestra_pre_tratamiento"]).sum()),
+        }
+    return out
 
 
 # --------------------------------------------------------------------------------------------- Muestras

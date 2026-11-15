@@ -12,7 +12,7 @@
 
 ## 1. Qué problema resuelve el modelo
 
-**Pregunta del proyecto (Entrega 02):** ¿qué efecto tuvo la declaración de zonas tensionadas (Ley 12/2023) sobre el precio y la oferta de alquiler en Cataluña?
+**Pregunta del proyecto (Entrega 02):** ¿qué efecto tuvo la declaración de zonas tensionadas (Ley 12/2023) sobre la renta del alquiler y el número de contratos nuevos registrados en Cataluña?
 
 Para responderla hay que saber **qué habría pasado sin la ley**, y eso no se puede observar. El ML aporta justamente eso: una **previsión, hecha antes de la norma, de cómo habrían evolucionado la renta y los contratos de cada municipio**. Cuando ya se conocen los datos reales, la diferencia entre lo que pasó y lo que se esperaba indica si la norma tuvo efecto.
 

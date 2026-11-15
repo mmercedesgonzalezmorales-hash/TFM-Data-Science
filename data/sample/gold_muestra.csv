@@ -1,241 +1,241 @@
-codigo_ine,municipio,periodo,fecha_trimestre,anio,trimestre,contratos,renta_media,tramo_renta,fila_en_fuente,renta_disponible,log_renta,log_contratos,ola,grupo,fecha_efectos,trimestre_transicion,post,trimestres_desde_tratamiento,periodo_ley_catalana_2020,trimestre_anomalo_fuente,cobertura_renta,muestra_principal
-08019,Barcelona,2019Q1,2019-01-01,2019,1,12832,944.43,> 650 euros/mes,True,True,6.850581570907585,9.459775257244461,1,ola 1 (mar-2024),2024-03-16,False,False,-21.0,False,False,1.0,True
-08019,Barcelona,2019Q2,2019-04-01,2019,2,12467,968.89,> 650 euros/mes,True,True,6.876151086355139,9.430920640887228,1,ola 1 (mar-2024),2024-03-16,False,False,-20.0,False,False,1.0,True
-08019,Barcelona,2019Q3,2019-07-01,2019,3,12593,1005.79,> 650 euros/mes,True,True,6.913528581353979,9.440975789048688,1,ola 1 (mar-2024),2024-03-16,False,False,-19.0,False,False,1.0,True
-08019,Barcelona,2019Q4,2019-10-01,2019,4,13402,995.59,> 650 euros/mes,True,True,6.903335526248538,9.503233841478497,1,ola 1 (mar-2024),2024-03-16,False,False,-18.0,False,False,1.0,True
-08019,Barcelona,2020Q1,2020-01-01,2020,1,11435,980.48,> 650 euros/mes,True,True,6.888042247672117,9.344521553442203,1,ola 1 (mar-2024),2024-03-16,False,False,-17.0,False,False,1.0,True
-08019,Barcelona,2020Q2,2020-04-01,2020,2,5727,960.06,> 650 euros/mes,True,True,6.866995782508838,8.653121708640482,1,ola 1 (mar-2024),2024-03-16,False,False,-16.0,False,False,1.0,True
-08019,Barcelona,2020Q3,2020-07-01,2020,3,11055,979.42,> 650 euros/mes,True,True,6.8869605597254315,9.310728546007452,1,ola 1 (mar-2024),2024-03-16,False,False,-15.0,False,False,1.0,True
-08019,Barcelona,2020Q4,2020-10-01,2020,4,12199,939.1,> 650 euros/mes,True,True,6.844921969810568,9.409191230721348,1,ola 1 (mar-2024),2024-03-16,False,False,-14.0,True,False,1.0,True
-08019,Barcelona,2021Q1,2021-01-01,2021,1,14399,905.39,> 650 euros/mes,True,True,6.808365790098804,9.574983485564092,1,ola 1 (mar-2024),2024-03-16,False,False,-13.0,True,False,1.0,True
-08019,Barcelona,2021Q2,2021-04-01,2021,2,14110,903.28,> 600 euros/mes,True,True,6.806032582872267,9.55470991405776,1,ola 1 (mar-2024),2024-03-16,False,False,-12.0,True,False,1.0,True
-08019,Barcelona,2021Q3,2021-07-01,2021,3,14398,932.31,> 600 euros/mes,True,True,6.83766537740623,9.57491403870827,1,ola 1 (mar-2024),2024-03-16,False,False,-11.0,True,False,1.0,True
-08019,Barcelona,2021Q4,2021-10-01,2021,4,14251,934.21,> 600 euros/mes,True,True,6.839701252356681,9.564652526725727,1,ola 1 (mar-2024),2024-03-16,False,False,-10.0,True,False,1.0,True
-08019,Barcelona,2022Q1,2022-01-01,2022,1,12227,965.38,> 600 euros/mes,True,True,6.872521806210471,9.411483683010726,1,ola 1 (mar-2024),2024-03-16,False,False,-9.0,True,False,1.0,True
-08019,Barcelona,2022Q2,2022-04-01,2022,2,11443,996.56,> 600 euros/mes,True,True,6.904309348577837,9.345220854170002,1,ola 1 (mar-2024),2024-03-16,False,False,-8.0,False,False,1.0,True
-08019,Barcelona,2022Q3,2022-07-01,2022,3,11967,1066.68,> 600 euros/mes,True,True,6.972306300041584,9.389991700214258,1,ola 1 (mar-2024),2024-03-16,False,False,-7.0,False,False,1.0,True
-08019,Barcelona,2022Q4,2022-10-01,2022,4,12290,1077.48,> 600 euros/mes,True,True,6.982380260320718,9.416622566214981,1,ola 1 (mar-2024),2024-03-16,False,False,-6.0,False,False,1.0,True
-08019,Barcelona,2023Q1,2023-01-01,2023,1,10890,1087.33,> 600 euros/mes,True,True,6.991480428904226,9.295692039075686,1,ola 1 (mar-2024),2024-03-16,False,False,-5.0,False,False,1.0,True
-08019,Barcelona,2023Q2,2023-04-01,2023,2,10328,1123.56,> 600 euros/mes,True,True,7.024257494738798,9.242710752006634,1,ola 1 (mar-2024),2024-03-16,False,False,-4.0,False,False,1.0,True
-08019,Barcelona,2023Q3,2023-07-01,2023,3,8934,1171.28,> 600 euros/mes,True,True,7.065852446885227,9.097731427593528,1,ola 1 (mar-2024),2024-03-16,False,False,-3.0,False,False,1.0,True
-08019,Barcelona,2023Q4,2023-10-01,2023,4,8531,1178.05,> 600 euros/mes,True,True,7.071615808132508,9.05157907959124,1,ola 1 (mar-2024),2024-03-16,False,False,-2.0,False,False,1.0,True
-08019,Barcelona,2024Q1,2024-01-01,2024,1,9825,1193.51,> 600 euros/mes,True,True,7.0846538244618396,9.192787212728593,1,ola 1 (mar-2024),2024-03-16,True,False,-1.0,False,False,1.0,True
-08019,Barcelona,2024Q2,2024-04-01,2024,2,7938,1131.8,> 600 euros/mes,True,True,7.0315645647084235,8.979542601725113,1,ola 1 (mar-2024),2024-03-16,False,True,0.0,False,False,1.0,True
-08019,Barcelona,2024Q3,2024-07-01,2024,3,7484,1133.33,> 600 euros/mes,True,True,7.032915480755348,8.920656296853728,1,ola 1 (mar-2024),2024-03-16,False,True,1.0,False,False,1.0,True
-08019,Barcelona,2024Q4,2024-10-01,2024,4,7656,1117.39,> 600 euros/mes,True,True,7.018750887638305,8.943375541113124,1,ola 1 (mar-2024),2024-03-16,False,True,2.0,False,False,1.0,True
-08019,Barcelona,2025Q1,2025-01-01,2025,1,7615,1087.23,> 600 euros/mes,True,True,6.991388456275216,8.938006576471201,1,ola 1 (mar-2024),2024-03-16,False,True,3.0,False,False,1.0,True
-08019,Barcelona,2025Q2,2025-04-01,2025,2,7411,1135.55,> 600 euros/mes,True,True,7.034872394041602,8.91085558740525,1,ola 1 (mar-2024),2024-03-16,False,True,4.0,False,False,1.0,True
-08019,Barcelona,2025Q3,2025-07-01,2025,3,7855,1153.11,> 600 euros/mes,True,True,7.050217919014204,8.969032850034301,1,ola 1 (mar-2024),2024-03-16,False,True,5.0,False,False,1.0,True
-08019,Barcelona,2025Q4,2025-10-01,2025,4,7908,1160.99,> 600 euros/mes,True,True,7.05702836839637,8.975756630519417,1,ola 1 (mar-2024),2024-03-16,False,True,6.0,False,False,1.0,True
-08019,Barcelona,2026Q1,2026-01-01,2026,1,8156,1137.35,> 600 euros/mes,True,True,7.036456273997871,9.00663173330058,1,ola 1 (mar-2024),2024-03-16,False,True,7.0,False,True,1.0,True
-08019,Barcelona,2026Q2,2026-04-01,2026,2,7845,1140.89,> 600 euros/mes,True,True,7.039563938553831,8.967759126769497,1,ola 1 (mar-2024),2024-03-16,False,True,8.0,False,False,1.0,True
-08114,Martorell,2019Q1,2019-01-01,2019,1,124,548.14,> 500 i <= 650 euros/mes,True,True,6.306530728772529,4.8283137373023015,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2019Q2,2019-04-01,2019,2,106,608.2,> 500 i <= 650 euros/mes,True,True,6.4105037752432645,4.672828834461906,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2019Q3,2019-07-01,2019,3,93,600.69,> 500 i <= 650 euros/mes,True,True,6.398078994472668,4.543294782270004,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2019Q4,2019-10-01,2019,4,91,624.98,> 500 i <= 650 euros/mes,True,True,6.43771964922439,4.5217885770490405,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2020Q1,2020-01-01,2020,1,91,622.29,> 500 i <= 650 euros/mes,True,True,6.433406222026163,4.5217885770490405,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2020Q2,2020-04-01,2020,2,54,625.56,> 500 i <= 650 euros/mes,True,True,6.438647248568015,4.007333185232471,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2020Q3,2020-07-01,2020,3,82,643.59,> 500 i <= 650 euros/mes,True,True,6.467061877396524,4.418840607796598,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2020Q4,2020-10-01,2020,4,93,616.01,> 500 i <= 650 euros/mes,True,True,6.423263197167987,4.543294782270004,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2021Q1,2021-01-01,2021,1,126,582.04,> 500 i <= 650 euros/mes,True,True,6.366539173892078,4.844187086458591,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2021Q2,2021-04-01,2021,2,100,608.36,> 600 euros/mes,True,True,6.410766812004168,4.61512051684126,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2021Q3,2021-07-01,2021,3,91,595.21,> 450 i <= 600 euros/mes,True,True,6.388914284453015,4.5217885770490405,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2021Q4,2021-10-01,2021,4,79,560.8,> 450 i <= 600 euros/mes,True,True,6.32936433572038,4.382026634673881,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2022Q1,2022-01-01,2022,1,101,646.41,> 600 euros/mes,True,True,6.471433977384251,4.624972813284271,0,control (no tensionado),,False,False,,True,False,1.0,True
-08114,Martorell,2022Q2,2022-04-01,2022,2,87,629.1,> 600 euros/mes,True,True,6.444290226575984,4.477336814478207,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2022Q3,2022-07-01,2022,3,73,704.0,> 600 euros/mes,True,True,6.556778356158042,4.30406509320417,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2022Q4,2022-10-01,2022,4,109,639.74,> 600 euros/mes,True,True,6.46106184381183,4.700480365792417,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2023Q1,2023-01-01,2023,1,94,688.76,> 600 euros/mes,True,True,6.534892879417985,4.553876891600541,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2023Q2,2023-04-01,2023,2,78,684.62,> 600 euros/mes,True,True,6.528863939809004,4.3694478524670215,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2023Q3,2023-07-01,2023,3,81,682.78,> 600 euros/mes,True,True,6.52617269933722,4.406719247264253,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2023Q4,2023-10-01,2023,4,91,674.04,> 600 euros/mes,True,True,6.513289456332342,4.5217885770490405,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2024Q1,2024-01-01,2024,1,240,663.33,> 600 euros/mes,True,True,6.497272603912174,5.484796933490655,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2024Q2,2024-04-01,2024,2,138,673.68,> 600 euros/mes,True,True,6.512755220721736,4.9344739331306915,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2024Q3,2024-07-01,2024,3,92,725.83,> 600 euros/mes,True,True,6.5873158276255,4.532599493153256,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2024Q4,2024-10-01,2024,4,88,728.44,> 600 euros/mes,True,True,6.590905261227619,4.48863636973214,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2025Q1,2025-01-01,2025,1,69,724.89,> 600 euros/mes,True,True,6.586019919205472,4.248495242049359,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2025Q2,2025-04-01,2025,2,85,813.89,> 600 euros/mes,True,True,6.70182522173583,4.454347296253507,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2025Q3,2025-07-01,2025,3,81,786.17,> 600 euros/mes,True,True,6.667173054030258,4.406719247264253,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2025Q4,2025-10-01,2025,4,81,812.17,> 600 euros/mes,True,True,6.699709677854925,4.406719247264253,0,control (no tensionado),,False,False,,False,False,1.0,True
-08114,Martorell,2026Q1,2026-01-01,2026,1,116,,> 600 euros/mes,True,False,,4.762173934797756,0,control (no tensionado),,False,False,,False,True,1.0,True
-08114,Martorell,2026Q2,2026-04-01,2026,2,89,793.1,> 600 euros/mes,True,True,6.675949317089274,4.499809670330265,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2019Q1,2019-01-01,2019,1,103,603.66,> 500 i <= 650 euros/mes,True,True,6.403011125532014,4.6443908991413725,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2019Q2,2019-04-01,2019,2,110,626.66,> 500 i <= 650 euros/mes,True,True,6.4404041288014255,4.709530201312334,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2019Q3,2019-07-01,2019,3,96,690.74,> 650 euros/mes,True,True,6.537763486680999,4.574710978503383,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2019Q4,2019-10-01,2019,4,90,639.69,> 500 i <= 650 euros/mes,True,True,6.460983684006252,4.51085950651685,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2020Q1,2020-01-01,2020,1,101,622.19,> 500 i <= 650 euros/mes,True,True,6.433245512331809,4.624972813284271,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2020Q2,2020-04-01,2020,2,52,657.92,> 650 euros/mes,True,True,6.489083343386691,3.970291913552122,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2020Q3,2020-07-01,2020,3,98,672.46,> 650 euros/mes,True,True,6.510942630153112,4.59511985013459,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2020Q4,2020-10-01,2020,4,94,629.43,> 500 i <= 650 euros/mes,True,True,6.444814647936719,4.553876891600541,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2021Q1,2021-01-01,2021,1,82,595.53,> 500 i <= 650 euros/mes,True,True,6.389451765360188,4.418840607796598,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2021Q2,2021-04-01,2021,2,77,643.29,> 600 euros/mes,True,True,6.466595633449249,4.356708826689592,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2021Q3,2021-07-01,2021,3,81,649.95,> 600 euros/mes,True,True,6.476895436854028,4.406719247264253,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2021Q4,2021-10-01,2021,4,79,646.17,> 600 euros/mes,True,True,6.471062627057373,4.382026634673881,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2022Q1,2022-01-01,2022,1,65,646.15,> 600 euros/mes,True,True,6.471031674971201,4.189654742026425,0,control (no tensionado),,False,False,,True,False,1.0,True
-08196,Sant Andreu de la Barca,2022Q2,2022-04-01,2022,2,75,664.5,> 600 euros/mes,True,True,6.4990348781533,4.330733340286331,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2022Q3,2022-07-01,2022,3,83,687.51,> 600 euros/mes,True,True,6.533076374889488,4.430816798843313,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2022Q4,2022-10-01,2022,4,96,713.19,> 600 euros/mes,True,True,6.569747864578291,4.574710978503383,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2023Q1,2023-01-01,2023,1,78,700.14,> 600 euros/mes,True,True,6.551280315046071,4.3694478524670215,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2023Q2,2023-04-01,2023,2,95,696.3,> 600 euros/mes,True,True,6.545780601948501,4.564348191467836,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2023Q3,2023-07-01,2023,3,75,761.06,> 600 euros/mes,True,True,6.634712198380497,4.330733340286331,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2023Q4,2023-10-01,2023,4,69,746.04,> 600 euros/mes,True,True,6.614779218069247,4.248495242049359,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2024Q1,2024-01-01,2024,1,76,745.15,> 600 euros/mes,True,True,6.613585540394801,4.343805421853684,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2024Q2,2024-04-01,2024,2,63,739.23,> 600 euros/mes,True,True,6.605609103919534,4.1588830833596715,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2024Q3,2024-07-01,2024,3,80,768.92,> 600 euros/mes,True,True,6.64498693288466,4.394449154672439,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2024Q4,2024-10-01,2024,4,60,755.86,> 600 euros/mes,True,True,6.627856173845454,4.110873864173311,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2025Q1,2025-01-01,2025,1,67,819.42,> 600 euros/mes,True,True,6.708596772918388,4.219507705176107,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2025Q2,2025-04-01,2025,2,42,755.06,> 600 euros/mes,True,True,6.626797216290111,3.7612001156935624,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2025Q3,2025-07-01,2025,3,90,668.21,> 600 euros/mes,True,True,6.504602495389841,4.51085950651685,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2025Q4,2025-10-01,2025,4,63,842.54,> 600 euros/mes,True,True,6.736421138844292,4.1588830833596715,0,control (no tensionado),,False,False,,False,False,1.0,True
-08196,Sant Andreu de la Barca,2026Q1,2026-01-01,2026,1,82,,> 600 euros/mes,True,False,,4.418840607796598,0,control (no tensionado),,False,False,,False,True,1.0,True
-08196,Sant Andreu de la Barca,2026Q2,2026-04-01,2026,2,64,824.85,> 600 euros/mes,True,True,6.715201551621933,4.174387269895637,0,control (no tensionado),,False,False,,False,False,1.0,True
-17079,Girona,2019Q1,2019-01-01,2019,1,778,625.8,> 500 i <= 650 euros/mes,True,True,6.439030831234781,6.658011045870748,1,ola 1 (mar-2024),2024-03-16,False,False,-21.0,False,False,1.0,True
-17079,Girona,2019Q2,2019-04-01,2019,2,799,624.46,> 500 i <= 650 euros/mes,True,True,6.436887276273271,6.684611727667927,1,ola 1 (mar-2024),2024-03-16,False,False,-20.0,False,False,1.0,True
-17079,Girona,2019Q3,2019-07-01,2019,3,1094,659.49,> 650 euros/mes,True,True,6.491466809040135,6.9985096422506015,1,ola 1 (mar-2024),2024-03-16,False,False,-19.0,False,False,1.0,True
-17079,Girona,2019Q4,2019-10-01,2019,4,901,619.51,> 500 i <= 650 euros/mes,True,True,6.428928842988956,6.804614520062624,1,ola 1 (mar-2024),2024-03-16,False,False,-18.0,False,False,1.0,True
-17079,Girona,2020Q1,2020-01-01,2020,1,675,642.65,> 500 i <= 650 euros/mes,True,True,6.465600252556141,6.516193076042964,1,ola 1 (mar-2024),2024-03-16,False,False,-17.0,False,False,1.0,True
-17079,Girona,2020Q2,2020-04-01,2020,2,440,628.33,> 500 i <= 650 euros/mes,True,True,6.443065506160142,6.089044875446846,1,ola 1 (mar-2024),2024-03-16,False,False,-16.0,False,False,1.0,True
-17079,Girona,2020Q3,2020-07-01,2020,3,1099,664.45,> 650 euros/mes,True,True,6.498959630777517,7.003065458786462,1,ola 1 (mar-2024),2024-03-16,False,False,-15.0,False,False,1.0,True
-17079,Girona,2020Q4,2020-10-01,2020,4,938,608.09,> 500 i <= 650 euros/mes,True,True,6.410322897327142,6.844815479208263,1,ola 1 (mar-2024),2024-03-16,False,False,-14.0,True,False,1.0,True
-17079,Girona,2021Q1,2021-01-01,2021,1,862,623.56,> 500 i <= 650 euros/mes,True,True,6.43544499144448,6.760414691083428,1,ola 1 (mar-2024),2024-03-16,False,False,-13.0,True,False,1.0,True
-17079,Girona,2021Q2,2021-04-01,2021,2,947,614.42,> 600 euros/mes,True,True,6.420678733386988,6.854354502255021,1,ola 1 (mar-2024),2024-03-16,False,False,-12.0,True,False,1.0,True
-17079,Girona,2021Q3,2021-07-01,2021,3,1044,639.97,> 600 euros/mes,True,True,6.461421300255051,6.951772164398911,1,ola 1 (mar-2024),2024-03-16,False,False,-11.0,True,False,1.0,True
-17079,Girona,2021Q4,2021-10-01,2021,4,882,616.04,> 600 euros/mes,True,True,6.423311896490265,6.78332520060396,1,ola 1 (mar-2024),2024-03-16,False,False,-10.0,True,False,1.0,True
-17079,Girona,2022Q1,2022-01-01,2022,1,605,666.67,> 600 euros/mes,True,True,6.502295170861473,6.406879986069314,1,ola 1 (mar-2024),2024-03-16,False,False,-9.0,True,False,1.0,True
-17079,Girona,2022Q2,2022-04-01,2022,2,751,676.83,> 600 euros/mes,True,True,6.517420133550769,6.62273632394984,1,ola 1 (mar-2024),2024-03-16,False,False,-8.0,False,False,1.0,True
-17079,Girona,2022Q3,2022-07-01,2022,3,1001,736.59,> 600 euros/mes,True,True,6.602031428029591,6.90975328164481,1,ola 1 (mar-2024),2024-03-16,False,False,-7.0,False,False,1.0,True
-17079,Girona,2022Q4,2022-10-01,2022,4,843,693.69,> 600 euros/mes,True,True,6.542025174833986,6.738152494595957,1,ola 1 (mar-2024),2024-03-16,False,False,-6.0,False,False,1.0,True
-17079,Girona,2023Q1,2023-01-01,2023,1,733,762.28,> 600 euros/mes,True,True,6.636313942260175,6.598509028614515,1,ola 1 (mar-2024),2024-03-16,False,False,-5.0,False,False,1.0,True
-17079,Girona,2023Q2,2023-04-01,2023,2,661,768.99,> 600 euros/mes,True,True,6.645077965519922,6.495265555937008,1,ola 1 (mar-2024),2024-03-16,False,False,-4.0,False,False,1.0,True
-17079,Girona,2023Q3,2023-07-01,2023,3,762,798.79,> 600 euros/mes,True,True,6.683098082685133,6.637258031284457,1,ola 1 (mar-2024),2024-03-16,False,False,-3.0,False,False,1.0,True
-17079,Girona,2023Q4,2023-10-01,2023,4,653,722.66,> 600 euros/mes,True,True,6.5829388487566245,6.483107351457199,1,ola 1 (mar-2024),2024-03-16,False,False,-2.0,False,False,1.0,True
-17079,Girona,2024Q1,2024-01-01,2024,1,661,807.56,> 600 euros/mes,True,True,6.694017355742023,6.495265555937008,1,ola 1 (mar-2024),2024-03-16,True,False,-1.0,False,False,1.0,True
-17079,Girona,2024Q2,2024-04-01,2024,2,548,781.38,> 600 euros/mes,True,True,6.661061587207667,6.3080984415095305,1,ola 1 (mar-2024),2024-03-16,False,True,0.0,False,False,1.0,True
-17079,Girona,2024Q3,2024-07-01,2024,3,634,799.21,> 600 euros/mes,True,True,6.683623739768575,6.453624998892692,1,ola 1 (mar-2024),2024-03-16,False,True,1.0,False,False,1.0,True
-17079,Girona,2024Q4,2024-10-01,2024,4,622,677.77,> 600 euros/mes,True,True,6.518807997349504,6.434546518787453,1,ola 1 (mar-2024),2024-03-16,False,True,2.0,False,False,1.0,True
-17079,Girona,2025Q1,2025-01-01,2025,1,535,827.01,> 600 euros/mes,True,True,6.717816786849013,6.284134161070802,1,ola 1 (mar-2024),2024-03-16,False,True,3.0,False,False,1.0,True
-17079,Girona,2025Q2,2025-04-01,2025,2,542,817.34,> 600 euros/mes,True,True,6.706055164961579,6.297109319933935,1,ola 1 (mar-2024),2024-03-16,False,True,4.0,False,False,1.0,True
-17079,Girona,2025Q3,2025-07-01,2025,3,591,826.02,> 600 euros/mes,True,True,6.716618986302906,6.3835066348840055,1,ola 1 (mar-2024),2024-03-16,False,True,5.0,False,False,1.0,True
-17079,Girona,2025Q4,2025-10-01,2025,4,517,791.88,> 600 euros/mes,True,True,6.67440986518333,6.249975242259483,1,ola 1 (mar-2024),2024-03-16,False,True,6.0,False,False,1.0,True
-17079,Girona,2026Q1,2026-01-01,2026,1,664,,> 600 euros/mes,True,False,,6.499787040655854,1,ola 1 (mar-2024),2024-03-16,False,True,7.0,False,True,1.0,True
-17079,Girona,2026Q2,2026-04-01,2026,2,618,826.52,> 600 euros/mes,True,True,6.717224115395404,6.428105272684596,1,ola 1 (mar-2024),2024-03-16,False,True,8.0,False,False,1.0,True
-17152,Roses,2019Q1,2019-01-01,2019,1,143,488.51,> 350 i <= 500 euros/mes,True,True,6.191359942102381,4.969813299576001,2,ola 2 (oct-2024),2024-10-10,False,False,-24.0,False,False,1.0,True
-17152,Roses,2019Q2,2019-04-01,2019,2,110,489.7,> 350 i <= 500 euros/mes,True,True,6.193792958708272,4.709530201312334,2,ola 2 (oct-2024),2024-10-10,False,False,-23.0,False,False,1.0,True
-17152,Roses,2019Q3,2019-07-01,2019,3,77,506.62,> 500 i <= 650 euros/mes,True,True,6.227761215667104,4.356708826689592,2,ola 2 (oct-2024),2024-10-10,False,False,-22.0,False,False,1.0,True
-17152,Roses,2019Q4,2019-10-01,2019,4,109,481.49,> 350 i <= 500 euros/mes,True,True,6.17688546259053,4.700480365792417,2,ola 2 (oct-2024),2024-10-10,False,False,-21.0,False,False,1.0,True
-17152,Roses,2020Q1,2020-01-01,2020,1,105,512.67,> 500 i <= 650 euros/mes,True,True,6.239632363326927,4.663439094112067,2,ola 2 (oct-2024),2024-10-10,False,False,-20.0,False,False,1.0,True
-17152,Roses,2020Q2,2020-04-01,2020,2,60,530.83,> 500 i <= 650 euros/mes,True,True,6.274441819323642,4.110873864173311,2,ola 2 (oct-2024),2024-10-10,False,False,-19.0,False,False,1.0,True
-17152,Roses,2020Q3,2020-07-01,2020,3,103,549.72,> 500 i <= 650 euros/mes,True,True,6.3094090576866515,4.6443908991413725,2,ola 2 (oct-2024),2024-10-10,False,False,-18.0,False,False,1.0,True
-17152,Roses,2020Q4,2020-10-01,2020,4,97,489.27,> 350 i <= 500 euros/mes,True,True,6.192914484336936,4.584967478670572,2,ola 2 (oct-2024),2024-10-10,False,False,-17.0,True,False,1.0,True
-17152,Roses,2021Q1,2021-01-01,2021,1,115,482.13,> 350 i <= 500 euros/mes,True,True,6.1782137872290885,4.7535901911063645,2,ola 2 (oct-2024),2024-10-10,False,False,-16.0,True,False,1.0,True
-17152,Roses,2021Q2,2021-04-01,2021,2,102,503.53,> 450 i <= 600 euros/mes,True,True,6.221643293303188,4.634728988229636,2,ola 2 (oct-2024),2024-10-10,False,False,-15.0,True,False,1.0,True
-17152,Roses,2021Q3,2021-07-01,2021,3,82,510.98,> 450 i <= 600 euros/mes,True,True,6.236330450494507,4.418840607796598,2,ola 2 (oct-2024),2024-10-10,False,False,-14.0,True,False,1.0,True
-17152,Roses,2021Q4,2021-10-01,2021,4,99,530.85,> 450 i <= 600 euros/mes,True,True,6.274479495459582,4.605170185988092,2,ola 2 (oct-2024),2024-10-10,False,False,-13.0,True,False,1.0,True
-17152,Roses,2022Q1,2022-01-01,2022,1,101,519.21,> 450 i <= 600 euros/mes,True,True,6.252308425605017,4.624972813284271,2,ola 2 (oct-2024),2024-10-10,False,False,-12.0,True,False,1.0,True
-17152,Roses,2022Q2,2022-04-01,2022,2,106,529.39,> 450 i <= 600 euros/mes,True,True,6.271725400305944,4.672828834461906,2,ola 2 (oct-2024),2024-10-10,False,False,-11.0,False,False,1.0,True
-17152,Roses,2022Q3,2022-07-01,2022,3,73,531.23,> 450 i <= 600 euros/mes,True,True,6.275195072471135,4.30406509320417,2,ola 2 (oct-2024),2024-10-10,False,False,-10.0,False,False,1.0,True
-17152,Roses,2022Q4,2022-10-01,2022,4,75,560.11,> 450 i <= 600 euros/mes,True,True,6.328133193011058,4.330733340286331,2,ola 2 (oct-2024),2024-10-10,False,False,-9.0,False,False,1.0,True
-17152,Roses,2023Q1,2023-01-01,2023,1,99,605.75,> 600 euros/mes,True,True,6.406467359696635,4.605170185988092,2,ola 2 (oct-2024),2024-10-10,False,False,-8.0,False,False,1.0,True
-17152,Roses,2023Q2,2023-04-01,2023,2,95,568.06,> 450 i <= 600 euros/mes,True,True,6.342227046945111,4.564348191467836,2,ola 2 (oct-2024),2024-10-10,False,False,-7.0,False,False,1.0,True
-17152,Roses,2023Q3,2023-07-01,2023,3,68,540.95,> 450 i <= 600 euros/mes,True,True,6.293326853133583,4.23410650459726,2,ola 2 (oct-2024),2024-10-10,False,False,-6.0,False,False,1.0,True
-17152,Roses,2023Q4,2023-10-01,2023,4,83,574.22,> 450 i <= 600 euros/mes,True,True,6.353012598149689,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,False,-5.0,False,False,1.0,True
-17152,Roses,2024Q1,2024-01-01,2024,1,100,616.76,> 600 euros/mes,True,True,6.424479969303152,4.61512051684126,2,ola 2 (oct-2024),2024-10-10,False,False,-4.0,False,False,1.0,True
-17152,Roses,2024Q2,2024-04-01,2024,2,83,629.25,> 600 euros/mes,True,True,6.444528634015425,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,False,-3.0,False,False,1.0,True
-17152,Roses,2024Q3,2024-07-01,2024,3,60,648.68,> 600 euros/mes,True,True,6.4749395288511735,4.110873864173311,2,ola 2 (oct-2024),2024-10-10,False,False,-2.0,False,False,1.0,True
-17152,Roses,2024Q4,2024-10-01,2024,4,87,616.57,> 600 euros/mes,True,True,6.42417186035988,4.477336814478207,2,ola 2 (oct-2024),2024-10-10,True,False,-1.0,False,False,1.0,True
-17152,Roses,2025Q1,2025-01-01,2025,1,93,620.59,> 600 euros/mes,True,True,6.430670638445849,4.543294782270004,2,ola 2 (oct-2024),2024-10-10,False,True,0.0,False,False,1.0,True
-17152,Roses,2025Q2,2025-04-01,2025,2,80,619.76,> 600 euros/mes,True,True,6.429332306323647,4.394449154672439,2,ola 2 (oct-2024),2024-10-10,False,True,1.0,False,False,1.0,True
-17152,Roses,2025Q3,2025-07-01,2025,3,64,670.92,> 600 euros/mes,True,True,6.508649904826554,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,True,2.0,False,False,1.0,True
-17152,Roses,2025Q4,2025-10-01,2025,4,71,624.02,> 600 euros/mes,True,True,6.436182419137848,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,True,3.0,False,False,1.0,True
-17152,Roses,2026Q1,2026-01-01,2026,1,127,,> 450 i <= 600 euros/mes,True,False,,4.852030263919617,2,ola 2 (oct-2024),2024-10-10,False,True,4.0,False,True,1.0,True
-17152,Roses,2026Q2,2026-04-01,2026,2,90,597.13,> 450 i <= 600 euros/mes,True,True,6.3921348451312126,4.51085950651685,2,ola 2 (oct-2024),2024-10-10,False,True,5.0,False,False,1.0,True
-43037,Calafell,2019Q1,2019-01-01,2019,1,186,572.11,> 500 i <= 650 euros/mes,True,True,6.3493312805833515,5.231108616854587,2,ola 2 (oct-2024),2024-10-10,False,False,-24.0,False,False,1.0,True
-43037,Calafell,2019Q2,2019-04-01,2019,2,197,588.25,> 500 i <= 650 euros/mes,True,True,6.377152027607472,5.288267030694535,2,ola 2 (oct-2024),2024-10-10,False,False,-23.0,False,False,1.0,True
-43037,Calafell,2019Q3,2019-07-01,2019,3,123,590.49,> 500 i <= 650 euros/mes,True,True,6.380952700693006,4.820281565605037,2,ola 2 (oct-2024),2024-10-10,False,False,-22.0,False,False,1.0,True
-43037,Calafell,2019Q4,2019-10-01,2019,4,207,590.49,> 500 i <= 650 euros/mes,True,True,6.380952700693006,5.337538079701318,2,ola 2 (oct-2024),2024-10-10,False,False,-21.0,False,False,1.0,True
-43037,Calafell,2020Q1,2020-01-01,2020,1,161,562.97,> 500 i <= 650 euros/mes,True,True,6.3332263407519145,5.087596335232384,2,ola 2 (oct-2024),2024-10-10,False,False,-20.0,False,False,1.0,True
-43037,Calafell,2020Q2,2020-04-01,2020,2,95,614.32,> 500 i <= 650 euros/mes,True,True,6.420515965022288,4.564348191467836,2,ola 2 (oct-2024),2024-10-10,False,False,-19.0,False,False,1.0,True
-43037,Calafell,2020Q3,2020-07-01,2020,3,139,606.14,> 500 i <= 650 euros/mes,True,True,6.407110982489897,4.941642422609304,2,ola 2 (oct-2024),2024-10-10,False,False,-18.0,False,False,1.0,True
-43037,Calafell,2020Q4,2020-10-01,2020,4,206,572.39,> 500 i <= 650 euros/mes,True,True,6.349820577229199,5.332718793265369,2,ola 2 (oct-2024),2024-10-10,False,False,-17.0,True,False,1.0,True
-43037,Calafell,2021Q1,2021-01-01,2021,1,180,598.4,> 500 i <= 650 euros/mes,True,True,6.394259426660267,5.198497031265826,2,ola 2 (oct-2024),2024-10-10,False,False,-16.0,True,False,1.0,True
-43037,Calafell,2021Q2,2021-04-01,2021,2,180,555.46,> 450 i <= 600 euros/mes,True,True,6.319796599286322,5.198497031265826,2,ola 2 (oct-2024),2024-10-10,False,False,-15.0,True,False,1.0,True
-43037,Calafell,2021Q3,2021-07-01,2021,3,177,547.68,> 450 i <= 600 euros/mes,True,True,6.305691174781875,5.181783550292085,2,ola 2 (oct-2024),2024-10-10,False,False,-14.0,True,False,1.0,True
-43037,Calafell,2021Q4,2021-10-01,2021,4,188,623.16,> 600 euros/mes,True,True,6.434803307644228,5.241747015059643,2,ola 2 (oct-2024),2024-10-10,False,False,-13.0,True,False,1.0,True
-43037,Calafell,2022Q1,2022-01-01,2022,1,186,615.19,> 600 euros/mes,True,True,6.421931163182859,5.231108616854587,2,ola 2 (oct-2024),2024-10-10,False,False,-12.0,True,False,1.0,True
-43037,Calafell,2022Q2,2022-04-01,2022,2,124,622.47,> 600 euros/mes,True,True,6.433695434406469,4.8283137373023015,2,ola 2 (oct-2024),2024-10-10,False,False,-11.0,False,False,1.0,True
-43037,Calafell,2022Q3,2022-07-01,2022,3,112,652.22,> 600 euros/mes,True,True,6.480381928325093,4.727387818712341,2,ola 2 (oct-2024),2024-10-10,False,False,-10.0,False,False,1.0,True
-43037,Calafell,2022Q4,2022-10-01,2022,4,179,684.07,> 600 euros/mes,True,True,6.52806025156754,5.19295685089021,2,ola 2 (oct-2024),2024-10-10,False,False,-9.0,False,False,1.0,True
-43037,Calafell,2023Q1,2023-01-01,2023,1,162,659.54,> 600 euros/mes,True,True,6.491542622327208,5.093750200806762,2,ola 2 (oct-2024),2024-10-10,False,False,-8.0,False,False,1.0,True
-43037,Calafell,2023Q2,2023-04-01,2023,2,138,655.97,> 600 euros/mes,True,True,6.4861150561910454,4.9344739331306915,2,ola 2 (oct-2024),2024-10-10,False,False,-7.0,False,False,1.0,True
-43037,Calafell,2023Q3,2023-07-01,2023,3,98,698.21,> 600 euros/mes,True,True,6.548519917112053,4.59511985013459,2,ola 2 (oct-2024),2024-10-10,False,False,-6.0,False,False,1.0,True
-43037,Calafell,2023Q4,2023-10-01,2023,4,137,711.75,> 600 euros/mes,True,True,6.567726726158147,4.927253685157205,2,ola 2 (oct-2024),2024-10-10,False,False,-5.0,False,False,1.0,True
-43037,Calafell,2024Q1,2024-01-01,2024,1,140,745.07,> 600 euros/mes,True,True,6.613478173697164,4.948759890378168,2,ola 2 (oct-2024),2024-10-10,False,False,-4.0,False,False,1.0,True
-43037,Calafell,2024Q2,2024-04-01,2024,2,144,737.65,> 600 euros/mes,True,True,6.603469457363576,4.976733742420574,2,ola 2 (oct-2024),2024-10-10,False,False,-3.0,False,False,1.0,True
-43037,Calafell,2024Q3,2024-07-01,2024,3,134,807.28,> 600 euros/mes,True,True,6.6936705721562735,4.90527477843843,2,ola 2 (oct-2024),2024-10-10,False,False,-2.0,False,False,1.0,True
-43037,Calafell,2024Q4,2024-10-01,2024,4,142,762.89,> 600 euros/mes,True,True,6.63711385313244,4.962844630259907,2,ola 2 (oct-2024),2024-10-10,True,False,-1.0,False,False,1.0,True
-43037,Calafell,2025Q1,2025-01-01,2025,1,133,706.34,> 600 euros/mes,True,True,6.560096707969994,4.897839799950911,2,ola 2 (oct-2024),2024-10-10,False,True,0.0,False,False,1.0,True
-43037,Calafell,2025Q2,2025-04-01,2025,2,139,697.9,> 600 euros/mes,True,True,6.548075826023106,4.941642422609304,2,ola 2 (oct-2024),2024-10-10,False,True,1.0,False,False,1.0,True
-43037,Calafell,2025Q3,2025-07-01,2025,3,116,708.75,> 600 euros/mes,True,True,6.563502855041961,4.762173934797756,2,ola 2 (oct-2024),2024-10-10,False,True,2.0,False,False,1.0,True
-43037,Calafell,2025Q4,2025-10-01,2025,4,164,718.91,> 600 euros/mes,True,True,6.577736176033573,5.10594547390058,2,ola 2 (oct-2024),2024-10-10,False,True,3.0,False,False,1.0,True
-43037,Calafell,2026Q1,2026-01-01,2026,1,135,,> 600 euros/mes,True,False,,4.912654885736052,2,ola 2 (oct-2024),2024-10-10,False,True,4.0,False,True,1.0,True
-43037,Calafell,2026Q2,2026-04-01,2026,2,123,775.6,> 600 euros/mes,True,True,6.653636923368497,4.820281565605037,2,ola 2 (oct-2024),2024-10-10,False,True,5.0,False,False,1.0,True
-43136,"Ràpita, la",2019Q1,2019-01-01,2019,1,83,312.54,<= 350 euros/mes,True,True,5.744732460985155,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,False,-24.0,False,False,1.0,True
-43136,"Ràpita, la",2019Q2,2019-04-01,2019,2,77,367.32,> 350 i <= 500 euros/mes,True,True,5.906233402745322,4.356708826689592,2,ola 2 (oct-2024),2024-10-10,False,False,-23.0,False,False,1.0,True
-43136,"Ràpita, la",2019Q3,2019-07-01,2019,3,57,375.28,> 350 i <= 500 euros/mes,True,True,5.927672414020202,4.060443010546419,2,ola 2 (oct-2024),2024-10-10,False,False,-22.0,False,False,1.0,True
-43136,"Ràpita, la",2019Q4,2019-10-01,2019,4,104,350.58,> 350 i <= 500 euros/mes,True,True,5.859588925794401,4.653960350157523,2,ola 2 (oct-2024),2024-10-10,False,False,-21.0,False,False,1.0,True
-43136,"Ràpita, la",2020Q1,2020-01-01,2020,1,67,341.0,<= 350 euros/mes,True,True,5.831882477283517,4.219507705176107,2,ola 2 (oct-2024),2024-10-10,False,False,-20.0,False,False,1.0,True
-43136,"Ràpita, la",2020Q2,2020-04-01,2020,2,44,346.14,<= 350 euros/mes,True,True,5.846843317496853,3.8066624897703196,2,ola 2 (oct-2024),2024-10-10,False,False,-19.0,False,False,1.0,True
-43136,"Ràpita, la",2020Q3,2020-07-01,2020,3,57,381.44,> 350 i <= 500 euros/mes,True,True,5.943953564436931,4.060443010546419,2,ola 2 (oct-2024),2024-10-10,False,False,-18.0,False,False,1.0,True
-43136,"Ràpita, la",2020Q4,2020-10-01,2020,4,55,350.33,> 350 i <= 500 euros/mes,True,True,5.8588755674157165,4.02535169073515,2,ola 2 (oct-2024),2024-10-10,False,False,-17.0,True,False,1.0,True
-43136,"Ràpita, la",2021Q1,2021-01-01,2021,1,89,335.44,<= 350 euros/mes,True,True,5.815443102862507,4.499809670330265,2,ola 2 (oct-2024),2024-10-10,False,False,-16.0,True,False,1.0,True
-43136,"Ràpita, la",2021Q2,2021-04-01,2021,2,71,367.65,> 350 i <= 450 euros/mes,True,True,5.907131398642231,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,False,-15.0,True,False,1.0,True
-43136,"Ràpita, la",2021Q3,2021-07-01,2021,3,54,402.33,> 350 i <= 450 euros/mes,True,True,5.997272647390958,4.007333185232471,2,ola 2 (oct-2024),2024-10-10,False,False,-14.0,True,False,1.0,True
-43136,"Ràpita, la",2021Q4,2021-10-01,2021,4,70,401.94,> 350 i <= 450 euros/mes,True,True,5.996302823748231,4.2626798770413155,2,ola 2 (oct-2024),2024-10-10,False,False,-13.0,True,False,1.0,True
-43136,"Ràpita, la",2022Q1,2022-01-01,2022,1,71,397.56,> 350 i <= 450 euros/mes,True,True,5.985345866099805,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,False,-12.0,True,False,1.0,True
-43136,"Ràpita, la",2022Q2,2022-04-01,2022,2,58,377.83,> 350 i <= 450 euros/mes,True,True,5.934444359008533,4.07753744390572,2,ola 2 (oct-2024),2024-10-10,False,False,-11.0,False,False,1.0,True
-43136,"Ràpita, la",2022Q3,2022-07-01,2022,3,53,446.89,> 350 i <= 450 euros/mes,True,True,6.102312479318498,3.9889840465642745,2,ola 2 (oct-2024),2024-10-10,False,False,-10.0,False,False,1.0,True
-43136,"Ràpita, la",2022Q4,2022-10-01,2022,4,98,440.73,> 350 i <= 450 euros/mes,True,True,6.088432443050445,4.59511985013459,2,ola 2 (oct-2024),2024-10-10,False,False,-9.0,False,False,1.0,True
-43136,"Ràpita, la",2023Q1,2023-01-01,2023,1,55,394.18,> 350 i <= 450 euros/mes,True,True,5.976807657764349,4.02535169073515,2,ola 2 (oct-2024),2024-10-10,False,False,-8.0,False,False,1.0,True
-43136,"Ràpita, la",2023Q2,2023-04-01,2023,2,69,447.98,> 350 i <= 450 euros/mes,True,True,6.10474858856132,4.248495242049359,2,ola 2 (oct-2024),2024-10-10,False,False,-7.0,False,False,1.0,True
-43136,"Ràpita, la",2023Q3,2023-07-01,2023,3,61,451.03,> 450 i <= 600 euros/mes,True,True,6.111533856137404,4.127134385045092,2,ola 2 (oct-2024),2024-10-10,False,False,-6.0,False,False,1.0,True
-43136,"Ràpita, la",2023Q4,2023-10-01,2023,4,66,454.1,> 450 i <= 600 euros/mes,True,True,6.118317438103905,4.204692619390966,2,ola 2 (oct-2024),2024-10-10,False,False,-5.0,False,False,1.0,True
-43136,"Ràpita, la",2024Q1,2024-01-01,2024,1,71,431.08,> 350 i <= 450 euros/mes,True,True,6.066293687728631,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,False,-4.0,False,False,1.0,True
-43136,"Ràpita, la",2024Q2,2024-04-01,2024,2,58,486.72,> 450 i <= 600 euros/mes,True,True,6.187689009070928,4.07753744390572,2,ola 2 (oct-2024),2024-10-10,False,False,-3.0,False,False,1.0,True
-43136,"Ràpita, la",2024Q3,2024-07-01,2024,3,70,460.91,> 450 i <= 600 euros/mes,True,True,6.133202796171501,4.2626798770413155,2,ola 2 (oct-2024),2024-10-10,False,False,-2.0,False,False,1.0,True
-43136,"Ràpita, la",2024Q4,2024-10-01,2024,4,76,450.11,> 450 i <= 600 euros/mes,True,True,6.109491997337135,4.343805421853684,2,ola 2 (oct-2024),2024-10-10,True,False,-1.0,False,False,1.0,True
-43136,"Ràpita, la",2025Q1,2025-01-01,2025,1,61,472.22,> 450 i <= 600 euros/mes,True,True,6.157444978688818,4.127134385045092,2,ola 2 (oct-2024),2024-10-10,False,True,0.0,False,False,1.0,True
-43136,"Ràpita, la",2025Q2,2025-04-01,2025,2,52,477.34,> 450 i <= 600 euros/mes,True,True,6.168229025235398,3.970291913552122,2,ola 2 (oct-2024),2024-10-10,False,True,1.0,False,False,1.0,True
-43136,"Ràpita, la",2025Q3,2025-07-01,2025,3,94,361.57,> 350 i <= 450 euros/mes,True,True,5.890455660474498,4.553876891600541,2,ola 2 (oct-2024),2024-10-10,False,True,2.0,False,False,1.0,True
-43136,"Ràpita, la",2025Q4,2025-10-01,2025,4,82,465.92,> 450 i <= 600 euros/mes,True,True,6.1440139455682665,4.418840607796598,2,ola 2 (oct-2024),2024-10-10,False,True,3.0,False,False,1.0,True
-43136,"Ràpita, la",2026Q1,2026-01-01,2026,1,64,,> 350 i <= 450 euros/mes,True,False,,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,True,4.0,False,True,1.0,True
-43136,"Ràpita, la",2026Q2,2026-04-01,2026,2,64,441.23,> 350 i <= 450 euros/mes,True,True,6.0895662814412255,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,True,5.0,False,False,1.0,True
-43171,Vila-seca,2019Q1,2019-01-01,2019,1,86,487.23,> 350 i <= 500 euros/mes,True,True,6.188736290854621,4.465908118654584,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2019Q2,2019-04-01,2019,2,106,474.19,> 350 i <= 500 euros/mes,True,True,6.161608085260486,4.672828834461906,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2019Q3,2019-07-01,2019,3,73,500.1,> 500 i <= 650 euros/mes,True,True,6.214808078424858,4.30406509320417,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2019Q4,2019-10-01,2019,4,104,479.26,> 350 i <= 500 euros/mes,True,True,6.172243247644422,4.653960350157523,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2020Q1,2020-01-01,2020,1,105,463.84,> 350 i <= 500 euros/mes,True,True,6.139539665173345,4.663439094112067,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2020Q2,2020-04-01,2020,2,60,475.31,> 350 i <= 500 euros/mes,True,True,6.163967222742213,4.110873864173311,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2020Q3,2020-07-01,2020,3,96,509.83,> 500 i <= 650 euros/mes,True,True,6.234077336817133,4.574710978503383,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2020Q4,2020-10-01,2020,4,106,482.11,> 350 i <= 500 euros/mes,True,True,6.178172303780978,4.672828834461906,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2021Q1,2021-01-01,2021,1,89,497.27,> 350 i <= 500 euros/mes,True,True,6.2091331381419215,4.499809670330265,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2021Q2,2021-04-01,2021,2,110,486.17,> 450 i <= 600 euros/mes,True,True,6.186558356975435,4.709530201312334,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2021Q3,2021-07-01,2021,3,80,492.96,> 450 i <= 600 euros/mes,True,True,6.200428034848358,4.394449154672439,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2021Q4,2021-10-01,2021,4,94,503.7,> 450 i <= 600 euros/mes,True,True,6.221980852751605,4.553876891600541,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2022Q1,2022-01-01,2022,1,93,510.04,> 450 i <= 600 euros/mes,True,True,6.234489154015341,4.543294782270004,0,control (no tensionado),,False,False,,True,False,1.0,True
-43171,Vila-seca,2022Q2,2022-04-01,2022,2,76,530.6,> 450 i <= 600 euros/mes,True,True,6.274008441703639,4.343805421853684,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2022Q3,2022-07-01,2022,3,64,612.42,> 600 euros/mes,True,True,6.417418321643462,4.174387269895637,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2022Q4,2022-10-01,2022,4,99,545.02,> 450 i <= 600 euros/mes,True,True,6.300822491237623,4.605170185988092,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2023Q1,2023-01-01,2023,1,91,573.87,> 450 i <= 600 euros/mes,True,True,6.352402889832672,4.5217885770490405,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2023Q2,2023-04-01,2023,2,74,559.41,> 450 i <= 600 euros/mes,True,True,6.326882656904112,4.31748811353631,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2023Q3,2023-07-01,2023,3,60,567.45,> 450 i <= 600 euros/mes,True,True,6.341152639747148,4.110873864173311,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2023Q4,2023-10-01,2023,4,75,566.74,> 450 i <= 600 euros/mes,True,True,6.339900644767924,4.330733340286331,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2024Q1,2024-01-01,2024,1,98,522.67,> 450 i <= 600 euros/mes,True,True,6.258950289772927,4.59511985013459,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2024Q2,2024-04-01,2024,2,61,548.46,> 450 i <= 600 euros/mes,True,True,6.307114350893783,4.127134385045092,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2024Q3,2024-07-01,2024,3,62,535.58,> 450 i <= 600 euros/mes,True,True,6.2833502718203365,4.143134726391533,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2024Q4,2024-10-01,2024,4,65,628.25,> 600 euros/mes,True,True,6.442938176423701,4.189654742026425,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2025Q1,2025-01-01,2025,1,85,584.26,> 450 i <= 600 euros/mes,True,True,6.3703460892331245,4.454347296253507,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2025Q2,2025-04-01,2025,2,75,628.75,> 600 euros/mes,True,True,6.443733721413949,4.330733340286331,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2025Q3,2025-07-01,2025,3,50,642.96,> 600 euros/mes,True,True,6.466082513904463,3.9318256327243257,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2025Q4,2025-10-01,2025,4,82,658.11,> 600 euros/mes,True,True,6.4893720906057055,4.418840607796598,0,control (no tensionado),,False,False,,False,False,1.0,True
-43171,Vila-seca,2026Q1,2026-01-01,2026,1,104,,> 600 euros/mes,True,False,,4.653960350157523,0,control (no tensionado),,False,False,,False,True,1.0,True
-43171,Vila-seca,2026Q2,2026-04-01,2026,2,73,680.14,> 600 euros/mes,True,True,6.522298659332231,4.30406509320417,0,control (no tensionado),,False,False,,False,False,1.0,True
+codigo_ine,municipio,periodo,fecha_trimestre,anio,trimestre,contratos,renta_media,tramo_renta,fila_en_fuente,renta_disponible,renta_no_publicada,log_renta,log_contratos,ola,grupo,fecha_efectos,trimestre_transicion,fraccion_trimestre_vigente,post,trimestres_desde_tratamiento,periodo_ley_catalana_2020,trimestre_anomalo_fuente,cobertura_renta,muestra_principal,cobertura_renta_pre,muestra_pre_tratamiento
+08019,Barcelona,2019Q1,2019-01-01,2019,1,12832,944.43,> 650 euros/mes,True,True,False,6.850581570907585,9.459775257244461,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-21.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2019Q2,2019-04-01,2019,2,12467,968.89,> 650 euros/mes,True,True,False,6.876151086355139,9.430920640887228,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-20.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2019Q3,2019-07-01,2019,3,12593,1005.79,> 650 euros/mes,True,True,False,6.913528581353979,9.440975789048688,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-19.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2019Q4,2019-10-01,2019,4,13402,995.59,> 650 euros/mes,True,True,False,6.903335526248538,9.503233841478497,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-18.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2020Q1,2020-01-01,2020,1,11435,980.48,> 650 euros/mes,True,True,False,6.888042247672117,9.344521553442203,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-17.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2020Q2,2020-04-01,2020,2,5727,960.06,> 650 euros/mes,True,True,False,6.866995782508838,8.653121708640482,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-16.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2020Q3,2020-07-01,2020,3,11055,979.42,> 650 euros/mes,True,True,False,6.8869605597254315,9.310728546007452,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-15.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2020Q4,2020-10-01,2020,4,12199,939.1,> 650 euros/mes,True,True,False,6.844921969810568,9.409191230721348,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-14.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2021Q1,2021-01-01,2021,1,14399,905.39,> 650 euros/mes,True,True,False,6.808365790098804,9.574983485564092,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-13.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2021Q2,2021-04-01,2021,2,14110,903.28,> 600 euros/mes,True,True,False,6.806032582872267,9.55470991405776,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-12.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2021Q3,2021-07-01,2021,3,14398,932.31,> 600 euros/mes,True,True,False,6.83766537740623,9.57491403870827,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-11.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2021Q4,2021-10-01,2021,4,14251,934.21,> 600 euros/mes,True,True,False,6.839701252356681,9.564652526725727,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-10.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2022Q1,2022-01-01,2022,1,12227,965.38,> 600 euros/mes,True,True,False,6.872521806210471,9.411483683010726,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-9.0,True,False,1.0,True,1.0,True
+08019,Barcelona,2022Q2,2022-04-01,2022,2,11443,996.56,> 600 euros/mes,True,True,False,6.904309348577837,9.345220854170002,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-8.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2022Q3,2022-07-01,2022,3,11967,1066.68,> 600 euros/mes,True,True,False,6.972306300041584,9.389991700214258,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-7.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2022Q4,2022-10-01,2022,4,12290,1077.48,> 600 euros/mes,True,True,False,6.982380260320718,9.416622566214981,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-6.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2023Q1,2023-01-01,2023,1,10890,1087.33,> 600 euros/mes,True,True,False,6.991480428904226,9.295692039075686,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-5.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2023Q2,2023-04-01,2023,2,10328,1123.56,> 600 euros/mes,True,True,False,7.024257494738798,9.242710752006634,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-4.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2023Q3,2023-07-01,2023,3,8934,1171.28,> 600 euros/mes,True,True,False,7.065852446885227,9.097731427593528,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-3.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2023Q4,2023-10-01,2023,4,8531,1178.05,> 600 euros/mes,True,True,False,7.071615808132508,9.05157907959124,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-2.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2024Q1,2024-01-01,2024,1,9825,1193.51,> 600 euros/mes,True,True,False,7.0846538244618396,9.192787212728593,1,ola 1 (mar-2024),2024-03-16,True,0.176,False,-1.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2024Q2,2024-04-01,2024,2,7938,1131.8,> 600 euros/mes,True,True,False,7.0315645647084235,8.979542601725113,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,0.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2024Q3,2024-07-01,2024,3,7484,1133.33,> 600 euros/mes,True,True,False,7.032915480755348,8.920656296853728,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,1.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2024Q4,2024-10-01,2024,4,7656,1117.39,> 600 euros/mes,True,True,False,7.018750887638305,8.943375541113124,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,2.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2025Q1,2025-01-01,2025,1,7615,1087.23,> 600 euros/mes,True,True,False,6.991388456275216,8.938006576471201,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,3.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2025Q2,2025-04-01,2025,2,7411,1135.55,> 600 euros/mes,True,True,False,7.034872394041602,8.91085558740525,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,4.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2025Q3,2025-07-01,2025,3,7855,1153.11,> 600 euros/mes,True,True,False,7.050217919014204,8.969032850034301,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,5.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2025Q4,2025-10-01,2025,4,7908,1160.99,> 600 euros/mes,True,True,False,7.05702836839637,8.975756630519417,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,6.0,False,False,1.0,True,1.0,True
+08019,Barcelona,2026Q1,2026-01-01,2026,1,8156,1137.35,> 600 euros/mes,True,True,False,7.036456273997871,9.00663173330058,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,7.0,False,True,1.0,True,1.0,True
+08019,Barcelona,2026Q2,2026-04-01,2026,2,7845,1140.89,> 600 euros/mes,True,True,False,7.039563938553831,8.967759126769497,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,8.0,False,False,1.0,True,1.0,True
+08114,Martorell,2019Q1,2019-01-01,2019,1,124,548.14,> 500 i <= 650 euros/mes,True,True,False,6.306530728772529,4.8283137373023015,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2019Q2,2019-04-01,2019,2,106,608.2,> 500 i <= 650 euros/mes,True,True,False,6.4105037752432645,4.672828834461906,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2019Q3,2019-07-01,2019,3,93,600.69,> 500 i <= 650 euros/mes,True,True,False,6.398078994472668,4.543294782270004,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2019Q4,2019-10-01,2019,4,91,624.98,> 500 i <= 650 euros/mes,True,True,False,6.43771964922439,4.5217885770490405,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2020Q1,2020-01-01,2020,1,91,622.29,> 500 i <= 650 euros/mes,True,True,False,6.433406222026163,4.5217885770490405,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2020Q2,2020-04-01,2020,2,54,625.56,> 500 i <= 650 euros/mes,True,True,False,6.438647248568015,4.007333185232471,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2020Q3,2020-07-01,2020,3,82,643.59,> 500 i <= 650 euros/mes,True,True,False,6.467061877396524,4.418840607796598,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2020Q4,2020-10-01,2020,4,93,616.01,> 500 i <= 650 euros/mes,True,True,False,6.423263197167987,4.543294782270004,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2021Q1,2021-01-01,2021,1,126,582.04,> 500 i <= 650 euros/mes,True,True,False,6.366539173892078,4.844187086458591,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2021Q2,2021-04-01,2021,2,100,608.36,> 600 euros/mes,True,True,False,6.410766812004168,4.61512051684126,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2021Q3,2021-07-01,2021,3,91,595.21,> 450 i <= 600 euros/mes,True,True,False,6.388914284453015,4.5217885770490405,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2021Q4,2021-10-01,2021,4,79,560.8,> 450 i <= 600 euros/mes,True,True,False,6.32936433572038,4.382026634673881,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2022Q1,2022-01-01,2022,1,101,646.41,> 600 euros/mes,True,True,False,6.471433977384251,4.624972813284271,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08114,Martorell,2022Q2,2022-04-01,2022,2,87,629.1,> 600 euros/mes,True,True,False,6.444290226575984,4.477336814478207,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2022Q3,2022-07-01,2022,3,73,704.0,> 600 euros/mes,True,True,False,6.556778356158042,4.30406509320417,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2022Q4,2022-10-01,2022,4,109,639.74,> 600 euros/mes,True,True,False,6.46106184381183,4.700480365792417,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2023Q1,2023-01-01,2023,1,94,688.76,> 600 euros/mes,True,True,False,6.534892879417985,4.553876891600541,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2023Q2,2023-04-01,2023,2,78,684.62,> 600 euros/mes,True,True,False,6.528863939809004,4.3694478524670215,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2023Q3,2023-07-01,2023,3,81,682.78,> 600 euros/mes,True,True,False,6.52617269933722,4.406719247264253,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2023Q4,2023-10-01,2023,4,91,674.04,> 600 euros/mes,True,True,False,6.513289456332342,4.5217885770490405,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2024Q1,2024-01-01,2024,1,240,663.33,> 600 euros/mes,True,True,False,6.497272603912174,5.484796933490655,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2024Q2,2024-04-01,2024,2,138,673.68,> 600 euros/mes,True,True,False,6.512755220721736,4.9344739331306915,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2024Q3,2024-07-01,2024,3,92,725.83,> 600 euros/mes,True,True,False,6.5873158276255,4.532599493153256,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2024Q4,2024-10-01,2024,4,88,728.44,> 600 euros/mes,True,True,False,6.590905261227619,4.48863636973214,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2025Q1,2025-01-01,2025,1,69,724.89,> 600 euros/mes,True,True,False,6.586019919205472,4.248495242049359,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2025Q2,2025-04-01,2025,2,85,813.89,> 600 euros/mes,True,True,False,6.70182522173583,4.454347296253507,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2025Q3,2025-07-01,2025,3,81,786.17,> 600 euros/mes,True,True,False,6.667173054030258,4.406719247264253,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2025Q4,2025-10-01,2025,4,81,812.17,> 600 euros/mes,True,True,False,6.699709677854925,4.406719247264253,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08114,Martorell,2026Q1,2026-01-01,2026,1,116,,> 600 euros/mes,True,False,True,,4.762173934797756,0,control (no tensionado),,False,0.0,False,,False,True,1.0,True,1.0,True
+08114,Martorell,2026Q2,2026-04-01,2026,2,89,793.1,> 600 euros/mes,True,True,False,6.675949317089274,4.499809670330265,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2019Q1,2019-01-01,2019,1,103,603.66,> 500 i <= 650 euros/mes,True,True,False,6.403011125532014,4.6443908991413725,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2019Q2,2019-04-01,2019,2,110,626.66,> 500 i <= 650 euros/mes,True,True,False,6.4404041288014255,4.709530201312334,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2019Q3,2019-07-01,2019,3,96,690.74,> 650 euros/mes,True,True,False,6.537763486680999,4.574710978503383,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2019Q4,2019-10-01,2019,4,90,639.69,> 500 i <= 650 euros/mes,True,True,False,6.460983684006252,4.51085950651685,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2020Q1,2020-01-01,2020,1,101,622.19,> 500 i <= 650 euros/mes,True,True,False,6.433245512331809,4.624972813284271,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2020Q2,2020-04-01,2020,2,52,657.92,> 650 euros/mes,True,True,False,6.489083343386691,3.970291913552122,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2020Q3,2020-07-01,2020,3,98,672.46,> 650 euros/mes,True,True,False,6.510942630153112,4.59511985013459,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2020Q4,2020-10-01,2020,4,94,629.43,> 500 i <= 650 euros/mes,True,True,False,6.444814647936719,4.553876891600541,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2021Q1,2021-01-01,2021,1,82,595.53,> 500 i <= 650 euros/mes,True,True,False,6.389451765360188,4.418840607796598,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2021Q2,2021-04-01,2021,2,77,643.29,> 600 euros/mes,True,True,False,6.466595633449249,4.356708826689592,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2021Q3,2021-07-01,2021,3,81,649.95,> 600 euros/mes,True,True,False,6.476895436854028,4.406719247264253,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2021Q4,2021-10-01,2021,4,79,646.17,> 600 euros/mes,True,True,False,6.471062627057373,4.382026634673881,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2022Q1,2022-01-01,2022,1,65,646.15,> 600 euros/mes,True,True,False,6.471031674971201,4.189654742026425,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2022Q2,2022-04-01,2022,2,75,664.5,> 600 euros/mes,True,True,False,6.4990348781533,4.330733340286331,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2022Q3,2022-07-01,2022,3,83,687.51,> 600 euros/mes,True,True,False,6.533076374889488,4.430816798843313,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2022Q4,2022-10-01,2022,4,96,713.19,> 600 euros/mes,True,True,False,6.569747864578291,4.574710978503383,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2023Q1,2023-01-01,2023,1,78,700.14,> 600 euros/mes,True,True,False,6.551280315046071,4.3694478524670215,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2023Q2,2023-04-01,2023,2,95,696.3,> 600 euros/mes,True,True,False,6.545780601948501,4.564348191467836,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2023Q3,2023-07-01,2023,3,75,761.06,> 600 euros/mes,True,True,False,6.634712198380497,4.330733340286331,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2023Q4,2023-10-01,2023,4,69,746.04,> 600 euros/mes,True,True,False,6.614779218069247,4.248495242049359,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2024Q1,2024-01-01,2024,1,76,745.15,> 600 euros/mes,True,True,False,6.613585540394801,4.343805421853684,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2024Q2,2024-04-01,2024,2,63,739.23,> 600 euros/mes,True,True,False,6.605609103919534,4.1588830833596715,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2024Q3,2024-07-01,2024,3,80,768.92,> 600 euros/mes,True,True,False,6.64498693288466,4.394449154672439,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2024Q4,2024-10-01,2024,4,60,755.86,> 600 euros/mes,True,True,False,6.627856173845454,4.110873864173311,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2025Q1,2025-01-01,2025,1,67,819.42,> 600 euros/mes,True,True,False,6.708596772918388,4.219507705176107,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2025Q2,2025-04-01,2025,2,42,755.06,> 600 euros/mes,True,True,False,6.626797216290111,3.7612001156935624,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2025Q3,2025-07-01,2025,3,90,668.21,> 600 euros/mes,True,True,False,6.504602495389841,4.51085950651685,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2025Q4,2025-10-01,2025,4,63,842.54,> 600 euros/mes,True,True,False,6.736421138844292,4.1588830833596715,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2026Q1,2026-01-01,2026,1,82,,> 600 euros/mes,True,False,True,,4.418840607796598,0,control (no tensionado),,False,0.0,False,,False,True,1.0,True,1.0,True
+08196,Sant Andreu de la Barca,2026Q2,2026-04-01,2026,2,64,824.85,> 600 euros/mes,True,True,False,6.715201551621933,4.174387269895637,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+17079,Girona,2019Q1,2019-01-01,2019,1,778,625.8,> 500 i <= 650 euros/mes,True,True,False,6.439030831234781,6.658011045870748,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-21.0,False,False,1.0,True,1.0,True
+17079,Girona,2019Q2,2019-04-01,2019,2,799,624.46,> 500 i <= 650 euros/mes,True,True,False,6.436887276273271,6.684611727667927,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-20.0,False,False,1.0,True,1.0,True
+17079,Girona,2019Q3,2019-07-01,2019,3,1094,659.49,> 650 euros/mes,True,True,False,6.491466809040135,6.9985096422506015,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-19.0,False,False,1.0,True,1.0,True
+17079,Girona,2019Q4,2019-10-01,2019,4,901,619.51,> 500 i <= 650 euros/mes,True,True,False,6.428928842988956,6.804614520062624,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-18.0,False,False,1.0,True,1.0,True
+17079,Girona,2020Q1,2020-01-01,2020,1,675,642.65,> 500 i <= 650 euros/mes,True,True,False,6.465600252556141,6.516193076042964,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-17.0,False,False,1.0,True,1.0,True
+17079,Girona,2020Q2,2020-04-01,2020,2,440,628.33,> 500 i <= 650 euros/mes,True,True,False,6.443065506160142,6.089044875446846,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-16.0,False,False,1.0,True,1.0,True
+17079,Girona,2020Q3,2020-07-01,2020,3,1099,664.45,> 650 euros/mes,True,True,False,6.498959630777517,7.003065458786462,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-15.0,False,False,1.0,True,1.0,True
+17079,Girona,2020Q4,2020-10-01,2020,4,938,608.09,> 500 i <= 650 euros/mes,True,True,False,6.410322897327142,6.844815479208263,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-14.0,True,False,1.0,True,1.0,True
+17079,Girona,2021Q1,2021-01-01,2021,1,862,623.56,> 500 i <= 650 euros/mes,True,True,False,6.43544499144448,6.760414691083428,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-13.0,True,False,1.0,True,1.0,True
+17079,Girona,2021Q2,2021-04-01,2021,2,947,614.42,> 600 euros/mes,True,True,False,6.420678733386988,6.854354502255021,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-12.0,True,False,1.0,True,1.0,True
+17079,Girona,2021Q3,2021-07-01,2021,3,1044,639.97,> 600 euros/mes,True,True,False,6.461421300255051,6.951772164398911,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-11.0,True,False,1.0,True,1.0,True
+17079,Girona,2021Q4,2021-10-01,2021,4,882,616.04,> 600 euros/mes,True,True,False,6.423311896490265,6.78332520060396,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-10.0,True,False,1.0,True,1.0,True
+17079,Girona,2022Q1,2022-01-01,2022,1,605,666.67,> 600 euros/mes,True,True,False,6.502295170861473,6.406879986069314,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-9.0,True,False,1.0,True,1.0,True
+17079,Girona,2022Q2,2022-04-01,2022,2,751,676.83,> 600 euros/mes,True,True,False,6.517420133550769,6.62273632394984,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-8.0,False,False,1.0,True,1.0,True
+17079,Girona,2022Q3,2022-07-01,2022,3,1001,736.59,> 600 euros/mes,True,True,False,6.602031428029591,6.90975328164481,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-7.0,False,False,1.0,True,1.0,True
+17079,Girona,2022Q4,2022-10-01,2022,4,843,693.69,> 600 euros/mes,True,True,False,6.542025174833986,6.738152494595957,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-6.0,False,False,1.0,True,1.0,True
+17079,Girona,2023Q1,2023-01-01,2023,1,733,762.28,> 600 euros/mes,True,True,False,6.636313942260175,6.598509028614515,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-5.0,False,False,1.0,True,1.0,True
+17079,Girona,2023Q2,2023-04-01,2023,2,661,768.99,> 600 euros/mes,True,True,False,6.645077965519922,6.495265555937008,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-4.0,False,False,1.0,True,1.0,True
+17079,Girona,2023Q3,2023-07-01,2023,3,762,798.79,> 600 euros/mes,True,True,False,6.683098082685133,6.637258031284457,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-3.0,False,False,1.0,True,1.0,True
+17079,Girona,2023Q4,2023-10-01,2023,4,653,722.66,> 600 euros/mes,True,True,False,6.5829388487566245,6.483107351457199,1,ola 1 (mar-2024),2024-03-16,False,0.0,False,-2.0,False,False,1.0,True,1.0,True
+17079,Girona,2024Q1,2024-01-01,2024,1,661,807.56,> 600 euros/mes,True,True,False,6.694017355742023,6.495265555937008,1,ola 1 (mar-2024),2024-03-16,True,0.176,False,-1.0,False,False,1.0,True,1.0,True
+17079,Girona,2024Q2,2024-04-01,2024,2,548,781.38,> 600 euros/mes,True,True,False,6.661061587207667,6.3080984415095305,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,0.0,False,False,1.0,True,1.0,True
+17079,Girona,2024Q3,2024-07-01,2024,3,634,799.21,> 600 euros/mes,True,True,False,6.683623739768575,6.453624998892692,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,1.0,False,False,1.0,True,1.0,True
+17079,Girona,2024Q4,2024-10-01,2024,4,622,677.77,> 600 euros/mes,True,True,False,6.518807997349504,6.434546518787453,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,2.0,False,False,1.0,True,1.0,True
+17079,Girona,2025Q1,2025-01-01,2025,1,535,827.01,> 600 euros/mes,True,True,False,6.717816786849013,6.284134161070802,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,3.0,False,False,1.0,True,1.0,True
+17079,Girona,2025Q2,2025-04-01,2025,2,542,817.34,> 600 euros/mes,True,True,False,6.706055164961579,6.297109319933935,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,4.0,False,False,1.0,True,1.0,True
+17079,Girona,2025Q3,2025-07-01,2025,3,591,826.02,> 600 euros/mes,True,True,False,6.716618986302906,6.3835066348840055,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,5.0,False,False,1.0,True,1.0,True
+17079,Girona,2025Q4,2025-10-01,2025,4,517,791.88,> 600 euros/mes,True,True,False,6.67440986518333,6.249975242259483,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,6.0,False,False,1.0,True,1.0,True
+17079,Girona,2026Q1,2026-01-01,2026,1,664,,> 600 euros/mes,True,False,True,,6.499787040655854,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,7.0,False,True,1.0,True,1.0,True
+17079,Girona,2026Q2,2026-04-01,2026,2,618,826.52,> 600 euros/mes,True,True,False,6.717224115395404,6.428105272684596,1,ola 1 (mar-2024),2024-03-16,False,1.0,True,8.0,False,False,1.0,True,1.0,True
+17152,Roses,2019Q1,2019-01-01,2019,1,143,488.51,> 350 i <= 500 euros/mes,True,True,False,6.191359942102381,4.969813299576001,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-24.0,False,False,1.0,True,1.0,True
+17152,Roses,2019Q2,2019-04-01,2019,2,110,489.7,> 350 i <= 500 euros/mes,True,True,False,6.193792958708272,4.709530201312334,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-23.0,False,False,1.0,True,1.0,True
+17152,Roses,2019Q3,2019-07-01,2019,3,77,506.62,> 500 i <= 650 euros/mes,True,True,False,6.227761215667104,4.356708826689592,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-22.0,False,False,1.0,True,1.0,True
+17152,Roses,2019Q4,2019-10-01,2019,4,109,481.49,> 350 i <= 500 euros/mes,True,True,False,6.17688546259053,4.700480365792417,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-21.0,False,False,1.0,True,1.0,True
+17152,Roses,2020Q1,2020-01-01,2020,1,105,512.67,> 500 i <= 650 euros/mes,True,True,False,6.239632363326927,4.663439094112067,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-20.0,False,False,1.0,True,1.0,True
+17152,Roses,2020Q2,2020-04-01,2020,2,60,530.83,> 500 i <= 650 euros/mes,True,True,False,6.274441819323642,4.110873864173311,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-19.0,False,False,1.0,True,1.0,True
+17152,Roses,2020Q3,2020-07-01,2020,3,103,549.72,> 500 i <= 650 euros/mes,True,True,False,6.3094090576866515,4.6443908991413725,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-18.0,False,False,1.0,True,1.0,True
+17152,Roses,2020Q4,2020-10-01,2020,4,97,489.27,> 350 i <= 500 euros/mes,True,True,False,6.192914484336936,4.584967478670572,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-17.0,True,False,1.0,True,1.0,True
+17152,Roses,2021Q1,2021-01-01,2021,1,115,482.13,> 350 i <= 500 euros/mes,True,True,False,6.1782137872290885,4.7535901911063645,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-16.0,True,False,1.0,True,1.0,True
+17152,Roses,2021Q2,2021-04-01,2021,2,102,503.53,> 450 i <= 600 euros/mes,True,True,False,6.221643293303188,4.634728988229636,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-15.0,True,False,1.0,True,1.0,True
+17152,Roses,2021Q3,2021-07-01,2021,3,82,510.98,> 450 i <= 600 euros/mes,True,True,False,6.236330450494507,4.418840607796598,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-14.0,True,False,1.0,True,1.0,True
+17152,Roses,2021Q4,2021-10-01,2021,4,99,530.85,> 450 i <= 600 euros/mes,True,True,False,6.274479495459582,4.605170185988092,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-13.0,True,False,1.0,True,1.0,True
+17152,Roses,2022Q1,2022-01-01,2022,1,101,519.21,> 450 i <= 600 euros/mes,True,True,False,6.252308425605017,4.624972813284271,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-12.0,True,False,1.0,True,1.0,True
+17152,Roses,2022Q2,2022-04-01,2022,2,106,529.39,> 450 i <= 600 euros/mes,True,True,False,6.271725400305944,4.672828834461906,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-11.0,False,False,1.0,True,1.0,True
+17152,Roses,2022Q3,2022-07-01,2022,3,73,531.23,> 450 i <= 600 euros/mes,True,True,False,6.275195072471135,4.30406509320417,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-10.0,False,False,1.0,True,1.0,True
+17152,Roses,2022Q4,2022-10-01,2022,4,75,560.11,> 450 i <= 600 euros/mes,True,True,False,6.328133193011058,4.330733340286331,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-9.0,False,False,1.0,True,1.0,True
+17152,Roses,2023Q1,2023-01-01,2023,1,99,605.75,> 600 euros/mes,True,True,False,6.406467359696635,4.605170185988092,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-8.0,False,False,1.0,True,1.0,True
+17152,Roses,2023Q2,2023-04-01,2023,2,95,568.06,> 450 i <= 600 euros/mes,True,True,False,6.342227046945111,4.564348191467836,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-7.0,False,False,1.0,True,1.0,True
+17152,Roses,2023Q3,2023-07-01,2023,3,68,540.95,> 450 i <= 600 euros/mes,True,True,False,6.293326853133583,4.23410650459726,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-6.0,False,False,1.0,True,1.0,True
+17152,Roses,2023Q4,2023-10-01,2023,4,83,574.22,> 450 i <= 600 euros/mes,True,True,False,6.353012598149689,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-5.0,False,False,1.0,True,1.0,True
+17152,Roses,2024Q1,2024-01-01,2024,1,100,616.76,> 600 euros/mes,True,True,False,6.424479969303152,4.61512051684126,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-4.0,False,False,1.0,True,1.0,True
+17152,Roses,2024Q2,2024-04-01,2024,2,83,629.25,> 600 euros/mes,True,True,False,6.444528634015425,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-3.0,False,False,1.0,True,1.0,True
+17152,Roses,2024Q3,2024-07-01,2024,3,60,648.68,> 600 euros/mes,True,True,False,6.4749395288511735,4.110873864173311,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-2.0,False,False,1.0,True,1.0,True
+17152,Roses,2024Q4,2024-10-01,2024,4,87,616.57,> 600 euros/mes,True,True,False,6.42417186035988,4.477336814478207,2,ola 2 (oct-2024),2024-10-10,True,0.902,False,-1.0,False,False,1.0,True,1.0,True
+17152,Roses,2025Q1,2025-01-01,2025,1,93,620.59,> 600 euros/mes,True,True,False,6.430670638445849,4.543294782270004,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,0.0,False,False,1.0,True,1.0,True
+17152,Roses,2025Q2,2025-04-01,2025,2,80,619.76,> 600 euros/mes,True,True,False,6.429332306323647,4.394449154672439,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,1.0,False,False,1.0,True,1.0,True
+17152,Roses,2025Q3,2025-07-01,2025,3,64,670.92,> 600 euros/mes,True,True,False,6.508649904826554,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,2.0,False,False,1.0,True,1.0,True
+17152,Roses,2025Q4,2025-10-01,2025,4,71,624.02,> 600 euros/mes,True,True,False,6.436182419137848,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,3.0,False,False,1.0,True,1.0,True
+17152,Roses,2026Q1,2026-01-01,2026,1,127,,> 450 i <= 600 euros/mes,True,False,True,,4.852030263919617,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,4.0,False,True,1.0,True,1.0,True
+17152,Roses,2026Q2,2026-04-01,2026,2,90,597.13,> 450 i <= 600 euros/mes,True,True,False,6.3921348451312126,4.51085950651685,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,5.0,False,False,1.0,True,1.0,True
+43037,Calafell,2019Q1,2019-01-01,2019,1,186,572.11,> 500 i <= 650 euros/mes,True,True,False,6.3493312805833515,5.231108616854587,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-24.0,False,False,1.0,True,1.0,True
+43037,Calafell,2019Q2,2019-04-01,2019,2,197,588.25,> 500 i <= 650 euros/mes,True,True,False,6.377152027607472,5.288267030694535,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-23.0,False,False,1.0,True,1.0,True
+43037,Calafell,2019Q3,2019-07-01,2019,3,123,590.49,> 500 i <= 650 euros/mes,True,True,False,6.380952700693006,4.820281565605037,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-22.0,False,False,1.0,True,1.0,True
+43037,Calafell,2019Q4,2019-10-01,2019,4,207,590.49,> 500 i <= 650 euros/mes,True,True,False,6.380952700693006,5.337538079701318,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-21.0,False,False,1.0,True,1.0,True
+43037,Calafell,2020Q1,2020-01-01,2020,1,161,562.97,> 500 i <= 650 euros/mes,True,True,False,6.3332263407519145,5.087596335232384,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-20.0,False,False,1.0,True,1.0,True
+43037,Calafell,2020Q2,2020-04-01,2020,2,95,614.32,> 500 i <= 650 euros/mes,True,True,False,6.420515965022288,4.564348191467836,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-19.0,False,False,1.0,True,1.0,True
+43037,Calafell,2020Q3,2020-07-01,2020,3,139,606.14,> 500 i <= 650 euros/mes,True,True,False,6.407110982489897,4.941642422609304,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-18.0,False,False,1.0,True,1.0,True
+43037,Calafell,2020Q4,2020-10-01,2020,4,206,572.39,> 500 i <= 650 euros/mes,True,True,False,6.349820577229199,5.332718793265369,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-17.0,True,False,1.0,True,1.0,True
+43037,Calafell,2021Q1,2021-01-01,2021,1,180,598.4,> 500 i <= 650 euros/mes,True,True,False,6.394259426660267,5.198497031265826,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-16.0,True,False,1.0,True,1.0,True
+43037,Calafell,2021Q2,2021-04-01,2021,2,180,555.46,> 450 i <= 600 euros/mes,True,True,False,6.319796599286322,5.198497031265826,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-15.0,True,False,1.0,True,1.0,True
+43037,Calafell,2021Q3,2021-07-01,2021,3,177,547.68,> 450 i <= 600 euros/mes,True,True,False,6.305691174781875,5.181783550292085,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-14.0,True,False,1.0,True,1.0,True
+43037,Calafell,2021Q4,2021-10-01,2021,4,188,623.16,> 600 euros/mes,True,True,False,6.434803307644228,5.241747015059643,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-13.0,True,False,1.0,True,1.0,True
+43037,Calafell,2022Q1,2022-01-01,2022,1,186,615.19,> 600 euros/mes,True,True,False,6.421931163182859,5.231108616854587,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-12.0,True,False,1.0,True,1.0,True
+43037,Calafell,2022Q2,2022-04-01,2022,2,124,622.47,> 600 euros/mes,True,True,False,6.433695434406469,4.8283137373023015,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-11.0,False,False,1.0,True,1.0,True
+43037,Calafell,2022Q3,2022-07-01,2022,3,112,652.22,> 600 euros/mes,True,True,False,6.480381928325093,4.727387818712341,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-10.0,False,False,1.0,True,1.0,True
+43037,Calafell,2022Q4,2022-10-01,2022,4,179,684.07,> 600 euros/mes,True,True,False,6.52806025156754,5.19295685089021,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-9.0,False,False,1.0,True,1.0,True
+43037,Calafell,2023Q1,2023-01-01,2023,1,162,659.54,> 600 euros/mes,True,True,False,6.491542622327208,5.093750200806762,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-8.0,False,False,1.0,True,1.0,True
+43037,Calafell,2023Q2,2023-04-01,2023,2,138,655.97,> 600 euros/mes,True,True,False,6.4861150561910454,4.9344739331306915,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-7.0,False,False,1.0,True,1.0,True
+43037,Calafell,2023Q3,2023-07-01,2023,3,98,698.21,> 600 euros/mes,True,True,False,6.548519917112053,4.59511985013459,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-6.0,False,False,1.0,True,1.0,True
+43037,Calafell,2023Q4,2023-10-01,2023,4,137,711.75,> 600 euros/mes,True,True,False,6.567726726158147,4.927253685157205,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-5.0,False,False,1.0,True,1.0,True
+43037,Calafell,2024Q1,2024-01-01,2024,1,140,745.07,> 600 euros/mes,True,True,False,6.613478173697164,4.948759890378168,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-4.0,False,False,1.0,True,1.0,True
+43037,Calafell,2024Q2,2024-04-01,2024,2,144,737.65,> 600 euros/mes,True,True,False,6.603469457363576,4.976733742420574,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-3.0,False,False,1.0,True,1.0,True
+43037,Calafell,2024Q3,2024-07-01,2024,3,134,807.28,> 600 euros/mes,True,True,False,6.6936705721562735,4.90527477843843,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-2.0,False,False,1.0,True,1.0,True
+43037,Calafell,2024Q4,2024-10-01,2024,4,142,762.89,> 600 euros/mes,True,True,False,6.63711385313244,4.962844630259907,2,ola 2 (oct-2024),2024-10-10,True,0.902,False,-1.0,False,False,1.0,True,1.0,True
+43037,Calafell,2025Q1,2025-01-01,2025,1,133,706.34,> 600 euros/mes,True,True,False,6.560096707969994,4.897839799950911,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,0.0,False,False,1.0,True,1.0,True
+43037,Calafell,2025Q2,2025-04-01,2025,2,139,697.9,> 600 euros/mes,True,True,False,6.548075826023106,4.941642422609304,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,1.0,False,False,1.0,True,1.0,True
+43037,Calafell,2025Q3,2025-07-01,2025,3,116,708.75,> 600 euros/mes,True,True,False,6.563502855041961,4.762173934797756,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,2.0,False,False,1.0,True,1.0,True
+43037,Calafell,2025Q4,2025-10-01,2025,4,164,718.91,> 600 euros/mes,True,True,False,6.577736176033573,5.10594547390058,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,3.0,False,False,1.0,True,1.0,True
+43037,Calafell,2026Q1,2026-01-01,2026,1,135,,> 600 euros/mes,True,False,True,,4.912654885736052,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,4.0,False,True,1.0,True,1.0,True
+43037,Calafell,2026Q2,2026-04-01,2026,2,123,775.6,> 600 euros/mes,True,True,False,6.653636923368497,4.820281565605037,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,5.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2019Q1,2019-01-01,2019,1,83,312.54,<= 350 euros/mes,True,True,False,5.744732460985155,4.430816798843313,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-24.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2019Q2,2019-04-01,2019,2,77,367.32,> 350 i <= 500 euros/mes,True,True,False,5.906233402745322,4.356708826689592,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-23.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2019Q3,2019-07-01,2019,3,57,375.28,> 350 i <= 500 euros/mes,True,True,False,5.927672414020202,4.060443010546419,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-22.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2019Q4,2019-10-01,2019,4,104,350.58,> 350 i <= 500 euros/mes,True,True,False,5.859588925794401,4.653960350157523,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-21.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2020Q1,2020-01-01,2020,1,67,341.0,<= 350 euros/mes,True,True,False,5.831882477283517,4.219507705176107,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-20.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2020Q2,2020-04-01,2020,2,44,346.14,<= 350 euros/mes,True,True,False,5.846843317496853,3.8066624897703196,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-19.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2020Q3,2020-07-01,2020,3,57,381.44,> 350 i <= 500 euros/mes,True,True,False,5.943953564436931,4.060443010546419,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-18.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2020Q4,2020-10-01,2020,4,55,350.33,> 350 i <= 500 euros/mes,True,True,False,5.8588755674157165,4.02535169073515,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-17.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2021Q1,2021-01-01,2021,1,89,335.44,<= 350 euros/mes,True,True,False,5.815443102862507,4.499809670330265,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-16.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2021Q2,2021-04-01,2021,2,71,367.65,> 350 i <= 450 euros/mes,True,True,False,5.907131398642231,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-15.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2021Q3,2021-07-01,2021,3,54,402.33,> 350 i <= 450 euros/mes,True,True,False,5.997272647390958,4.007333185232471,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-14.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2021Q4,2021-10-01,2021,4,70,401.94,> 350 i <= 450 euros/mes,True,True,False,5.996302823748231,4.2626798770413155,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-13.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2022Q1,2022-01-01,2022,1,71,397.56,> 350 i <= 450 euros/mes,True,True,False,5.985345866099805,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-12.0,True,False,1.0,True,1.0,True
+43136,"Ràpita, la",2022Q2,2022-04-01,2022,2,58,377.83,> 350 i <= 450 euros/mes,True,True,False,5.934444359008533,4.07753744390572,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-11.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2022Q3,2022-07-01,2022,3,53,446.89,> 350 i <= 450 euros/mes,True,True,False,6.102312479318498,3.9889840465642745,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-10.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2022Q4,2022-10-01,2022,4,98,440.73,> 350 i <= 450 euros/mes,True,True,False,6.088432443050445,4.59511985013459,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-9.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2023Q1,2023-01-01,2023,1,55,394.18,> 350 i <= 450 euros/mes,True,True,False,5.976807657764349,4.02535169073515,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-8.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2023Q2,2023-04-01,2023,2,69,447.98,> 350 i <= 450 euros/mes,True,True,False,6.10474858856132,4.248495242049359,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-7.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2023Q3,2023-07-01,2023,3,61,451.03,> 450 i <= 600 euros/mes,True,True,False,6.111533856137404,4.127134385045092,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-6.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2023Q4,2023-10-01,2023,4,66,454.1,> 450 i <= 600 euros/mes,True,True,False,6.118317438103905,4.204692619390966,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-5.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2024Q1,2024-01-01,2024,1,71,431.08,> 350 i <= 450 euros/mes,True,True,False,6.066293687728631,4.276666119016055,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-4.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2024Q2,2024-04-01,2024,2,58,486.72,> 450 i <= 600 euros/mes,True,True,False,6.187689009070928,4.07753744390572,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-3.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2024Q3,2024-07-01,2024,3,70,460.91,> 450 i <= 600 euros/mes,True,True,False,6.133202796171501,4.2626798770413155,2,ola 2 (oct-2024),2024-10-10,False,0.0,False,-2.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2024Q4,2024-10-01,2024,4,76,450.11,> 450 i <= 600 euros/mes,True,True,False,6.109491997337135,4.343805421853684,2,ola 2 (oct-2024),2024-10-10,True,0.902,False,-1.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2025Q1,2025-01-01,2025,1,61,472.22,> 450 i <= 600 euros/mes,True,True,False,6.157444978688818,4.127134385045092,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,0.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2025Q2,2025-04-01,2025,2,52,477.34,> 450 i <= 600 euros/mes,True,True,False,6.168229025235398,3.970291913552122,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,1.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2025Q3,2025-07-01,2025,3,94,361.57,> 350 i <= 450 euros/mes,True,True,False,5.890455660474498,4.553876891600541,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,2.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2025Q4,2025-10-01,2025,4,82,465.92,> 450 i <= 600 euros/mes,True,True,False,6.1440139455682665,4.418840607796598,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,3.0,False,False,1.0,True,1.0,True
+43136,"Ràpita, la",2026Q1,2026-01-01,2026,1,64,,> 350 i <= 450 euros/mes,True,False,True,,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,4.0,False,True,1.0,True,1.0,True
+43136,"Ràpita, la",2026Q2,2026-04-01,2026,2,64,441.23,> 350 i <= 450 euros/mes,True,True,False,6.0895662814412255,4.174387269895637,2,ola 2 (oct-2024),2024-10-10,False,1.0,True,5.0,False,False,1.0,True,1.0,True
+43171,Vila-seca,2019Q1,2019-01-01,2019,1,86,487.23,> 350 i <= 500 euros/mes,True,True,False,6.188736290854621,4.465908118654584,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2019Q2,2019-04-01,2019,2,106,474.19,> 350 i <= 500 euros/mes,True,True,False,6.161608085260486,4.672828834461906,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2019Q3,2019-07-01,2019,3,73,500.1,> 500 i <= 650 euros/mes,True,True,False,6.214808078424858,4.30406509320417,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2019Q4,2019-10-01,2019,4,104,479.26,> 350 i <= 500 euros/mes,True,True,False,6.172243247644422,4.653960350157523,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2020Q1,2020-01-01,2020,1,105,463.84,> 350 i <= 500 euros/mes,True,True,False,6.139539665173345,4.663439094112067,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2020Q2,2020-04-01,2020,2,60,475.31,> 350 i <= 500 euros/mes,True,True,False,6.163967222742213,4.110873864173311,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2020Q3,2020-07-01,2020,3,96,509.83,> 500 i <= 650 euros/mes,True,True,False,6.234077336817133,4.574710978503383,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2020Q4,2020-10-01,2020,4,106,482.11,> 350 i <= 500 euros/mes,True,True,False,6.178172303780978,4.672828834461906,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2021Q1,2021-01-01,2021,1,89,497.27,> 350 i <= 500 euros/mes,True,True,False,6.2091331381419215,4.499809670330265,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2021Q2,2021-04-01,2021,2,110,486.17,> 450 i <= 600 euros/mes,True,True,False,6.186558356975435,4.709530201312334,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2021Q3,2021-07-01,2021,3,80,492.96,> 450 i <= 600 euros/mes,True,True,False,6.200428034848358,4.394449154672439,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2021Q4,2021-10-01,2021,4,94,503.7,> 450 i <= 600 euros/mes,True,True,False,6.221980852751605,4.553876891600541,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2022Q1,2022-01-01,2022,1,93,510.04,> 450 i <= 600 euros/mes,True,True,False,6.234489154015341,4.543294782270004,0,control (no tensionado),,False,0.0,False,,True,False,1.0,True,1.0,True
+43171,Vila-seca,2022Q2,2022-04-01,2022,2,76,530.6,> 450 i <= 600 euros/mes,True,True,False,6.274008441703639,4.343805421853684,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2022Q3,2022-07-01,2022,3,64,612.42,> 600 euros/mes,True,True,False,6.417418321643462,4.174387269895637,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2022Q4,2022-10-01,2022,4,99,545.02,> 450 i <= 600 euros/mes,True,True,False,6.300822491237623,4.605170185988092,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2023Q1,2023-01-01,2023,1,91,573.87,> 450 i <= 600 euros/mes,True,True,False,6.352402889832672,4.5217885770490405,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2023Q2,2023-04-01,2023,2,74,559.41,> 450 i <= 600 euros/mes,True,True,False,6.326882656904112,4.31748811353631,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2023Q3,2023-07-01,2023,3,60,567.45,> 450 i <= 600 euros/mes,True,True,False,6.341152639747148,4.110873864173311,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2023Q4,2023-10-01,2023,4,75,566.74,> 450 i <= 600 euros/mes,True,True,False,6.339900644767924,4.330733340286331,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2024Q1,2024-01-01,2024,1,98,522.67,> 450 i <= 600 euros/mes,True,True,False,6.258950289772927,4.59511985013459,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2024Q2,2024-04-01,2024,2,61,548.46,> 450 i <= 600 euros/mes,True,True,False,6.307114350893783,4.127134385045092,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2024Q3,2024-07-01,2024,3,62,535.58,> 450 i <= 600 euros/mes,True,True,False,6.2833502718203365,4.143134726391533,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2024Q4,2024-10-01,2024,4,65,628.25,> 600 euros/mes,True,True,False,6.442938176423701,4.189654742026425,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2025Q1,2025-01-01,2025,1,85,584.26,> 450 i <= 600 euros/mes,True,True,False,6.3703460892331245,4.454347296253507,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2025Q2,2025-04-01,2025,2,75,628.75,> 600 euros/mes,True,True,False,6.443733721413949,4.330733340286331,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2025Q3,2025-07-01,2025,3,50,642.96,> 600 euros/mes,True,True,False,6.466082513904463,3.9318256327243257,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2025Q4,2025-10-01,2025,4,82,658.11,> 600 euros/mes,True,True,False,6.4893720906057055,4.418840607796598,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True
+43171,Vila-seca,2026Q1,2026-01-01,2026,1,104,,> 600 euros/mes,True,False,True,,4.653960350157523,0,control (no tensionado),,False,0.0,False,,False,True,1.0,True,1.0,True
+43171,Vila-seca,2026Q2,2026-04-01,2026,2,73,680.14,> 600 euros/mes,True,True,False,6.522298659332231,4.30406509320417,0,control (no tensionado),,False,0.0,False,,False,False,1.0,True,1.0,True

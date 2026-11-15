@@ -6,7 +6,7 @@ En la Entrega 01 se propuso un modelo de valoración automática de viviendas (A
 
 Ante esto, mantenemos el sector y el objetivo de aportar valor al análisis del mercado de la vivienda, pero reorientamos la pregunta de *cuánto vale una vivienda* a *qué explica la evolución de los precios*. En concreto, aprovechamos un experimento natural: la declaración de zonas de mercado residencial tensionado en Cataluña en 2024 (Ley 12/2023, por el derecho a la vivienda), que limitó las rentas del alquiler en unos municipios y no en otros, ni en la Comunidad de Madrid. Esto permite comparar zonas reguladas y no reguladas con métodos de inferencia causal (diferencias en diferencias), usando datos administrativos reales, abiertos y actualizados, como el registro de fianzas del Incasòl. Así se combina el enfoque predictivo de la propuesta inicial con un análisis explicativo de mayor interés práctico y social.
 
-**Pregunta del proyecto:** ¿qué efecto tuvo la declaración de zonas tensionadas sobre el **precio** y la **oferta** del alquiler en Cataluña? Como contraste complementario, ¿cómo evolucionó el alquiler en Madrid, donde no se aplicó?
+**Pregunta del proyecto:** ¿qué efecto tuvo la declaración de zonas tensionadas sobre la **renta** de los alquileres y el número de **contratos nuevos registrados** en Cataluña? Como contexto, se describirá cómo evolucionó el alquiler en Madrid, donde no se aplicó.
 
 ## 1. Qué datos necesita el producto
 
@@ -15,14 +15,14 @@ Ante esto, mantenemos el sector y el objetivo de aportar valor al análisis del 
 **Imprescindibles:**
 
 - **Renta media de los contratos nuevos** (€/mes). Es la variable de precio.
-- **Número de contratos nuevos.** Es el indicador de oferta: si la regulación retira pisos del mercado, debería caer.
+- **Número de contratos nuevos registrados** (con fianza depositada en el Incasòl). No es una medida directa de la oferta: si baja, todavía no sabemos si se anunciaron menos viviendas, si se alquilaron más despacio o si cambió el tipo de contrato (por ejemplo, hacia alquiler de temporada, que no se registra aquí). Lo tratamos como lo que es: contratos nuevos registrados.
 - **Si el municipio está declarado tensionado y desde cuándo.** Es la variable de tratamiento.
 
 **Deseables:**
 
 - Población y renta de los hogares por municipio, para controlar diferencias de tamaño y nivel económico.
-- Oferta de alquiler de temporada y de pisos turísticos, por el posible desvío de viviendas hacia esos usos.
-- Para la comparativa con Madrid: precio de oferta del alquiler por distrito en Madrid y en Barcelona, de una misma fuente.
+- Anuncios de alquiler de temporada y de pisos turísticos, para saber si una caída de contratos registrados es desvío hacia esos usos.
+- Para el contexto de Madrid: precio de anuncio del alquiler por distrito en Madrid y en Barcelona, de una misma fuente.
 
 **Granularidad e histórico:** datos trimestrales y varios años antes y después de 2024. El modelo de diferencias en diferencias necesita un periodo previo largo para comprobar que los grupos evolucionaban igual antes de la norma. Con este dataset tenemos 5 años antes (2019–2023) y 2 después (2024–2026T2).
 
@@ -43,7 +43,12 @@ Ante esto, mantenemos el sector y el objetivo de aportar valor al análisis del 
 - **Ola 2:** 131 municipios, con efectos desde el **10/10/2024** (BOE-A-2024-20576; Resolución TER/2408/2024).
 - **Lista:** transcrita a `data/referencia/municipios_tensionados.csv` y cruzada por nombre con los códigos INE del Incasòl. Cruzan los 271 municipios.
 
-**Fuente complementaria (fase siguiente), para la comparativa Madrid–Barcelona:** informes públicos de precio del alquiler por distrito de idealista (sala de prensa). Son mensuales, desde 2018, y se publican para las dos ciudades. Son precios de oferta, no de contratos firmados, así que esta parte se planteará como contraste descriptivo y no como estimación causal.
+**Fuente de contexto (fase siguiente), para Madrid:** informes públicos de precio del alquiler por distrito de idealista (sala de prensa), mensuales desde 2018, para Madrid y Barcelona. Hay que distinguir dos cosas que no son comparables entre sí:
+
+- **Precio de anuncio** (idealista): lo que pide el propietario en el portal. Existe para Madrid y Barcelona.
+- **Renta firmada** (Incasòl): lo que se paga en el contrato. Solo existe para Cataluña.
+
+Por eso Madrid no entra en la estimación del efecto: sirve solo como contexto, y se compara siempre anuncio con anuncio (Madrid frente a Barcelona en idealista), nunca con las rentas firmadas del Incasòl.
 
 **Alternativas si una fuente clave no estuviera disponible:**
 
@@ -73,25 +78,30 @@ BOE (271 municipios) ───────────────────�
 | **Bronze** | Se descarga el CSV completo y se guarda **sin tocar**. Se registran la URL, la fecha y el hash SHA-256 en `bronze_metadata.json`. | `data/raw/incasol_fianzas_municipi.csv` |
 | **Silver** | Se convierten los números en formato español (`30.789` → 30789; `1.134,61` → 1134,61). Se rellena el código INE a 5 dígitos. Se separan los datos anuales (2007+) de los trimestrales (2019+) y se descartan los periodos acumulados (`gener-juny`, `gener-setembre`: 11.920 filas que se pueden reconstruir con los trimestres). Se marca la renta suprimida (20.947 filas, el 44 %). Se unifica el nombre de los 10 municipios que cambian de nombre. Se comprueban duplicados y valores imposibles (no hay ninguno). | `data/silver/fianzas_trimestral.parquet`, `fianzas_anual.parquet` |
 | **Tratamiento** | Se cruza la lista del BOE con los códigos del Incasòl, normalizando los nombres (`la Bisbal d'Empordà` ↔ `Bisbal d'Empordà, la`). Si algún municipio no cruza, el script se detiene. | 271 municipios: 140 de la ola 1 y 131 de la ola 2 |
-| **Gold** | Panel equilibrado de 942 municipios × 30 trimestres (2019T1–2026T2). Lleva las variables de resultado, el tratamiento, las marcas de calidad y la muestra principal. | `data/gold/panel_municipio_trimestre.parquet` + `informe_calidad.json` |
+| **Gold** | Panel equilibrado de 942 municipios × 30 trimestres (2019T1–2026T2). Lleva las variables de resultado, el tratamiento, las marcas de calidad y las dos muestras de análisis. | `data/gold/panel_municipio_trimestre.parquet` + `informe_calidad.json` |
 
 **Comprobaciones de calidad:**
 
 - **Coherencia:** la suma de los cuatro trimestres coincide con el dato anual en el **99,97 %** de los 3.521 municipio-año comparados.
 - **Anomalía de la fuente:** en **2026T1** falta la renta en casi todos los municipios, aunque está en los trimestres de antes y de después. Ese trimestre se marca (`trimestre_anomalo_fuente`) y se excluye.
+- **Rentas que la fuente no publica:** en **10.498 filas** del Gold el Incasòl da el número de contratos pero suprime la renta media por secreto estadístico. Se marcan con `renta_no_publicada`, distinta de `fila_en_fuente = False` (el municipio no aparece ese trimestre). Ninguna se rellena ni se imputa.
+- **Trimestres con la medida vigente solo una parte del tiempo:** el trimestre en que entra en vigor cada ola se marca con `trimestre_transicion` (271 filas, una por municipio tratado) y `fraccion_trimestre_vigente` indica qué parte del trimestre estuvo vigente: **17,6 %** en la ola 1 (2024T1, desde el 16 de marzo) y **90,2 %** en la ola 2 (2024T4, desde el 10 de octubre). Esos trimestres no cuentan como tratados (`post`) ni como previos; en el análisis se excluyen.
 - **Muestra principal:** muchos municipios pequeños tienen la renta suprimida casi siempre. La muestra principal incluye los municipios con renta en al menos el 90 % de los trimestres: **250 municipios** (134 de la ola 1, 87 de la ola 2 y 29 de control), que suman el **95,6 %** de los contratos.
+- **Muestra alternativa, elegida solo con datos anteriores a la medida:** la muestra principal mira todos los trimestres, también los posteriores a 2024, y eso puede cambiar qué municipios quedan dentro. Por ejemplo, si la ley reduce los contratos de un municipio y por eso el Incasòl deja de publicar su renta, ese municipio saldría de la muestra por el propio efecto que queremos medir. Para evitarlo, `muestra_pre_tratamiento` aplica la misma regla (≥ 90 % de trimestres con renta) pero solo con **2019T1–2023T4**. Entran **266 municipios** (135 de la ola 1, 101 de la ola 2 y 30 de control): los 250 de la principal y 16 más (14 de ellos de la ola 2), que tenían la renta publicada antes de la medida y la perdieron después. El análisis se hará con las dos muestras para comprobar que el resultado no depende de esta elección.
 
 **Qué significa cada fila del Gold:** un municipio en un trimestre. Columnas principales:
 
 | Columna | Uso |
 |---|---|
 | `renta_media`, `log_renta` | Variable de resultado: precio |
-| `contratos`, `log_contratos` | Variable de resultado: oferta |
+| `contratos`, `log_contratos` | Variable de resultado: contratos nuevos registrados |
 | `ola`, `grupo`, `fecha_efectos` | Grupo de tratamiento (0 control, 1 marzo 2024, 2 octubre 2024) |
 | `post`, `trimestres_desde_tratamiento` | Variables para el modelo de diferencias en diferencias y el estudio de eventos |
-| `trimestre_transicion` | Trimestre de entrada en vigor, tratado solo en parte |
+| `trimestre_transicion`, `fraccion_trimestre_vigente` | Trimestre de entrada en vigor y qué parte de él estuvo vigente la medida |
 | `periodo_ley_catalana_2020` | Control del tope autonómico anterior (2020T4–2022T1) |
-| `muestra_principal`, `cobertura_renta`, `fila_en_fuente`, `renta_disponible`, `trimestre_anomalo_fuente` | Calidad y filtrado |
+| `fila_en_fuente`, `renta_disponible`, `renta_no_publicada`, `trimestre_anomalo_fuente` | Calidad: qué publica la fuente en cada fila |
+| `muestra_principal`, `cobertura_renta` | Muestra elegida con todos los trimestres |
+| `muestra_pre_tratamiento`, `cobertura_renta_pre` | Muestra alternativa elegida solo con 2019T1–2023T4 |
 
 El diccionario completo está al final del notebook.
 
@@ -99,7 +109,7 @@ El diccionario completo está al final del notebook.
 
 ## 5. Riesgos y limitaciones
 
-- **Falta** el alquiler de temporada y turístico, que no pasa por el Incasòl: una caída de contratos podría ser desvío y no pérdida de oferta.
-- **Sesgo:** el grupo de control es pequeño (29 municipios) y más pequeño que los tratados; lo reforzamos con la ola 2 como control "aún no tratado". El tope catalán de 2020–2022 se controla aparte.
-- **Madrid** solo tiene precios de oferta, así que su comparación será descriptiva.
+- **Falta** el alquiler de temporada y turístico, que no pasa por el Incasòl: una caída de contratos nuevos registrados puede ser desvío a otros tipos de contrato y no menos viviendas en alquiler.
+- **Sesgo:** el grupo de control es pequeño (29–30 municipios) y más pequeño que los tratados; lo reforzamos con la ola 2 como control "aún no tratado" y comparamos dos muestras (una elegida solo con datos previos). El tope catalán de 2020–2022 se controla aparte.
+- **Madrid** solo tiene precios de anuncio, no rentas firmadas: queda como contexto descriptivo, comparando anuncio con anuncio.
 - **Si el Incasòl dejara de publicar:** la instantánea queda guardada con su hash y el índice SERPAVI sirve de alternativa anual.
