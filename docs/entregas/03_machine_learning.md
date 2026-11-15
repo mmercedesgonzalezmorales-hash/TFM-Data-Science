@@ -1,6 +1,6 @@
 # Entrega 03 · Machine Learning
 
-**Punto de partida:** el Gold de la Entrega 02 (`data/gold/panel_municipio_trimestre.parquet`), un panel de 942 municipios catalanes × 30 trimestres (2019T1–2026T2) con la renta media y los contratos nuevos de alquiler del registro de fianzas del Incasòl. Se usa la **muestra principal** definida en la Entrega 02: 250 municipios (134 de la ola 1, 87 de la ola 2 y 29 de control), que suman el 95,6 % de los contratos.
+**Punto de partida:** el Gold de la Entrega 02 (`data/gold/panel_municipio_trimestre.parquet`), un panel de 942 municipios catalanes × 30 trimestres (2019T1–2026T2) con la renta media y los contratos nuevos registrados del registro de fianzas del Incasòl. Se usa la **muestra principal** definida en la Entrega 02: 250 municipios (134 de la ola 1, 87 de la ola 2 y 29 de control), que suman el 95,6 % de los contratos. Como comprobación, todo se repite con la **muestra alternativa** de la Entrega 02, elegida solo con datos de 2019T1–2023T4 (266 municipios; apartado 4.4).
 
 **Código:**
 - `src/modelado.py`: baseline y selección del modelo (apartado 3).
@@ -36,7 +36,7 @@ La regla de oro del enfoque es que **el modelo se entrena solo con datos hasta 2
 
 **Salidas (variables objetivo):**
 - `log_renta`: logaritmo de la renta media de los contratos nuevos (€/mes).
-- `log_contratos`: logaritmo de (1 + contratos nuevos del trimestre).
+- `log_contratos`: logaritmo de (1 + contratos nuevos registrados en el trimestre). No es una medida directa de la oferta: una caída puede deberse a menos viviendas anunciadas, a alquileres más lentos o a un cambio de tipo de contrato (por ejemplo, a temporada, que no se registra aquí).
 
 Se trabaja en logaritmos para que las diferencias se lean como porcentajes y Barcelona (7.800 contratos al trimestre) no aplaste a un municipio de 30. Concretamente, el modelo predice **el cambio** de cada variable respecto al nivel medio del municipio en el último año, *h* trimestres después (con *h* de 1 a 10).
 
@@ -134,6 +134,7 @@ La separación es **temporal**: no hay validación aleatoria, que mezclaría tri
 - **Placebos:** el mismo cálculo en los 4 backtests anteriores a la ley, con una ventana de 6 trimestres. Ahí el efecto real es 0, así que lo que salga es "efecto falso". Un efecto solo es creíble si se separa claramente de los placebos.
 - El IC del *bootstrap* solo recoge la incertidumbre por la muestra de municipios, no el error del propio modelo. Ese error lo miden los placebos, y por eso se presentan los dos.
 - **Contraste clásico:** diferencias en diferencias con efectos fijos de municipio y trimestre y errores agrupados por municipio.
+- **Otra muestra:** todo se repite con la muestra alternativa de la Entrega 02 (apartado 4.4).
 
 ### 4.3 Resultados fuera de entrenamiento
 
@@ -190,6 +191,20 @@ El mismo efecto ajustado por control, calculado con cada modelo (`results/04_res
 | M2 · LightGBM | −6,6 % | −6,8 % | −13,1 % | −1,8 % |
 
 En renta, todos los modelos dan un efecto negativo. Los tres con menor error de previsión coinciden entre −5,9 % y −7,2 %, así que la conclusión no depende del modelo. En contratos, el baseline de tendencia da incluso el signo contrario: otra señal de que ahí el resultado no es robusto.
+
+**Con la muestra elegida solo con datos anteriores a la ley** (`results/04_robustez_muestra_pre.json`). La muestra principal se elige mirando todos los trimestres, también los posteriores a 2024. Si la ley hiciera que el Incasòl dejara de publicar la renta de un municipio, ese municipio saldría de la muestra por el propio efecto que se quiere medir. La muestra alternativa de la Entrega 02 evita ese riesgo: 266 municipios (135 de la ola 1, 101 de la ola 2 y 30 de control). Se repite todo con el mismo modelo (Ridge):
+
+| | Muestra principal (250) | Muestra pre-tratamiento (266) |
+|---|---:|---:|
+| Renta · ola 1 ajustado por control | −5,9 % (−8,2 / −3,4) | −5,7 % (−7,8 / −3,2) |
+| Renta · ola 2 ajustado por control | −6,9 % (−9,3 / −4,7) | −6,8 % (−9,1 / −4,8) |
+| Renta · ola 1 frente a ola 2 | −4,8 % (−6,3 / −3,4) | −4,4 % (−5,9 / −2,8) |
+| Renta · DiD clásico | −4,9 % (−6,1 / −3,7) | −4,8 % (−6,0 / −3,6) |
+| Contratos · ola 1 ajustado por control | −12,7 % (−18,1 / −5,4) | −12,2 % (−17,9 / −5,2) |
+| Contratos · ola 1 sin ajustar | −7,0 % (−8,3 / −4,9) | −1,3 % (−2,7 / +0,6) |
+| Contratos · ola 2 sin ajustar | +3,5 % (−1,7 / +8,8) | +10,9 % (+5,7 / +16,0) |
+
+En renta, el resultado es prácticamente el mismo con las dos muestras, y los placebos también: entre +5,2 % y +6,7 % en la ola 1 ajustada. En contratos, el efecto ajustado se mantiene, pero el efecto sin ajustar cambia mucho al cambiar la muestra (de −7,0 % a −1,3 % en la ola 1). Es otra señal de que la cifra de contratos no es estable.
 
 ### 4.5 Análisis de errores
 
@@ -298,7 +313,7 @@ Una fila por municipio y variable (`results/05_efecto_por_municipio.csv`), más 
 pip install pandas pyarrow numpy scikit-learn lightgbm statsmodels matplotlib
 python src/preparacion_datos.py    # Entrega 02: descarga el CSV del Incasòl y genera el Gold
 python src/modelado.py             # Apartado 3: backtests y elección del modelo (~10 s)
-python src/evaluacion.py           # Apartados 4 y 5: previsión congelada, efectos y salida (~2 min)
+python src/evaluacion.py           # Apartados 4 y 5: previsión congelada, efectos y salida (~4 min)
 ```
 
 Semilla fija (`42`). Versiones probadas: Python 3.13, pandas 3.0.5, scikit-learn 1.9.1, LightGBM 4.7.0 y statsmodels 0.15.0. Se ha usado la instantánea del Incasòl de la Entrega 02 (SHA-256 `602427…7a7`). Con una descarga más reciente las cifras pueden variar ligeramente.

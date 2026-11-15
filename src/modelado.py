@@ -40,6 +40,8 @@ ROOT = Path(__file__).resolve().parents[1]
 GOLD = ROOT / "data" / "gold" / "panel_municipio_trimestre.parquet"
 OUT = ROOT / "results"
 SEED = 42
+# Muestra de municipios (Entrega 02): la principal, o la alternativa elegida solo con datos de 2019T1–2023T4
+MUESTRA = "muestra_principal"
 
 VARIABLES = {"log_renta": "Renta media", "log_contratos": "Contratos nuevos"}
 CORTE_FINAL = pd.Period("2023Q4", "Q")  # último trimestre completo antes de la ola 1 (16/03/2024)
@@ -51,9 +53,9 @@ PRIMER_ORIGEN = pd.Period("2020Q4", "Q")  # primer origen con 8 trimestres de hi
 
 # --------------------------------------------------------------------------------------------- Datos
 def cargar() -> tuple[pd.DataFrame, dict[str, pd.DataFrame], pd.PeriodIndex]:
-    """Muestra principal en formato ancho: una fila por municipio, una columna por trimestre."""
+    """Muestra (MUESTRA) en formato ancho: una fila por municipio, una columna por trimestre."""
     g = pd.read_parquet(GOLD)
-    g = g[g["muestra_principal"]].copy()
+    g = g[g[MUESTRA]].copy()
     g["periodo_q"] = pd.PeriodIndex(g["periodo"], freq="Q")
     # 2026T1: la fuente no publica la renta en casi ningún municipio (ver Entrega 02). Se trata como dato ausente.
     g.loc[g["trimestre_anomalo_fuente"], "log_renta"] = np.nan
