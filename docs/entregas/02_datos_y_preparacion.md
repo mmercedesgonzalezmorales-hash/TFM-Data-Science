@@ -99,8 +99,7 @@ El diccionario completo está al final del notebook.
 
 ## 5. Riesgos y limitaciones
 
-- **Grupo de control pequeño:** tras la ola 2, los municipios regulados reúnen a la gran mayoría de la población. Solo quedan 29 de control con datos suficientes, y suelen ser más pequeños que los tratados. Lo compensaremos usando también la ola 2 como control "todavía no tratado" de la ola 1 entre 2024T2 y 2024T4.
-- **Factores que se mezclan con el efecto:** el tope autonómico de 2020–2022 y el posible paso de viviendas al alquiler de temporada, que no deposita fianza en el Incasòl. Una caída de contratos podría ser desvío y no pérdida real de oferta.
-- **Precio y oferta medidos con contratos nuevos:** los datos reflejan los contratos nuevos, no el stock de alquileres vigentes.
-- **Comparativa con Madrid:** solo será descriptiva, porque se basa en precios de oferta.
-- **Si el Incasòl dejara de publicar estos datos:** la instantánea queda descrita y con su hash, y SERPAVI sirve como fuente alternativa, aunque sea anual.
+- **Falta** el alquiler de temporada y turístico, que no pasa por el Incasòl: una caída de contratos podría ser desvío y no pérdida de oferta.
+- **Sesgo:** el grupo de control es pequeño (29 municipios) y más pequeño que los tratados; lo reforzamos con la ola 2 como control "aún no tratado". El tope catalán de 2020–2022 se controla aparte.
+- **Madrid** solo tiene precios de oferta, así que su comparación será descriptiva.
+- **Si el Incasòl dejara de publicar:** la instantánea queda guardada con su hash y el índice SERPAVI sirve de alternativa anual.
