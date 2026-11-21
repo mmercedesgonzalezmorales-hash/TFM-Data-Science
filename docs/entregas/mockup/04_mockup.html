@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup · Alquiler y zonas tensionadas</title>
+<!-- Mockup de la Entrega 04. Datos: results/ de la Entrega 03 (generados con src/frontal_mockup.py). -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="geometria_cataluna.js"></script>
+<script src="datos_mockup.js"></script>
+<style>
+  :root{
+    --bg:#f6f5f1; --card:#ffffff; --ink:#1c1f23; --muted:#5f6670; --faint:#8b9098; --line:#e4e2dc;
+    --neg3:#1f4e79; --neg2:#3d7ab5; --neg1:#9cc3e0; --zero:#ecebe6; --pos1:#f1c08d; --pos2:#d9853b; --pos3:#a14f12;
+    --fuera:#f3f2ee; --control:#cfcac0; --warn-bg:#fff6e0; --warn-ink:#7a5300; --accent:#1f4e79;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,sans-serif;}
+  .app{max-width:1440px;margin:0 auto;padding:20px 28px 28px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:14px}
+  h1{font-size:22px;margin:0 0 2px;letter-spacing:-.01em}
+  .sub{color:var(--muted);margin:0}
+  .meta{color:var(--faint);font-size:12px;text-align:right}
+  .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  .seg{display:inline-flex;background:#e9e7e1;border-radius:9px;padding:3px}
+  .seg button{border:0;background:transparent;padding:7px 14px;border-radius:7px;font:inherit;color:var(--muted);cursor:pointer}
+  .seg button.on{background:var(--card);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+  .tag{font-size:11px;font-weight:600;border-radius:5px;padding:2px 6px;margin-left:6px;background:var(--warn-bg);color:var(--warn-ink)}
+  .search{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:7px 12px;min-width:280px}
+  .search input{border:0;outline:0;font:inherit;flex:1;background:transparent}
+  .chips{display:flex;gap:6px}
+  .chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 11px;font-size:13px;color:var(--muted);cursor:pointer}
+  .chip.on{border-color:var(--ink);color:var(--ink);font-weight:600}
+  .grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .card h2{font-size:15px;margin:0 0 2px}
+  .card .hint{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+  #mapa svg{display:block;width:100%;height:auto}
+  .legend{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+  .ramp{display:flex}
+  .ramp span{width:34px;height:10px}
+  .ramp-labels{display:flex;justify-content:space-between;width:238px;font-size:11px;color:var(--faint)}
+  .sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+  .aviso{margin-top:12px;background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:10px 12px;font-size:12.5px;display:flex;gap:9px}
+  .aviso b{white-space:nowrap}
+  .detail-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .pill{font-size:11.5px;border-radius:999px;padding:3px 9px;background:#e8eef5;color:var(--accent);font-weight:600;white-space:nowrap}
+  .big{font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1;margin:14px 0 4px}
+  .big.neg{color:var(--neg3)} .big.pos{color:var(--pos3)} .big.gris{color:var(--faint)}
+  .acciones{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 11px;font:inherit;font-size:13px;color:var(--ink);cursor:pointer}
+  .lead{margin:0 0 12px;color:var(--ink)}
+  .kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+  .kpi{background:#f8f7f4;border-radius:10px;padding:10px 12px}
+  .kpi .l{font-size:12px;color:var(--muted)} .kpi .v{font-size:20px;font-weight:650}
+  .fiab{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+  .fiab b{color:var(--ink)}
+  .secondary{margin-top:14px;border:1px dashed #d9d4c6;border-radius:10px;padding:10px 12px;color:var(--muted);font-size:13px}
+  .secondary .row{display:flex;justify-content:space-between}
+  .bottom{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px;margin-top:16px}
+  .sum{display:grid;gap:10px}
+  .sumrow{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding:8px 0}
+  .sumrow:last-child{border-bottom:0}
+  .sumrow .v{font-size:22px;font-weight:700;color:var(--neg3)}
+  .sumrow .v.gris{color:var(--faint);font-size:16px}
+  .small{font-size:12px;color:var(--muted)}
+  .link{color:var(--accent);font-size:12.5px;font-weight:600;text-decoration:none}
+  .tooltip{position:fixed;pointer-events:none;background:#1c1f23;color:#fff;font-size:12px;padding:6px 9px;border-radius:7px;opacity:0}
+  svg text{font-family:Inter,system-ui,sans-serif}
+  @media (max-width:900px){.grid,.bottom{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start} .meta{text-align:left}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Alquiler y zonas tensionadas · Cataluña</h1>
+      <p class="sub">¿Cómo ha evolucionado el alquiler de cada municipio frente a lo que se esperaba sin la ley?</p>
+    </div>
+    <div class="meta">Datos reales hasta <b>2026T2</b> · fianzas del Incasòl<br>Previsión "sin ley" hecha con datos hasta 2023T4</div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" id="varSel">
+      <button data-v="renta" class="on">Renta media</button>
+      <button data-v="contratos">Contratos registrados<span class="tag">no concluyente</span></button>
+    </div>
+    <label class="search">🔍 <input id="buscar" list="lista" placeholder="Buscar municipio…" value="Barcelona"></label>
+    <datalist id="lista"></datalist>
+    <div class="chips" id="grupoSel">
+      <span class="chip on" data-g="todos">Todos</span>
+      <span class="chip" data-g="ola 1">Ola 1 · desde 16/03/2024</span>
+      <span class="chip" data-g="ola 2">Ola 2 · desde 10/10/2024</span>
+      <span class="chip" data-g="control">Sin ley</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2 id="mapTitle">Diferencia entre la renta real y la prevista sin ley</h2>
+      <p class="hint">Media desde la entrada en vigor, descontando lo que se desviaron los municipios sin ley. Pulsa un municipio para ver su ficha.</p>
+      <div id="mapa"></div>
+      <div class="legend">
+        <div><div class="ramp" id="ramp"></div><div class="ramp-labels" id="rampLab"></div></div>
+        <span><span class="sw" style="background:var(--control)"></span>Sin ley (referencia)</span>
+        <span><span class="sw" style="background:var(--fuera);border:1px solid #ddd"></span>Fuera del análisis (renta no publicada)</span>
+      </div>
+      <div class="aviso"><b>⚠ Es una estimación.</b><span>El color muestra cuánto se ha desviado cada municipio de lo que se esperaba sin la ley. No es una medida directa del efecto de la ley: los municipios tensionados ya seguían tendencias distintas antes de 2024, y parte de la diferencia puede venir de ahí.</span></div>
+    </section>
+
+    <section class="card" id="ficha"></section>
+  </div>
+
+  <div class="bottom">
+    <section class="card">
+      <h2 id="serieTitle">Todo el grupo: desviación frente a lo previsto, trimestre a trimestre</h2>
+      <p class="hint">Real − previsto sin ley, media ponderada por contratos. Si la ley no hiciera nada, las tres líneas se moverían juntas.</p>
+      <div id="serie"></div>
+    </section>
+    <section class="card">
+      <h2>Resultado del conjunto de municipios</h2>
+      <p class="hint">Es la cifra fiable: la de un municipio concreto es orientativa.</p>
+      <div class="sum" id="resumen"></div>
+      <a class="link" href="#">Cómo se calcula y cuánto fiarse →</a>
+    </section>
+  </div>
+</div>
+<div class="tooltip" id="tt"></div>
+
+<script>
+const D = window.DATOS, G = window.GEO;
+const fmtN = v => v.toLocaleString('es-ES',{maximumFractionDigits:0,useGrouping:'always'});
+const fmtE = v => fmtN(v) + ' €';
+const fmtP = (v,d=1) => (v>0?'+':v<0?'−':'') + Math.abs(v).toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d}) + ' %';
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const COL = ['--neg3','--neg2','--neg1','--zero','--pos1','--pos2','--pos3'].map(css);
+const UMBRAL = {renta:[-10,-5,-1,1,5,10], contratos:[-20,-10,-2,2,10,20]};
+const etiquetaGrupo = {'ola 1':'Ola 1 · tensionado desde 16/03/2024','ola 2':'Ola 2 · tensionado desde 10/10/2024','control':'Sin ley · municipio de referencia'};
+let estado = {variable:'renta', grupo:'todos', sel:'08019'};
+
+// ---------- mapa ----------
+const W = 760, H = 640;
+const svg = d3.select('#mapa').append('svg').attr('viewBox',`0 0 ${W} ${H}`);
+const proj = d3.geoConicConformal().rotate([-1.6,0]).fitExtent([[8,8],[W-8,H-8]], G.mun);
+const path = d3.geoPath(proj);
+const gMun = svg.append('g');
+svg.append('g').selectAll('path').data(G.prov.features).join('path')
+   .attr('d',path).attr('fill','none').attr('stroke','#7d8189').attr('stroke-width',.9);
+const gSel = svg.append('g');
+const tt = d3.select('#tt');
+
+function color(id){
+  const m = D.municipios[id];
+  if(!m) return css('--fuera');
+  if(m.grupo==='control') return css('--control');
+  const v = m[estado.variable].dif_ajustada, u = UMBRAL[estado.variable];
+  let i = u.findIndex(t => v < t); if(i<0) i = 6;
+  return COL[i];
+}
+function pintarMapa(){
+  gMun.selectAll('path').data(G.mun.features, d=>d.id).join('path')
+    .attr('d',path).attr('stroke','#fff').attr('stroke-width',.35)
+    .attr('fill', d => color(d.id))
+    .attr('opacity', d => {const m=D.municipios[d.id]; return estado.grupo==='todos'||!m||m.grupo===estado.grupo ? 1 : .25;})
+    .style('cursor', d => D.municipios[d.id] ? 'pointer':'default')
+    .on('mousemove',(e,d)=>{const m=D.municipios[d.id]; const n=m?m.nombre:d.properties.name;
+        const t = m ? (m.grupo==='control' ? 'sin ley' : fmtP(m[estado.variable].dif_ajustada)) : 'fuera del análisis';
+        tt.style('opacity',1).style('left',e.clientX+12+'px').style('top',e.clientY+12+'px').html(`<b>${n}</b> · ${t}`);})
+    .on('mouseleave',()=>tt.style('opacity',0))
+    .on('click',(e,d)=>{ if(D.municipios[d.id]){estado.sel=d.id; document.getElementById('buscar').value=D.municipios[d.id].nombre; render();} });
+  const f = G.mun.features.find(x=>x.id===estado.sel);
+  gSel.selectAll('*').remove();
+  if(f){
+    gSel.append('path').attr('d',path(f)).attr('fill','none').attr('stroke','#111').attr('stroke-width',2.2);
+    const [x,y] = path.centroid(f);
+    gSel.append('line').attr('x1',x).attr('y1',y).attr('x2',x+60).attr('y2',y-46).attr('stroke','#111');
+    gSel.append('text').attr('x',x+64).attr('y',y-50).attr('font-size',14).attr('font-weight',700).text(D.municipios[estado.sel].nombre);
+  }
+  // leyenda
+  const u = UMBRAL[estado.variable];
+  d3.select('#ramp').selectAll('span').data(COL).join('span').style('background',d=>d);
+  d3.select('#rampLab').html(`<span>${fmtP(u[0],0)}</span><span>por debajo · 0 · por encima</span><span>${fmtP(u[5],0)}</span>`);
+  document.getElementById('mapTitle').textContent = estado.variable==='renta'
+    ? 'Diferencia entre la renta real y la prevista sin ley'
+    : 'Diferencia entre los contratos registrados y los previstos sin ley';
+}
+
+// ---------- ficha del municipio ----------
+function bullet(r){
+  const w=420,h=86, lo=Math.min(r.rango[0],r.real,r.previsto), hi=Math.max(r.rango[1],r.real,r.previsto), pad=(hi-lo)*.08;
+  const x=d3.scaleLinear().domain([lo-pad,hi+pad]).range([10,w-10]);
+  const s=d3.create('svg').attr('viewBox',`0 0 ${w} ${h}`).style('width','100%');
+  s.append('rect').attr('x',x(r.rango[0])).attr('width',x(r.rango[1])-x(r.rango[0])).attr('y',26).attr('height',18).attr('rx',4).attr('fill','#dfe7ef');
+  s.append('text').attr('x',x(r.rango[0])).attr('y',18).attr('font-size',11).attr('fill',css('--muted')).text('Rango esperado sin ley (8 de cada 10 casos)');
+  s.append('line').attr('x1',x(r.previsto)).attr('x2',x(r.previsto)).attr('y1',22).attr('y2',48).attr('stroke',css('--neg2')).attr('stroke-width',3);
+  s.append('circle').attr('cx',x(r.real)).attr('cy',35).attr('r',7).attr('fill','#111');
+  const f = estado.variable==='renta'?fmtE:fmtN;
+  s.append('text').attr('x',x(r.real)).attr('y',70).attr('text-anchor','middle').attr('font-size',12).attr('font-weight',700).text('Real '+f(r.real));
+  s.append('text').attr('x',x(r.previsto)).attr('y',84).attr('text-anchor','middle').attr('font-size',11.5).attr('fill',css('--neg2')).text('Previsto '+f(r.previsto));
+  [r.rango[0],r.rango[1]].forEach((v,i)=>s.append('text').attr('x',x(v)).attr('y',58).attr('text-anchor',i?'end':'start').attr('font-size',10.5).attr('fill',css('--faint')).text(f(v)));
+  return s.node();
+}
+function peers(m){
+  const v=estado.variable, w=420, h=96, lim=v==='renta'?25:60;
+  const grupo = Object.entries(D.municipios).filter(([,o])=>o.grupo===m.grupo);
+  const x=d3.scaleLinear().domain([-lim,lim]).range([12,w-12]).clamp(true);
+  const s=d3.create('svg').attr('viewBox',`0 0 ${w} ${h}`).style('width','100%');
+  s.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',6).attr('y2',h-24).attr('stroke','#c9c4b8');
+  const nodos = grupo.map(([id,o])=>({id, v:o[v].dif_ajustada, x:x(o[v].dif_ajustada), y:h/2-12}));
+  const sim=d3.forceSimulation(nodos).force('x',d3.forceX(d=>d.x).strength(1)).force('y',d3.forceY(h/2-12).strength(.08)).force('c',d3.forceCollide(3.4)).stop();
+  for(let i=0;i<160;i++) sim.tick();
+  nodos.forEach(n=>n.y=Math.max(8,Math.min(h-30,n.y)));
+  s.append('g').selectAll('circle').data(nodos.filter(n=>n.id!==estado.sel)).join('circle').attr('cx',d=>d.x).attr('cy',d=>d.y).attr('r',2.8).attr('fill','#b7c9da');
+  const ola = m.grupo==='ola 1'?'ola1':m.grupo==='ola 2'?'ola2':null;
+  if(ola){ const e=D.grupo[v][ola].estimacion;
+    s.append('line').attr('x1',x(e)).attr('x2',x(e)).attr('y1',4).attr('y2',h-24).attr('stroke',css('--neg3')).attr('stroke-width',2);
+    s.append('text').attr('x',x(e)-4).attr('y',h-12).attr('text-anchor','end').attr('font-size',11).attr('fill',css('--neg3')).attr('font-weight',600).text('Conjunto '+fmtP(e)); }
+  const yo=nodos.find(n=>n.id===estado.sel);
+  s.append('circle').attr('cx',yo.x).attr('cy',yo.y).attr('r',5.5).attr('fill','#111').attr('stroke','#fff').attr('stroke-width',1.5);
+  s.append('text').attr('x',x(-lim)).attr('y',h-1).attr('font-size',10.5).attr('fill',css('--faint')).text(fmtP(-lim,0)+' o menos');
+  s.append('text').attr('x',x(lim)).attr('y',h-1).attr('text-anchor','end').attr('font-size',10.5).attr('fill',css('--faint')).text(fmtP(lim,0)+' o más');
+  s.append('text').attr('x',x(0)+4).attr('y',h-1).attr('font-size',10.5).attr('fill',css('--faint')).text('0 = lo previsto');
+  return s.node();
+}
+function pintarFicha(){
+  const m = D.municipios[estado.sel], v = estado.variable, r = m[v], otra = v==='renta'?'contratos':'renta';
+  const f = v==='renta'?fmtE:fmtN, u = v==='renta'?' /mes':' en el trimestre';
+  const esControl = m.grupo==='control';
+  const pocos = m.contratos_2023 < 30;
+  const el = document.getElementById('ficha');
+  el.innerHTML = `
+    <div class="detail-head"><div><h2 style="font-size:20px;margin:0">${m.nombre}</h2><span class="small">${m.provincia} · ${fmtN(m.contratos_2023)} contratos por trimestre (2023)</span></div>
+    <span class="pill">${etiquetaGrupo[m.grupo]}</span></div>
+    <div class="big ${v==='contratos'?'gris':r.dif_ajustada<0?'neg':'pos'}">${fmtP(r.dif_ajustada)}</div>
+    <p class="lead">${esControl ? 'Desviación frente a lo previsto, comparada con la media de los municipios sin ley.' :
+      `${v==='renta'?'La renta':'El número de contratos'} ha quedado de media un <b>${fmtP(Math.abs(r.dif_ajustada)).replace('+','')} ${r.dif_ajustada<0?'por debajo':'por encima'}</b> de lo esperado sin la ley desde que entró en vigor (${r.trimestres} trimestres), una vez descontado lo que cambió en los municipios sin ley.`}</p>
+    <div class="small" style="margin-bottom:2px"><b style="color:var(--ink)">Último trimestre (${r.ultimo_trimestre.replace('Q','T')})</b> · ${r.fuera_rango ? (r.real<r.rango[0]?'el dato real cae <b>por debajo</b> del rango esperado':'el dato real cae <b>por encima</b> del rango esperado') : 'el dato real cae dentro del rango esperado'}</div>
+    <div id="bul"></div>
+    <div class="kpis">
+      <div class="kpi"><div class="l">Real${u}</div><div class="v">${f(r.real)}</div></div>
+      <div class="kpi"><div class="l">Previsto sin ley${u}</div><div class="v" style="color:var(--neg2)">${f(r.previsto)}</div></div>
+    </div>
+    <div class="fiab"><b>¿Cuánto fiarse?</b> ${v==='contratos' ? 'Indicador no concluyente: antes de la ley ya aparecían caídas parecidas en estos municipios.' :
+       pocos ? 'Poco fiable: con menos de 30 contratos por trimestre la renta oscila mucho. Usa la cifra del grupo.' :
+       'Cifra orientativa para este municipio. La fiable es la del conjunto de su ola (abajo).'}</div>
+    <div class="small" style="margin-top:14px"><b style="color:var(--ink)">Frente al resto de su grupo</b> · cada punto es un municipio${esControl?'':'; la línea, el resultado del conjunto'}</div>
+    <div id="peers"></div>
+    <div class="secondary"><div class="row"><span>${otra==='contratos'?'Contratos registrados':'Renta media'} ${otra==='contratos'?'<span class="tag">no concluyente</span>':''}</span><b>${fmtP(m[otra].dif_ajustada)}</b></div></div>
+    <div class="acciones"><button class="btn">⇄ Comparar con otro municipio</button><button class="btn">⤓ Descargar datos (CSV)</button><button class="btn">🔗 Copiar enlace</button></div>`;
+  document.getElementById('bul').appendChild(bullet(r));
+  document.getElementById('peers').appendChild(peers(m));
+}
+
+// ---------- serie del grupo ----------
+function pintarSerie(){
+  const s = D.series[estado.variable], w=760, h=250, M={l:44,r:120,t:16,b:30};
+  const x = d3.scalePoint().domain(s.periodos).range([M.l,w-M.r]);
+  const vals = [...s['ola 1'],...s['ola 2'],...s.control];
+  const y = d3.scaleLinear().domain([Math.min(-6,d3.min(vals))-1, Math.max(6,d3.max(vals))+1]).nice().range([h-M.b,M.t]);
+  const c = d3.select('#serie').html('').append('svg').attr('viewBox',`0 0 ${w} ${h}`).style('width','100%');
+  c.append('g').selectAll('line').data(y.ticks(6)).join('line').attr('x1',M.l).attr('x2',w-M.r).attr('y1',y).attr('y2',y).attr('stroke',d=>d===0?'#9aa0a8':'#eeece7');
+  c.append('g').selectAll('text').data(y.ticks(6)).join('text').attr('x',M.l-8).attr('y',d=>y(d)+4).attr('text-anchor','end').attr('font-size',11).attr('fill',css('--faint')).text(d=>fmtP(d,0));
+  c.append('g').selectAll('text').data(s.periodos).join('text').attr('x',x).attr('y',h-10).attr('text-anchor','middle').attr('font-size',11).attr('fill',css('--faint')).text(d=>d.replace('Q','T'));
+  [['2024Q1','Ola 1'],['2024Q4','Ola 2']].forEach(([p,t])=>{ if(x(p)==null) return;
+    c.append('line').attr('x1',x(p)).attr('x2',x(p)).attr('y1',M.t).attr('y2',h-M.b).attr('stroke','#b9b3a5').attr('stroke-dasharray','3 3');
+    c.append('text').attr('x',x(p)+4).attr('y',M.t+10).attr('font-size',10.5).attr('fill',css('--muted')).text(t+' entra en vigor');});
+  const ser = [['control','Sin ley',css('--control'),'#8d877b'],['ola 2','Ola 2',css('--neg2'),css('--neg2')],['ola 1','Ola 1',css('--neg3'),css('--neg3')]];
+  const usados=[];
+  ser.forEach(([k,lab,col,txt])=>{
+    const pts = s.periodos.map((p,i)=>[p,s[k][i]]);
+    c.append('path').datum(pts).attr('fill','none').attr('stroke',k==='control'?'#8d877b':col).attr('stroke-width',2.4)
+      .attr('d',d3.line().defined(d=>d[1]!=null).x(d=>x(d[0])).y(d=>y(d[1])));
+    c.append('g').selectAll('circle').data(pts.filter(d=>d[1]!=null)).join('circle').attr('cx',d=>x(d[0])).attr('cy',d=>y(d[1])).attr('r',2.8).attr('fill',k==='control'?'#8d877b':col);
+    const last = pts.filter(d=>d[1]!=null).at(-1);
+    let ly = y(last[1])+4; while(usados.some(u=>Math.abs(u-ly)<14)) ly += (ly>h/2? -14:14); usados.push(ly);
+    c.append('text').attr('x',x(last[0])+10).attr('y',ly).attr('font-size',12).attr('font-weight',600).attr('fill',txt).text(`${lab} ${fmtP(last[1])}`);
+  });
+  const hueco = s.periodos.filter((p,i)=>s['ola 1'][i]==null);
+  hueco.forEach(p=>c.append('text').attr('x',x(p)).attr('y',y(0)+16).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--faint')).text('sin dato'));
+  if(s.periodos.length<10){ // 2026T1 no tiene renta publicada
+    c.append('text').attr('x',(x('2025Q4')+x('2026Q2'))/2).attr('y',y(0)+16).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--faint')).text('2026T1 sin dato');
+  }
+  document.getElementById('serieTitle').textContent = 'Todo el grupo: desviación frente a lo previsto, trimestre a trimestre · ' + (estado.variable==='renta'?'renta':'contratos');
+}
+
+// ---------- resumen ----------
+function pintarResumen(){
+  const g = D.grupo;
+  const fila = (t, e, extra) => `<div class="sumrow"><div><b>${t}</b><div class="small">${extra}</div></div><div class="v">${fmtP(e.estimacion)}</div></div>`;
+  document.getElementById('resumen').innerHTML =
+    fila('Renta · ola 1 (134 municipios)', g.renta.ola1, `IC 95 %: ${fmtP(g.renta.ola1.ic95[0])} a ${fmtP(g.renta.ola1.ic95[1])}`) +
+    fila('Renta · ola 2 (87 municipios)', g.renta.ola2, `IC 95 %: ${fmtP(g.renta.ola2.ic95[0])} a ${fmtP(g.renta.ola2.ic95[1])}`) +
+    `<div class="sumrow"><div><b>Contratos · ola 1</b> <span class="tag">no concluyente</span><div class="small">${fmtP(g.contratos.ola1.estimacion)}, pero antes de la ley ya salían caídas de ${fmtP(g.contratos.ola1.placebos[1])} a ${fmtP(g.contratos.ola1.placebos[0])}</div></div><div class="v gris">indicio</div></div>`;
+}
+
+function render(){ pintarMapa(); pintarFicha(); pintarSerie(); }
+
+// controles
+const nombres = Object.entries(D.municipios).sort((a,b)=>a[1].nombre.localeCompare(b[1].nombre,'es'));
+d3.select('#lista').selectAll('option').data(nombres).join('option').attr('value',d=>d[1].nombre);
+document.getElementById('buscar').addEventListener('change', e => {
+  const hit = nombres.find(([,m]) => m.nombre.toLowerCase()===e.target.value.trim().toLowerCase());
+  if(hit){ estado.sel = hit[0]; render(); }
+});
+document.querySelectorAll('#varSel button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#varSel button').forEach(x=>x.classList.toggle('on',x===b)); estado.variable=b.dataset.v; render(); });
+document.querySelectorAll('#grupoSel .chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#grupoSel .chip').forEach(x=>x.classList.toggle('on',x===b)); estado.grupo=b.dataset.g; pintarMapa(); });
+pintarResumen(); render();
+</script>
+</body>
+</html>
