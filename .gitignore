@@ -1,0 +1,6 @@
+data/raw/*
+!data/raw/.gitkeep
+data/silver/
+data/gold/
+__pycache__/
+.ipynb_checkpoints/
