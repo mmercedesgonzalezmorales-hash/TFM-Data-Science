@@ -113,9 +113,15 @@
 
   <div class="bottom">
     <section class="card">
-      <h2 id="serieTitle">Todo el grupo: desviación frente a lo previsto, trimestre a trimestre</h2>
+      <h2 id="serieTitle">Renta observada y renta estimada sin la ley</h2>
       <p class="hint" id="serieHint"></p>
+      <div class="chips" id="serieGrupo" style="margin-bottom:8px">
+        <span class="chip on" data-g="ola 1">Ola 1</span>
+        <span class="chip" data-g="ola 2">Ola 2</span>
+        <span class="chip" data-g="control">Sin ley</span>
+      </div>
       <div id="serie"></div>
+      <p class="small" id="serieNota" style="margin:6px 0 0"></p>
     </section>
     <section class="card">
       <h2>Resultado del conjunto de municipios</h2>
@@ -251,43 +257,67 @@ function pintarFicha(){
   document.getElementById('peers').appendChild(peers(m));
 }
 
-// ---------- serie del grupo ----------
+// ---------- serie del grupo: renta observada frente a la estimada sin ley ----------
+let serieGrupo = 'ola 1';
 function pintarSerie(){
-  const s = D.series[estado.variable], w=760, h=250, M={l:44,r:120,t:16,b:30};
-  const x = d3.scalePoint().domain(s.periodos).range([M.l,w-M.r]);
-  const vals = [...s['ola 1'],...s['ola 2'],...s.control];
-  const y = d3.scaleLinear().domain([Math.min(-6,d3.min(vals))-1, Math.max(6,d3.max(vals))+1]).nice().range([h-M.b,M.t]);
-  const c = d3.select('#serie').html('').append('svg').attr('viewBox',`0 0 ${w} ${h}`).style('width','100%');
-  c.append('g').selectAll('line').data(y.ticks(6)).join('line').attr('x1',M.l).attr('x2',w-M.r).attr('y1',y).attr('y2',y).attr('stroke',d=>d===0?'#9aa0a8':'#eeece7');
-  c.append('g').selectAll('text').data(y.ticks(6)).join('text').attr('x',M.l-8).attr('y',d=>y(d)+4).attr('text-anchor','end').attr('font-size',11).attr('fill',css('--faint')).text(d=>fmtP(d,0));
-  c.append('g').selectAll('text').data(s.periodos).join('text').attr('x',x).attr('y',h-10).attr('text-anchor','middle').attr('font-size',11).attr('fill',css('--faint')).text(d=>d.replace('Q','T'));
-  const b0=x('2024Q2'), b1=x('2024Q3');
-  c.append('rect').attr('x',b0-8).attr('width',b1-b0+16).attr('y',M.t+16).attr('height',h-M.b-M.t-16).attr('fill','#e8eef5').attr('opacity',.7);
-  c.append('text').attr('x',(b0+b1)/2).attr('y',M.t+28).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--accent')).text('ola 1 vs ola 2');
-  [['2024Q1','Ola 1'],['2024Q4','Ola 2']].forEach(([p,t])=>{ if(x(p)==null) return;
-    c.append('line').attr('x1',x(p)).attr('x2',x(p)).attr('y1',M.t).attr('y2',h-M.b).attr('stroke','#b9b3a5').attr('stroke-dasharray','3 3');
-    c.append('text').attr('x',x(p)+4).attr('y',M.t+10).attr('font-size',10.5).attr('fill',css('--muted')).text(t+' entra en vigor');});
-  const ser = [['control','Sin ley',css('--control'),'#8d877b'],['ola 2','Ola 2',css('--neg2'),css('--neg2')],['ola 1','Ola 1',css('--neg3'),css('--neg3')]];
-  const usados=[];
-  ser.forEach(([k,lab,col,txt])=>{
-    const pts = s.periodos.map((p,i)=>[p,s[k][i]]);
-    c.append('path').datum(pts).attr('fill','none').attr('stroke',k==='control'?'#8d877b':col).attr('stroke-width',2.4)
-      .attr('d',d3.line().defined(d=>d[1]!=null).x(d=>x(d[0])).y(d=>y(d[1])));
-    c.append('g').selectAll('circle').data(pts.filter(d=>d[1]!=null)).join('circle').attr('cx',d=>x(d[0])).attr('cy',d=>y(d[1])).attr('r',2.8).attr('fill',k==='control'?'#8d877b':col);
-    const last = pts.filter(d=>d[1]!=null).at(-1);
-    let ly = y(last[1])+4; while(usados.some(u=>Math.abs(u-ly)<14)) ly += (ly>h/2? -14:14); usados.push(ly);
-    c.append('text').attr('x',x(last[0])+10).attr('y',ly).attr('font-size',12).attr('font-weight',600).attr('fill',txt).text(`${lab} ${fmtP(last[1])}`);
-  });
-  const hueco = s.periodos.filter((p,i)=>s['ola 1'][i]==null);
-  hueco.forEach(p=>c.append('text').attr('x',x(p)).attr('y',y(0)+16).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--faint')).text('sin dato'));
-  if(s.periodos.length<10){ // 2026T1 no tiene renta publicada
-    c.append('text').attr('x',(x('2025Q4')+x('2026Q2'))/2).attr('y',y(0)+16).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--faint')).text('2026T1 sin dato');
-  }
-  const tp = D.tendencia_previa_contratos;
-  document.getElementById('serieHint').innerHTML = 'Real − previsto sin ley, media ponderada por contratos. Si la ley no hiciera nada, las tres líneas se moverían juntas. En la franja azul (2024T2–T3) la ola 2 aún no tenía la medida y sirve de comparación para la ola 1.' +
-    (estado.variable==='contratos' ? `<br><b style="color:var(--warn-ink)">Ojo:</b> antes de la medida (${tp.periodo}) los contratos ya caían ${fmtP(tp['ola 1'],0)} en la ola 1, ${fmtP(tp['ola 2'],0)} en la ola 2 y ${fmtP(tp.control,0)} sin ley.` : '');
-  document.getElementById('serieTitle').textContent = 'Todo el grupo: desviación frente a lo previsto, trimestre a trimestre · ' + (estado.variable==='renta'?'renta':'contratos');
+  const v = estado.variable, N = D.nivel[v], g = N[serieGrupo], tp = D.tendencia_previa_contratos;
+  const esRenta = v === 'renta', w = 760, h = 260, M = {l:58, r:160, t:18, b:30};
+  const per = N.periodos, x = d3.scalePoint().domain(per).range([M.l, w-M.r]);
+  // La previsión arranca en 2023T4 con el dato real, para que se vea de dónde sale
+  const i0 = per.indexOf('2023Q4');
+  const prev = per.map((p,i) => i===i0 ? g.real[i] : g.previsto[i]);
+  const vals = [...g.real, ...prev].filter(d => d!=null);
+  const y = d3.scaleLinear().domain(d3.extent(vals)).nice().range([h-M.b, M.t]);
+  const c = d3.select('#serie').html('').append('svg').attr('viewBox',`0 0 ${w} ${h}`).style('width','100%')
+    .attr('role','img').attr('aria-label', (esRenta?'Renta':'Contratos') + ' observada y estimada sin ley, ' + serieGrupo);
+  const fmtY = d => esRenta ? fmtE(d) : fmtN(d);
+  c.append('g').selectAll('line').data(y.ticks(5)).join('line').attr('x1',M.l).attr('x2',w-M.r).attr('y1',y).attr('y2',y).attr('stroke','#eeece7');
+  c.append('g').selectAll('text').data(y.ticks(5)).join('text').attr('x',M.l-8).attr('y',d=>y(d)+4).attr('text-anchor','end').attr('font-size',11).attr('fill',css('--faint')).text(fmtY);
+  c.append('g').selectAll('text').data(per.filter(p=>p.endsWith('Q1'))).join('text').attr('x',x).attr('y',h-10).attr('text-anchor','middle').attr('font-size',11).attr('fill',css('--faint')).text(d=>d.slice(0,4));
+  // Zona con la ley vigente, ventana ola 1 frente a ola 2 y corte del modelo
+  const ent = {'ola 1':'2024Q1', 'ola 2':'2024Q4'}[serieGrupo];
+  if(ent){ c.append('rect').attr('x',x(ent)).attr('y',M.t).attr('width',x(per.at(-1))-x(ent)).attr('height',h-M.b-M.t).attr('fill','#f1f4f8');
+           c.append('text').attr('x',x(ent)+5).attr('y',M.t+11).attr('font-size',10.5).attr('fill',css('--muted')).text('ley en vigor'); }
+  if(serieGrupo!=='control'){
+    const b0=x('2024Q2'), b1=x('2024Q3');
+    c.append('rect').attr('x',b0-6).attr('width',b1-b0+12).attr('y',M.t+18).attr('height',h-M.b-M.t-18).attr('fill','#dfe8f2').attr('opacity',.8);
+    c.append('text').attr('x',(b0+b1)/2).attr('y',h-M.b-6).attr('text-anchor','middle').attr('font-size',10).attr('fill',css('--accent')).text('ola 1 vs ola 2'); }
+  c.append('line').attr('x1',x('2023Q4')).attr('x2',x('2023Q4')).attr('y1',M.t).attr('y2',h-M.b).attr('stroke','#b9b3a5').attr('stroke-dasharray','3 3');
+  c.append('text').attr('x',x('2023Q4')-5).attr('y',h-M.b-6).attr('text-anchor','end').attr('font-size',10.5).attr('fill',css('--muted')).text('modelo congelado aquí');
+  const colPrev = esRenta ? css('--pos2') : '#8d877b';
+  const linea = d3.line().defined(d=>d[1]!=null).x(d=>x(d[0])).y(d=>y(d[1]));
+  // Observado: se salta el trimestre sin dato (2026T1 en renta), no se rellena
+  c.append('path').datum(per.map((p,i)=>[p,g.real[i]])).attr('fill','none').attr('stroke',css('--ink')).attr('stroke-width',2).attr('d',linea);
+  c.append('path').datum(per.map((p,i)=>[p,prev[i]])).attr('fill','none').attr('stroke',colPrev).attr('stroke-width',2).attr('stroke-dasharray','6 4').attr('d',linea);
+  const k = per.length-1, r = g.real[k], e = g.previsto[k];
+  const yr = y(r), ye = y(e), sep = Math.abs(yr-ye) < 26 ? (yr<ye? [-8, 8] : [8, -8]) : [0, 0];
+  c.append('text').attr('x',x(per[k])+8).attr('y',yr+4+sep[0]).attr('font-size',12).attr('font-weight',600).attr('fill',css('--ink')).text(`Observada ${fmtY(r)}`);
+  c.append('text').attr('x',x(per[k])+8).attr('y',ye+4+sep[1]).attr('font-size',12).attr('font-weight',600).attr('fill',css('--muted')).text(`Estimada sin ley ${fmtY(e)}`);
+  c.append('circle').attr('cx',x(per[k])).attr('cy',yr).attr('r',4).attr('fill',css('--ink'));
+  c.append('circle').attr('cx',x(per[k])).attr('cy',ye).attr('r',4).attr('fill',colPrev);
+  // Tooltip por trimestre
+  const tt = document.getElementById('tt');
+  c.append('g').selectAll('rect').data(per).join('rect').attr('x',d=>x(d)-x.step()/2).attr('width',x.step()).attr('y',M.t).attr('height',h-M.b-M.t).attr('fill','transparent')
+    .on('mousemove',(ev,p)=>{ const i=per.indexOf(p);
+      tt.innerHTML = `<b>${p.replace('Q','T')}</b><br>Observada: ${g.real[i]==null?'sin dato':fmtY(g.real[i])}` + (g.previsto[i]==null?'':`<br>Estimada sin ley: ${fmtY(g.previsto[i])}`);
+      tt.style.display='block'; tt.style.left=(ev.clientX+12)+'px'; tt.style.top=(ev.clientY+12)+'px'; })
+    .on('mouseleave',()=>tt.style.display='none');
+  const dif = (r/e-1)*100;
+  const nomG = {'ola 1':'de la ola 1 (134 municipios)','ola 2':'de la ola 2 (87 municipios)','control':'de los municipios sin ley (29)'}[serieGrupo];
+  document.getElementById('serieTitle').innerHTML = esRenta
+    ? 'Renta observada y renta estimada sin la ley'
+    : 'Contratos registrados: observados y estimados sin la ley <span class="tag">indicio</span>';
+  document.getElementById('serieHint').innerHTML = 'Media del grupo, ponderada por contratos. La línea discontinua es lo que esperaba un modelo entrenado solo con datos hasta 2023T4.'
+    + (serieGrupo!=='control' ? ' En la franja azul (2024T2–T3) la ola 2 aún no tenía la medida y sirve de comparación para la ola 1.' : '')
+    + (esRenta ? '' : `<br><b style="color:var(--warn-ink)">Ojo:</b> antes de la medida (${tp.periodo}) los contratos ya caían ${fmtP(tp['ola 1'],0)} en la ola 1, ${fmtP(tp['ola 2'],0)} en la ola 2 y ${fmtP(tp.control,0)} sin ley.`);
+  document.getElementById('serieNota').innerHTML = (esRenta
+    ? `En 2026T2, la renta ${nomG} queda un ${fmtP(dif)} frente a lo estimado sin ley. `
+    : `En 2026T2, los contratos ${nomG} quedan un ${fmtP(dif)} frente a lo estimado sin ley. <b>Es solo un indicio:</b> en pruebas anteriores a la ley ya aparecían caídas parecidas, así que no se puede atribuir a la ley. `)
+    + (serieGrupo==='control' ? 'Sin ley, el modelo se queda corto: es el desvío del mercado que se descuenta en la cifra ajustada.' : 'Cifra sin ajustar; el resultado del conjunto (a la derecha) descuenta lo que se desviaron los municipios sin ley.')
+    + (esRenta ? ' El hueco de 2026T1 es un trimestre que el Incasòl no publicó.' : '');
 }
+document.querySelectorAll('#serieGrupo .chip').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#serieGrupo .chip').forEach(x=>x.classList.toggle('on',x===b)); serieGrupo=b.dataset.g; pintarSerie(); });
 
 // ---------- resumen ----------
 function pintarResumen(){

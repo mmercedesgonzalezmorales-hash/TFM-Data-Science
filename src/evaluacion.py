@@ -138,21 +138,37 @@ def did_clasico(variable: str, muestra: str = "muestra_principal") -> dict:
 
 
 # --------------------------------------------------------------------------------------------- Gráficos
-def grafico(variable, series, info, p, nombre_fichero):
-    FIG.mkdir(parents=True, exist_ok=True)
-    fig, axes = plt.subplots(1, 3, figsize=(12, 3.6), sharey=False)
+def serie_grupo(variable, series, info, p) -> pd.DataFrame:
+    """Dato real y previsión sin ley de cada grupo, trimestre a trimestre, en nivel (€/mes o contratos).
+    Media ponderada por los contratos de 2023 (en log, y luego se pasa a nivel). Es lo que dibujan los
+    gráficos de este apartado y lo que muestra la demo del frontal (Entrega 04)."""
+    filas = []
     hist = series[variable]
-    for ax, ola in zip(axes, (1, 2, 0)):
+    for ola in (1, 2, 0):
         u = info.index[info["ola"] == ola]
         w = info.loc[u, "peso"]
         real = hist.loc[u].apply(lambda col: np.average(col.dropna(), weights=w[col.dropna().index])
-                                 if col.notna().any() else np.nan)
+                                 if col.notna().any() and w[col.dropna().index].sum() > 0 else np.nan)
         pp = p[p["ola"] == ola].dropna(subset=["previsto_log"])
         prev = pp.groupby("periodo_objetivo").apply(lambda x: np.average(x["previsto_log"], weights=x["peso"]))
-        real = real.dropna()  # 2026T1 sin renta en la fuente: la línea une 2025T4 con 2026T2
-        x_real = [q.to_timestamp() for q in real.index]
-        ax.plot(x_real, a_nivel(variable, real), color="#222", lw=1.6, label="Real")
-        ax.plot([pd.Period(q, "Q").to_timestamp() for q in prev.index], a_nivel(variable, prev),
+        for q in hist.columns:
+            filas.append({"grupo": GRUPOS[ola], "periodo": str(q),
+                          "real": round(float(a_nivel(variable, real[q])), 1) if pd.notna(real[q]) else None,
+                          "previsto_sin_ley": round(float(a_nivel(variable, prev[str(q)])), 1)
+                          if str(q) in prev.index else None})
+    return pd.DataFrame(filas)
+
+
+def grafico(variable, sg: pd.DataFrame, nombre_fichero):
+    FIG.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(1, 3, figsize=(12, 3.6), sharey=False)
+    for ax, ola in zip(axes, (1, 2, 0)):
+        d = sg[sg["grupo"] == GRUPOS[ola]]
+        real = d.dropna(subset=["real"])  # 2026T1 sin renta en la fuente: la línea une 2025T4 con 2026T2
+        prev = d.dropna(subset=["previsto_sin_ley"])
+        ax.plot([pd.Period(q, "Q").to_timestamp() for q in real["periodo"]], real["real"], color="#222", lw=1.6,
+                label="Real")
+        ax.plot([pd.Period(q, "Q").to_timestamp() for q in prev["periodo"]], prev["previsto_sin_ley"],
                 color="#c0392b", lw=1.6, ls="--", label="Previsto sin ley (modelo congelado en 2023T4)")
         ax.axvline(pd.Period("2023Q4", "Q").end_time, color="#888", lw=0.8)
         if ola:
@@ -240,7 +256,9 @@ def main():
         }
         print("Efectos (%):")
         print(json.dumps(resumen[variable], ensure_ascii=False, indent=1))
-        grafico(variable, series, info, p, f"04_real_vs_previsto_{variable}.png")
+        sg = serie_grupo(variable, series, info, p)
+        sg.to_csv(OUT / f"04_serie_grupo_{variable}.csv", index=False)
+        grafico(variable, sg, f"04_real_vs_previsto_{variable}.png")
 
         # Por municipio: media de los trimestres tratados
         rq = residuos_municipio(info, series, trimestres, variable, Modelo)

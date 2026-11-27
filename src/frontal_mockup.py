@@ -53,6 +53,16 @@ def main():
             **{g: b[g].tolist() for g in ["ola 1", "ola 2", "control"]},
         }
 
+    # Renta (o contratos) observada frente a la estimada sin ley, por grupo y trimestre, en nivel
+    nivel = {}
+    for var, clave in [("log_renta", "renta"), ("log_contratos", "contratos")]:
+        sg = pd.read_csv(RES / f"04_serie_grupo_{var}.csv")
+        nivel[clave] = {"periodos": sorted(sg.periodo.unique().tolist())}
+        for g, d in sg.groupby("grupo"):
+            d = d.set_index("periodo").reindex(nivel[clave]["periodos"])
+            nivel[clave][g] = {"real": [None if pd.isna(v) else v for v in d.real],
+                               "previsto": [None if pd.isna(v) else v for v in d.previsto_sin_ley]}
+
     grupo = {}
     for var, clave in [("log_renta", "renta"), ("log_contratos", "contratos")]:
         e = resumen[var]["efectos_pct"]
@@ -74,7 +84,7 @@ def main():
         }
 
     datos = {
-        "municipios": municipios, "series": series, "grupo": grupo,
+        "municipios": municipios, "series": series, "nivel": nivel, "grupo": grupo,
         "avisos": ejemplo["avisos"],
         "tendencia_previa_contratos": TENDENCIA_PREVIA_CONTRATOS,
         "fuente": "Fianzas del Incasòl · modelo Ridge congelado en 2023T4 (Entrega 03)",
