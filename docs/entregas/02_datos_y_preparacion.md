@@ -105,11 +105,16 @@ BOE (271 municipios) ───────────────────�
 
 El diccionario completo está al final del notebook.
 
-**Para qué se usará:** en la fase siguiente, para estimar el efecto de la declaración sobre la renta y los contratos. Usaremos diferencias en diferencias con efectos fijos de municipio y trimestre, y un estudio de eventos para comprobar que las tendencias de antes de 2024 eran paralelas. Como hay dos olas, el estimador tendrá en cuenta la entrada escalonada en el tratamiento. En una primera mirada descriptiva, la renta media de los tres grupos evoluciona de forma muy parecida hasta 2024 y se separa después; la fase siguiente dirá si esa diferencia se sostiene estadísticamente.
+**Para qué se usará:** en la fase siguiente, para estimar el efecto de la declaración sobre la renta y los contratos. Usaremos diferencias en diferencias con efectos fijos de municipio y trimestre, y un estudio de eventos para comprobar que las tendencias de antes de 2024 eran paralelas. Como hay dos olas, el estimador tendrá en cuenta la entrada escalonada en el tratamiento. En particular, la ola 2 sirve de comparación para la ola 1 durante los **dos trimestres** en que la ola 1 ya tenía la medida y la ola 2 todavía no (2024T2 y 2024T3; el 2024T4 es de transición).
+
+Una primera mirada descriptiva, antes de cualquier modelo, ya marca la diferencia entre las dos variables:
+
+- **Renta:** los tres grupos evolucionan de forma muy parecida hasta 2024 (entre 2019 y 2023, +14 % a +18 % de media) y se separan después.
+- **Contratos nuevos registrados:** ya había diferencias **antes** de la medida. Entre 2021 y 2023 cayeron de media un 16 % en la ola 1 y un 13 % en la ola 2, frente a un 7 % en los municipios de control. Por eso, si después de 2024 los contratos caen más en los municipios tensionados, no se le podrá atribuir a la medida toda esa caída: una parte ya venía de antes. El análisis tendrá que descontar esa tendencia previa y apoyarse en la comparación con la ola 2.
 
 ## 5. Riesgos y limitaciones
 
 - **Falta** el alquiler de temporada y turístico, que no pasa por el Incasòl: una caída de contratos nuevos registrados puede ser desvío a otros tipos de contrato y no menos viviendas en alquiler.
-- **Sesgo:** el grupo de control es pequeño (29–30 municipios) y más pequeño que los tratados; lo reforzamos con la ola 2 como control "aún no tratado" y comparamos dos muestras (una elegida solo con datos previos). El tope catalán de 2020–2022 se controla aparte.
+- **Sesgo:** el grupo de control es pequeño (29–30 municipios) y más pequeño que los tratados, y en contratos ya evolucionaba distinto antes de la medida. Lo reforzamos con la ola 2 como control "aún no tratado" en 2024T2–2024T3 (solo dos trimestres) y comparamos dos muestras (una elegida solo con datos previos). El tope catalán de 2020–2022 se controla aparte.
 - **Madrid** solo tiene precios de anuncio, no rentas firmadas: queda como contexto descriptivo, comparando anuncio con anuncio.
 - **Si el Incasòl dejara de publicar:** la instantánea queda guardada con su hash y el índice SERPAVI sirve de alternativa anual.
