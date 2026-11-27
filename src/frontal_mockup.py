@@ -18,6 +18,10 @@ RAIZ = Path(__file__).resolve().parents[1]
 RES = RAIZ / "results"
 SALIDA = RAIZ / "docs" / "entregas" / "mockup" / "datos_mockup.js"
 
+# Tendencia previa de los contratos nuevos registrados (cambio medio 2021-2023),
+# tal y como la describe la Entrega 02 (apartado 4, "Para qué se usará").
+TENDENCIA_PREVIA_CONTRATOS = {"periodo": "2021–2023", "ola 1": -16, "ola 2": -13, "control": -7}
+
 
 def main():
     pm = pd.read_csv(RES / "05_efecto_por_municipio.csv", dtype={"codigo_ine": str})
@@ -61,10 +65,18 @@ def main():
             }
             for ola in ["ola1", "ola2"]
         }
+        # Ola 1 frente a ola 2: solo 2024T2-2024T3, cuando la ola 2 aún no tenía la medida
+        c = e["ola1_ajustado_ola2"]
+        grupo[clave]["ola1_vs_ola2"] = {
+            "estimacion": c["estimacion"], "ic95": c["ic95_bootstrap"],
+            "placebos": [min(c["placebos_pct"]), max(c["placebos_pct"])],
+            "periodos": ["2024Q2", "2024Q3"],
+        }
 
     datos = {
         "municipios": municipios, "series": series, "grupo": grupo,
         "avisos": ejemplo["avisos"],
+        "tendencia_previa_contratos": TENDENCIA_PREVIA_CONTRATOS,
         "fuente": "Fianzas del Incasòl · modelo Ridge congelado en 2023T4 (Entrega 03)",
     }
     SALIDA.parent.mkdir(parents=True, exist_ok=True)

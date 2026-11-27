@@ -72,14 +72,14 @@ Al entrar, la pantalla ya muestra un municipio (Barcelona, el de más contratos)
 | Controles | Variable (renta o contratos), buscador de municipio y filtro de grupo. | — |
 | **Mapa** | 250 municipios del análisis coloreados por la diferencia ajustada. Los de control salen en gris y los que quedan fuera del análisis (renta no publicada), en blanco roto. El municipio elegido se resalta. Debajo, el aviso fijo. | `results/05_efecto_por_municipio.csv` · `diferencia_ajustada_media_pct` |
 | **Ficha** | Barcelona: **−7,8 %** de diferencia media desde la ley. En 2026T2, real 1.141 €/mes frente a 1.230 € previstos y un rango de 1.219–1.531 €, así que el dato real cae por debajo del rango. Incluye su posición entre los 134 municipios de la ola 1 y la cifra de contratos con la etiqueta "no concluyente". | `results/05_efecto_por_municipio.csv` · `results/05_ejemplo_salida.json` |
-| **Evolución del grupo** | Real − previsto por trimestre para la ola 1, la ola 2 y los municipios sin ley. En renta, 2026T1 queda como "sin dato". | `results/04_brecha_por_trimestre_log_renta.csv` |
-| **Resultado del conjunto** | Renta: ola 1 −5,9 % (IC 95 % −8,2 a −3,4) y ola 2 −6,9 % (−9,3 a −4,7). Contratos de la ola 1: −12,7 %, presentado como "indicio" porque los placebos ya daban de −2,9 % a −9,2 %. | `results/04_resultados.json` |
+| **Evolución del grupo** | Real − previsto por trimestre para la ola 1, la ola 2 y los municipios sin ley. Una franja azul marca 2024T2–2024T3, los dos únicos trimestres en que la ola 2 sirve de comparación para la ola 1 porque aún no tenía la medida (Entrega 02). En renta, 2026T1 queda como "sin dato". | `results/04_brecha_por_trimestre_log_renta.csv` |
+| **Resultado del conjunto** | Renta: ola 1 −5,9 % (IC 95 % −8,2 a −3,4) y ola 2 −6,9 % (−9,3 a −4,7). Como contraste, ola 1 frente a ola 2: −4,8 % (−6,3 a −3,4), con la indicación de que solo cubre 2024T2–T3. Contratos de la ola 1: −12,7 %, presentado como "indicio" porque ya caían antes de la medida (2021–2023: −16 % frente a −7 % sin ley) y los placebos daban de −2,9 % a −9,2 %. | `results/04_resultados.json` · tendencia previa: Entrega 02 |
 
 ### 3.2 Vista de contratos registrados
 
 ![Mockup con la variable de contratos y la ficha de Lleida](img/04_mockup_contratos.png)
 
-Es la misma pantalla con la otra variable. Cambian tres cosas: la escala de colores se amplía a ±20 % porque los contratos oscilan más, la cifra grande de la ficha sale **en gris** y no en color de resultado, y el apartado "¿Cuánto fiarse?" explica que antes de la ley ya aparecían caídas parecidas.
+Es la misma pantalla con la otra variable. Cambian tres cosas: la escala de colores se amplía a ±20 % porque los contratos oscilan más, la cifra grande de la ficha sale **en gris** y no en color de resultado, y el apartado "¿Cuánto fiarse?" da la tendencia previa que describe la Entrega 02: entre 2021 y 2023 los contratos ya caían un 16 % en la ola 1 y un 13 % en la ola 2, frente a un 7 % en los municipios sin ley. Ese mismo dato aparece como aviso ("Ojo: …") encima del gráfico de evolución.
 
 ### 3.3 Cómo abrir el prototipo
 
@@ -100,6 +100,7 @@ El principio del diseño es que **el usuario no necesita entender el modelo, per
 
 - **Una sola pregunta y una sola medida protagonista.** Todo gira en torno a "¿cuánto se ha desviado de lo esperado sin la ley?". La cifra principal es siempre la **diferencia ajustada por los municipios sin ley**, la que la Entrega 03 elige como principal. La diferencia sin ajustar no se muestra en pantalla, porque depende del modelo (con la persistencia, la de la ola 1 sale incluso positiva) y llevaría a conclusiones distintas según cómo se mire.
 - **La frase explica la cifra.** Debajo del −7,8 % hay una frase completa: *"La renta ha quedado de media un 7,8 % por debajo de lo esperado sin la ley desde que entró en vigor (8 trimestres), una vez descontado lo que cambió en los municipios sin ley"*. Así no hace falta saber qué es un "efecto ajustado por control".
+- **Cada comparación, con su alcance.** La comparación de la ola 1 con la ola 2 se muestra, pero siempre con el aviso "solo 2024T2–T3", porque son los dos únicos trimestres en que la ola 2 todavía no tenía la medida (Entrega 02). Así nadie la lee como una cifra de todo el periodo.
 - **Lenguaje llano.** Se habla de "previsto sin ley", "rango esperado (8 de cada 10 casos)" y "municipios sin ley", no de "contrafactual", "intervalo de predicción" o "grupo de control". Los términos técnicos quedan para la página "Cómo se calcula".
 - **Cifra fiable y cifra orientativa, separadas.** El resultado del conjunto tiene su propio bloque con la indicación *"Es la cifra fiable: la de un municipio concreto es orientativa"*. Responde al punto 4 del análisis de errores de la Entrega 03 (Badalona se desvía en sentido contrario al de su grupo).
 - **Aviso fijo junto al mapa**, con el texto acordado en la Entrega 03: es una estimación, no una medida directa del efecto, y los municipios tensionados ya seguían tendencias distintas antes de 2024. Va en un recuadro de color justo debajo del mapa, no en letra pequeña ni detrás de un icono.
@@ -115,7 +116,7 @@ El principio del diseño es que **el usuario no necesita entender el modelo, per
 | **Gris para los municipios sin ley** | Su papel es servir de referencia, no ser evaluados. Colorearlos haría pensar que también tienen un "efecto". |
 | **Barra de rango (real · previsto · rango esperado)** | Es la forma más directa de enseñar la incertidumbre del modelo: la barra es lo que cabría esperar sin ley, la marca azul la previsión y el punto negro el dato real. Se ve enseguida si el dato real cae dentro o fuera. El rango asimétrico de la Entrega 03 (la previsión está cerca del borde inferior) queda a la vista, sin ocultarlo. |
 | **Franja de puntos con los municipios del grupo** | Sitúa al municipio entre los de su ola y marca la línea del resultado del conjunto. Muestra a la vez la dispersión entre municipios y por qué la cifra fiable es la del grupo. |
-| **Gráfico de líneas trimestral (ola 1, ola 2 y sin ley)** | Enseña la lógica del método en una imagen: si la ley no hiciera nada, las tres líneas irían juntas. En renta, los municipios sin ley acaban por encima de lo previsto (+8,0 % en 2026T2) y los tensionados por debajo. Las líneas verticales marcan la entrada en vigor de cada ola. |
+| **Gráfico de líneas trimestral (ola 1, ola 2 y sin ley)** | Enseña la lógica del método en una imagen: si la ley no hiciera nada, las tres líneas irían juntas. En renta, los municipios sin ley acaban por encima de lo previsto (+8,0 % en 2026T2) y los tensionados por debajo. Las líneas verticales marcan la entrada en vigor de cada ola y la franja azul, la ventana en que la ola 2 sirve de comparación. |
 | **Selector de variable con etiqueta "no concluyente"** | Los contratos se muestran, porque el usuario los pedirá, pero la etiqueta acompaña a la variable en el selector, en la ficha y en el resumen. |
 | **Buscador con autocompletado y clic en el mapa** | Hay dos formas de llegar al municipio: quien sabe cuál busca, lo escribe; quien explora, pulsa en el mapa. |
 | **Filtro por grupo** | Atenúa los demás municipios en lugar de ocultarlos, para no perder el contexto. |
@@ -137,7 +138,8 @@ Los resultados de la Entrega 03 tienen incertidumbres concretas, y cada una tien
 
 | Situación | Qué hace el frontal |
 |---|---|
-| **Contratos: resultado no atribuible con seguridad a la ley** (los placebos ya daban caídas) | Etiqueta "no concluyente" en el selector, la ficha y el resumen. La cifra grande sale en gris y la del conjunto aparece como "indicio", no como resultado. |
+| **Contratos: resultado no atribuible con seguridad a la ley** (ya caían más en los tensionados antes de la medida, y los placebos también daban caídas) | Etiqueta "no concluyente" en el selector, la ficha y el resumen. La cifra grande sale en gris y la del conjunto aparece como "indicio", no como resultado. La tendencia previa (2021–2023: −16 % ola 1, −13 % ola 2, −7 % sin ley) se muestra con cifras en la ficha, en el gráfico y en el resumen, para que el usuario vea por qué. |
+| **Comparación ola 1 frente a ola 2 con solo dos trimestres** | Se marca la ventana 2024T2–T3 en el gráfico y la cifra del resumen indica "solo 2024T2–T3". No se presenta como resultado principal. |
 | **Cifra de un municipio concreto** (puede desviarse por causas locales, como Badalona) | El apartado "¿Cuánto fiarse?" la presenta como orientativa y remite al resultado del conjunto. La franja de puntos muestra dónde queda respecto a su grupo. |
 | **Municipio con pocos contratos** (menos de 30 por trimestre en 2023) | El apartado "¿Cuánto fiarse?" indica que la cifra es poco fiable porque la renta oscila mucho, y recomienda usar la del grupo. |
 | **Dato real fuera del rango esperado** | Se dice expresamente: "el dato real cae por debajo / por encima del rango esperado", y la barra de rango lo enseña. |
@@ -191,7 +193,8 @@ Incasòl (CSV)
 |---|---|---|
 | Mapa y ficha | `results/05_efecto_por_municipio.csv` | `diferencia_ajustada_media_pct`, `real_ultimo`, `previsto_sin_ley_ultimo`, `rango_previsto_min/max`, `fuera_del_rango_ultimo`, `contratos_2023`, `grupo` |
 | Evolución del grupo | `results/04_brecha_por_trimestre_log_renta.csv` y `…_log_contratos.csv` | real − previsto por trimestre y grupo |
-| Resultado del conjunto | `results/04_resultados.json` | `ola1/ola2_ajustado_control` → `estimacion`, `ic95_bootstrap`, `placebos_pct` |
+| Resultado del conjunto | `results/04_resultados.json` | `ola1/ola2_ajustado_control` y `ola1_ajustado_ola2` → `estimacion`, `ic95_bootstrap`, `placebos_pct` |
+| Tendencia previa de los contratos | Entrega 02 (apartado 4) | Cambio 2021–2023 por grupo. De momento es una constante en `src/frontal_mockup.py`; en el MVP, `src/preparacion_datos.py` la guardará en un fichero para leerla de ahí |
 | Avisos | `results/05_ejemplo_salida.json` | `avisos` |
 | Geometría del mapa | `docs/entregas/mockup/geometria_cataluna.js` | Límites municipales del IGN con código INE, que se cruza con `codigo_ine` (coinciden los 250 municipios) |
 
